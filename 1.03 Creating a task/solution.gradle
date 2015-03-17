@@ -1,0 +1,12 @@
+/*
+    Solution: 
+*/
+
+task hello { // 1. Define a task named hello
+    group = 'udacity' // 2. Add task to "udacity" group
+    description = 'This is my first Gradle task' // 3. Set a description
+    
+    doLast { // 4. Add a task action which prints to the console
+        println 'Hello World!'
+    }
+}

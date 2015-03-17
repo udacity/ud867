@@ -1,0 +1,13 @@
+/*
+    Solution:
+
+    1. Execute the following command in your terminal
+    
+        ./gradlew hello
+*/
+
+task hello {
+    doLast {
+        println "Hello, Jeremy" // 2. This statement has simply been modified to include my name.
+    }
+}

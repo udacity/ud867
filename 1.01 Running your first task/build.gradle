@@ -1,0 +1,16 @@
+/*
+    In this simple Gradle build script we have defined a single task named "hello".
+    As you can see, the task's action simply prints the string "Hello World" to 
+    standard out.
+
+    Exercises:
+
+    1. Using the Gradle Wrapper to execute the task "hello".
+    2. Modify the action of this task so it instead prints your name.
+*/
+
+task hello {
+    doLast {
+        println "Hello World"
+    }
+}

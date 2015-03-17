@@ -1,0 +1,38 @@
+/*
+    In this series of exercises you'll be practicing your Groovy skills.
+    For each exercise we've defined an empty Gradle task for you. Simply
+    place your solution in the task action. You can then test your solution
+    by running the task using Gradle from the command-line.
+*/
+
+
+/*
+    Exercise 1: Dynamic Types
+
+    1. Define a dynamic typed variable named "number".
+    2. Assign the string value "one-hundred" to this new variable.
+    3. Print the type of "number".
+    4. Assing the integer value 100 to this new variable.
+    5. Print the type of "number".
+
+    Hint: You can get the type of any object by using the "class" property. Example:
+        
+        println number.class
+*/
+task dynamicTypes << {
+    
+}
+
+/*
+    Exercise 2: Optional Syntax
+
+    1. In the task below, remove any optional syntax elements that are no
+    longer required in Groovy.
+*/
+task optionalSyntax << {
+    def hello = "Hello, Jeremy.";
+    def name = hello.substring(7, 13);
+    
+    println name.toUpperCase();
+}
+
