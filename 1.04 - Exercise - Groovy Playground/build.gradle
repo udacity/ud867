@@ -10,7 +10,9 @@
  *
  * Since all Gradle build scripts are Groovy, instead of installing Groovy, 
  * we'll just put our Groovy in the actions of tasks!
- *
+ */
+
+/*
  * Let's check out two super convinient Groovy features: dynamic typing,
  * and string interpolation. Dynamic typing means that type checking happens
  * at run time, which means you don't need to declare the types of variables.
@@ -21,6 +23,8 @@
  */
 
 task stringsAndTypes << {
+
+
     println "Let's do some math. 5 + 6 = ${5 + 6}"
 
     // We declare a variable like so:
@@ -42,13 +46,41 @@ task stringsAndTypes << {
 }
 
 
+/*
+ * Groovy syntax is based on Java, but you may have noticed a distinct lack of
+ * parentheses and semi-colons. The latter are always optional
+ */
 
+task syntax << {
 
-task optionalSyntax << {
     def hello = "Hello, Jeremy.";
     def name = hello.substring(7, 13);
     
     println name.toUpperCase();
+}
+
+task functionsAndClosures << {
+    //Functions are declared with Java-like syntax
+    def fac(n) { n == 0 ? 1 : n * fac(n - 1) }
+    assert 24 == fac(4)
+//    println double(5)
+
+    print "functions"
+}
+
+task lists << {
+    print "lists"
+}
+
+task classes << {
+
+
+
+}
+
+task branchingAndLooping << {
+    "branching"
+
 }
 
 
