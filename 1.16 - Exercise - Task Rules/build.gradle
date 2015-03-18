@@ -12,15 +12,3 @@
  *     b) Destination of archive should be "build" directory.
  *     c) Archive includes all files from "src/<Source>" directory.
  */
-
-tasks.addRule("Pattern: bundle<Source>: Creates a bundle of a particular source collection.") { String taskName ->
-    if (taskName.startsWith("bundle")) {
-        def sourceName = taskName.substring(6).toLowerCase()
-        task(taskName, type: Zip) {
-            baseName = sourceName
-            destinationDir = file('build')
-            
-            from "src/$sourceName"
-        }
-    }
-}
