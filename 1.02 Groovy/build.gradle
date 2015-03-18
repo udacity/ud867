@@ -1,38 +1,55 @@
 /*
-    In this series of exercises you'll be practicing your Groovy skills.
-    For each exercise we've defined an empty Gradle task for you. Simply
-    place your solution in the task action. You can then test your solution
-    by running the task using Gradle from the command-line.
-*/
+ * Welcome to our Groovy playground! You don't need to know a ton of Groovy to
+ * work with Gradle, but it helps to know the basics. We'll explore some useful 
+ * features, and we'll look at the docs to see where we can go for more
+ * information.
+ *
+ * Groovy was chosen for the language of Gradle build scripts because it allows
+ * for tremendous flexibility inside a compact domain specific language, all in
+ * a context that will be familiar to Java developers.
+ *
+ * Since all Gradle build scripts are Groovy, instead of installing Groovy, 
+ * we'll just put our Groovy in the actions of tasks!
+ *
+ * Let's check out two super convinient Groovy features: dynamic typing,
+ * and string interpolation. Dynamic typing means that type checking happens
+ * at run time, which means you don't need to declare the types of variables.
+ * String interpolation is a feature that allows us to build up strings very
+ * conviently.
+ *
+ * Just run the stringsAndTypes task to get started!
+ */
 
+task stringsAndTypes << {
+    println "Let's do some math. 5 + 6 = ${5 + 6}"
 
-/*
-    Exercise 1: Dynamic Types
+    // We declare a variable like so:
+    def foo = 6.5
 
-    1. Define a dynamic typed variable named "number".
-    2. Assign the string value "one-hundred" to this new variable.
-    3. Print the type of "number".
-    4. Assing the integer value 100 to this new variable.
-    5. Print the type of "number".
+    // We can use the class property to 
+    println "foo is of type: ${foo.class} and has value: $foo"
+    foo = "a string"
+    println "foo is now of type: ${foo.class} and has value: $foo"
 
-    Hint: You can get the type of any object by using the "class" property. Example:
-        
-        println number.class
-*/
-task dynamicTypes << {
-    
+    // TODO: Use string interpolation to print the square root of 127
+    // HINT: http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html
+    println "The square root of 127 is ${Math.sqrt(127)}"
+
+    // TODO: Assign the current date to foo and print it, along with its type
+    // HINT: http://docs.oracle.com/javase/7/docs/api/java/util/package-summary.html
+    foo = new java.util.Date()
+    println "foo is now of type: ${foo.class} and has value: $foo"
 }
 
-/*
-    Exercise 2: Optional Syntax
 
-    1. In the task below, remove any optional syntax elements that are no
-    longer required in Groovy.
-*/
+
+
 task optionalSyntax << {
     def hello = "Hello, Jeremy.";
     def name = hello.substring(7, 13);
     
     println name.toUpperCase();
 }
+
+
 
