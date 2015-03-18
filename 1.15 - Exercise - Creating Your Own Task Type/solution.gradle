@@ -1,0 +1,12 @@
+/*
+ * Solution: 
+ */
+
+task hello(type: HelloTask) // 3. Define task of type HelloTask
+
+class HelloTask extends DefaultTask { // 1. Define new class HelloTask which extends DefaultTask
+    @TaskAction
+    void doAction() { // 2. Add a new method annotated with @TaskAction which prints to console
+        println "Executing my custom task."
+    }
+}
