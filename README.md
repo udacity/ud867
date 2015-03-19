@@ -8,6 +8,7 @@ and a solution.gradle file are also provided.
 
 
 
+
 # Manifest, for internal use to keep track of what we need
 
 ### Lesson 1

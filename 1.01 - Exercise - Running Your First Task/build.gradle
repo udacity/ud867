@@ -1,6 +1,6 @@
 /*
  * In this simple Gradle build script we have defined a single task named
- * "hello".As you can see, the task's action simply prints the string 
+ * "hello". As you can see, the task's action simply prints the string 
  * "Hello World" to the standard out.
  *
  * Since we haven't installed Gradle yet, we'll execute this task using the
@@ -18,6 +18,6 @@
 
 task hello {
     doLast {
-        println "Hello World" // TODO: Modify this line to print your name
+        println "Hello World!" // TODO: Modify this line to print your name
     }
 }
