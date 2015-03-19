@@ -1,1 +1,16 @@
-// Placeholder
+/*
+ * Every task we've declared so far has been an instance of the `DefaultTask` class. `DefaultTask` is great for the trivial tasks we've been creating so far, but it does mean that we have to manually provide the action for every task to perform. If we wanted to create a bunch of tasks with similar actions, we'd be in for a lot of work.
+
+ The Gradle solution to this is to create a custom task type! 
+
+
+ */
+
+
+
+
+
+/*
+ * For more info, check out chapter 58 of the Gradle user guide:
+ * https://gradle.org/docs/current/userguide/custom_tasks.html
+ */
