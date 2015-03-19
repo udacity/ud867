@@ -1,1 +1,101 @@
-// Placeholder
+/*
+ Now that we have some Groovy under our belts, we're in a much better position to understand what's going on in a Gradle build script. Just like a closure can have a delegate object, the entire build script delegates to a project object. All the keywords in the gradle DSL are properties of, or methods on, the project object.
+
+ For instance, the project object has a method called `task` for declaring tasks. It accepts a the name of a new task and a configuration closure, which we'll talk about shortly.
+ */
+
+project.task("myTask1")
+
+/*
+  Since the entire build script delegates to `project`, we can leave that off.
+*/
+
+task("myTask2")
+
+/*
+	And because of Groovy syntactical magic, we can leave off the parentheses
+*/
+
+task "myTask3"
+
+/* 
+ * Now for some Gradle magic. Gradle hacks into Groovy's execution model, and
+ * allows us to knock off the quotes. For more info check out Mark's post on
+ * Stack Overflow here:
+ * http://stackoverflow.com/questions/27584463/understing-the-groovy-syntax-in-a-gradle-task-definition
+ */
+
+task myTask4
+
+/*
+ * Here we have the standard way to declare a task. Now, since the task is
+ * a Groovy object we can set its properties and access its methods. Let's add
+ * a description and a group to this task.
+ */
+
+ myTask4.description = "This is what's shown in the task list"
+ myTask4.group = "This is the heading for this task in the task list,"
+
+
+/* The most
+ * important property of a task is the list of actions it will perform. Instead
+ * of setting the `actions` property of our task, we can add a closure to the
+ * end of the list using the `doLast` method.
+ */
+
+myTask4.doLast {println "Do this last"}
+
+/*
+ * We can also add actions to the start of the list using `doFirst`.
+ */
+
+myTask4.doFirst {println "Do this last"}
+
+/*
+ * We can also add tasks using the `leftShift` operator.
+ */
+
+myTask4.leftShift {println "Do this even more last"}
+myTask4 << {println "Do this last of all"}
+
+/*
+ * We can also declare a task and give it an action in a single stroke.
+ */
+
+task myTask5 << {
+	println "Here's how to declare a task and give it an action in one stroke"
+}
+
+/*
+ * Instead of declaring a task and then setting its properties, we can also
+ * give the task a configuration closure:
+ */
+
+task myTask6 {
+	description "Here's a task with a configuration block"
+	group "Some group"
+	doLast {
+		println "Here's the action"
+	}
+}
+
+/*
+ * There are two important things to know to understand this configuration closure. The first is that when this closure is evaluated, its delegate is the task object. The second thing is that the the task object has setters with the same names as its properties.
+ */
+
+task myTask7 {
+	description("Description") // Function call works
+	group = "Some group" // Assignment also works
+	doLast { // We can also omit the parantheses, because Groovy magic
+		println "Here's the action"
+	}
+}
+
+/*
+ * The only gotcha is that you must include the equals sign or parenthases when
+ * assigning a collection to a property.
+ */
+
+
+
+
