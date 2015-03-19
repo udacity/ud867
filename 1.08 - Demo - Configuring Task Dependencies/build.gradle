@@ -4,7 +4,7 @@
  * We'll discuss three ways to configure the relationships between tasks:
  * `dependsOn`, `finalizedBy`, and `mustRunAfter`.
  * 
- * Task A `dependsOn` task B if task A can't do its work without task B having done its work. To take a familiar example, when you're getting up in the morning, you can't put on your shoes without having put on your socks. Let's declare and configure some tasks to represent this process
+ * Task A `dependsOn` task B if task A can't do its work without task B having done its work. To take a familiar example, when you're getting up in the morning, you can't put on your shoes without putting on your socks first.Let's declare and configure some tasks to represent this process
  */
 
 task putOnSocks {
@@ -16,7 +16,7 @@ task putOnSocks {
 task putOnShoes {
 	dependsOn "putOnSocks"
 	doLast {
-		print "Putting on Shoes."
+		println "Putting on Shoes."
 	}
 }
 
@@ -46,9 +46,7 @@ task doTheDishes {
 /*
  * The use case for `mustRunAfter` is slightly less obvious. Say we have a long running process that's unlikely to fail, like deploying some artifact to a continious integration server, and we also have a short running task that is likely to fail, like running unit tests. Those two tasks don't have any dependency relationship, but if we're running both, we would really like the unit tests to run before the integration tests.
 
- To continue our morning routine example, let's consider showering and putting on a scent like purfume or cologne. Putting a scent doesn't require showering, and showering doesn't require putting on a scent, but if we're going to both take a shower and also put on a scent, we should take the shower first. Let's create those tasks.
-
-
+ To continue our morning routine example, let's consider showering and putting on a scent like purfume or cologne. Putting on a scent doesn't require showering, and showering doesn't require putting on a scent, but if we're going to both take a shower and also put on a scent, we should take the shower first. Let's create those tasks.
  */
 
 task takeShower {
@@ -64,14 +62,43 @@ task putOnScent {
 	}
 }
 
+/*
+ * Now if we run `gradle putOnScent takeShower`, we see that we do the tasks 
+ * in the proper order.
+ *
+ * Let's check out a few other things we can do with task dependencies. We can
+ * depend on multiple tasks:
+ */
 
+task getReady {
+	// Rememeber that when assigning a collection to a property, we need the 
+	// equals sign
+	dependsOn = ["takeShower", "eatBreakfast", "putOnShoes"]
+}
 
+/*
+ * Oops, we put on our shoes before taking a shower! Let's put in another `mustRunAfter` relationship.
+ */
 
+ putOnShoes.mustRunAfter takeShower
 
+/*
+ * One more advanced thing we can do is look at all the tasks in the project and decide which ones we want to depend on. Let's make a task called `getEquipped` that depends on every task that starts with "putOn".
+*/
 
+task getEquipped {
+	dependsOn tasks.findAll{ task -> task.name.startsWith("putOn")}
+	doLast {
+		println "All geared up!"
+	}
+}
 
-
-
-
-
+/*
+ * You don't need to understand all the Groovy and Gradle DSL in that last 
+ * example. We just wanted to show off some of the power of Gradle. This is
+ * the sort of thing that's crazy hard to do with other build tools. Check out 
+ * this section of the Gradle user guide for more info:
+ *
+ * https://gradle.org/docs/current/userguide/more_about_tasks.html
+ */
 
