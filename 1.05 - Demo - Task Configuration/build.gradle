@@ -96,6 +96,17 @@ task myTask7 {
  * assigning a collection to a property.
  */
 
+/*
+ * One more important piece of syntax. You can set properties using named arguments like so. 
+ */
+
+task myTask8(description: "Another description") <<{
+	println "Doing something"
+}
+
+/*
+ * The choice to set properties here or in the configuration block or even later on in the script is mostly up to readability, except for one case. If you are giving your task a type, that needs to be declared here, and not in a configuration block. We'll talk more about that when we work with file system tasks.
+ */
 
 
 
