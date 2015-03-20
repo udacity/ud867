@@ -112,10 +112,11 @@ task zipImageFolders(type: Zip) {
 
 /*
     It is also sometimes necessary to delete files as part of our build. Most 
-    commonly we do this to remove all build outputs. We can use the Delete task 
-    to delete files or  folders in our project. Let's simply create a task that 
-    deletes the "build" folder. In this case, the Delete task provides a method 
-    called "delete" which we use to specify the items we want deleted.
+    commonly we do this to remove all build outputs. We can use the Delete 
+    task to delete files or  folders in our project. Let's simply create a 
+    task that deletes the "build" folder. In this case, the Delete task 
+    provides a method called "delete" which we use to specify the items we 
+    want deleted.
 */
 
 task deleteBuild(type: Delete) {
