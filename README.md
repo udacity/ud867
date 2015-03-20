@@ -30,3 +30,20 @@ and a solution.gradle file are also provided.
 * 1.15 - Exercise - Creating Your Own Task Type
 * 1.16 - Exercise - Task Rules
 * 1.17 - Exercise - Build Lifecycle
+
+## Lesson 2
+
+* 2.01 - Demo - Applying the Java Plugin
+* 2.02 - Exercise - Create a JAR
+* 2.03 - Exercise - Configure the Java Plugin
+* 2.04 - Demo - Working with Repositories
+* 2.05 - Demo - Declaring Dependencies
+* 2.06 - Exercise - Declare a Repository and Dependencies
+* 2.07 - Demo - Dependency Reports
+* 2.08 - Exercise - Dependency Resolution
+* 2.09 - Demo - Configurations
+* 2.10 - Exercise - Add Dependencies to Custom Configuration
+* 2.11 - Demo - Java Unit Tests
+* 2.12 - Exercise - Work with Unit Tests
+* 2.13 - Demo - Advanced Gradle Wrapper
+* 2.14 - Exercise - Configure the Gradle Wrapper
