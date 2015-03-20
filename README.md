@@ -11,7 +11,7 @@ and a solution.gradle file are also provided.
 
 # Manifest, for internal use to keep track of what we need
 
-### Lesson 1
+## Lesson 1
 
 * 1.01 - Exercise - Running Your First Task
 * 1.02 - Demo - Groovy Fundamentals
@@ -20,8 +20,8 @@ and a solution.gradle file are also provided.
 * 1.05 - Demo - Task Configuration
 * 1.06 - Merged, will renumber when we're all done
 * 1.07 - Exercise - Configure a Task
-* 1.08 - Demo - Configuring Task Dependencies
-* 1.09 - Exercise - Task Dependencies Exercise
+* 1.08 - Demo - Task Dependencies
+* 1.09 - Exercise - Configuring Task Dependencies
 * 1.10 - Demo - Interacting with the File System
 * 1.11 - Exercise - File System Tasks
 * 1.12 - Exercise - Exploring Incremental Builds
