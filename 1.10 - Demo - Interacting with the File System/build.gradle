@@ -7,7 +7,7 @@ task copyTask(type: Copy)
 
 /*
     Of course, this task won't actually do anything because we haven't told it 
-    want file we would like copied and to where. The simpilest example is 
+    want file we would like copied and to where. The simplest example is 
     simply to copy the contents of one folder into another. We use the Copy 
     task's "from" method to add sources and the "into" method to specify the 
     destination. The result of the following copy task will imply be to copy 
