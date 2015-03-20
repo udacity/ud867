@@ -87,7 +87,7 @@ task getReady {
 */
 
 task getEquipped {
-	dependsOn tasks.findAll{ task -> task.name.startsWith("putOn")}
+	dependsOn tasks.matching{ task -> task.name.startsWith("putOn")}
 	doLast {
 		println "All geared up!"
 	}
