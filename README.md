@@ -15,10 +15,10 @@ and a solution.gradle file are also provided.
 
 * 1.01 - Exercise - Running Your First Task
 * 1.02 - Demo - Groovy Fundamentals
-* 1.03 - Demo - Groovy Closures
+* 1.03 - Merged, will renumber when we're all done
 * 1.04 - Exercise - Groovy Playground
 * 1.05 - Demo - Task Configuration
-* 1.06 - Demo - Task Actions
+* 1.06 - Merged, will renumber when we're all done
 * 1.07 - Exercise - Configure a Task
 * 1.08 - Demo - Configuring Task Dependencies
 * 1.09 - Exercise - Task Dependencies Exercise
