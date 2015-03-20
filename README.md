@@ -28,8 +28,9 @@ and a solution.gradle file are also provided.
 * 1.13 - Exercise - Gradle Properties
 * 1.14 - Demo - Declaring Task Types
 * 1.15 - Exercise - Creating Your Own Task Type
-* 1.16 - Exercise - Task Rules
-* 1.17 - Exercise - Build Lifecycle
+* 1.16 - Demo - Logging From Gradle
+* 1.17 - Exercise - Task Rules
+* 1.18 - Exercise - Build Lifecycle
 
 ## Lesson 2
 
