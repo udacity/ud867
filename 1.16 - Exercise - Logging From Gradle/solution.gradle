@@ -1,0 +1,14 @@
+/*
+ * Solution:
+ */
+
+task hello(type: HelloTask)
+
+class HelloTask extends DefaultTask {
+    @TaskAction
+    void doAction() {
+        logger.info 'Start HelloTask Action'
+        logger.lifecycle 'Hello World'
+        logger.info 'End HelloTask Action'
+    }
+}
