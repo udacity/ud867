@@ -26,7 +26,7 @@ and a solution.gradle file are also provided.
 * 1.11 - Exercise - File System Tasks
 * 1.12 - Exercise - Exploring Incremental Builds
 * 1.13 - Exercise - Gradle Properties
-* 1.14 - Demo - Declaring Task Types
+* 1.14 - Demo - Creating Custom Task Types
 * 1.15 - Exercise - Creating Your Own Task Type
 * 1.16 - Demo - Logging From Gradle
 * 1.17 - Exercise - Task Rules
