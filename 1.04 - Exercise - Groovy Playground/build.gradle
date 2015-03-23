@@ -12,6 +12,19 @@
  * we'll just put our Groovy in the actions of tasks!
  */
 
+
+/*
+ * Java still works
+ */
+
+task runSomeJava << {
+
+
+}
+
+
+
+
 /*
  * Let's check out two super convinient Groovy features: dynamic typing,
  * and string interpolation. Dynamic typing means that type checking happens
@@ -19,7 +32,8 @@
  * String interpolation is a feature that allows us to build up strings very
  * conviently.
  *
- * Just run the stringsAndTypes task to get started!
+ * Just run the stringsAndTypes task to get started! Note that Gradle allows
+ * you to abbriviate task names. You can run this task using `gradle sAT`
  */
 
 task stringsAndTypes << {
@@ -47,22 +61,22 @@ task stringsAndTypes << {
 
 
 /*
- * Groovy syntax is based on Java, but you may have noticed a distinct lack of
- * parentheses and semi-colons. The latter are always optional
- */
+* Groovy syntax is based on Java, but you may have noticed a distinct lack of
+* parentheses and semi-colons. The latter are always optional, and parentheses can be omitted whenever a function is called with at least one argument, and the assignment of arguments to function calls is unambigious.
+*/
 
 task syntax << {
 
     def hello = "Hello, Jeremy.";
     def name = hello.substring(7, 13);
-    
+
     println name.toUpperCase();
 }
 
 task functionsAndClosures << {
     //Functions are declared with Java-like syntax
-    def fac(n) { n == 0 ? 1 : n * fac(n - 1) }
-    assert 24 == fac(4)
+//    def fac(n) { n == 0 ? 1 : n * fac(n - 1) }
+//    assert 24 == fac(4)
 //    println double(5)
 
     print "functions"
@@ -72,14 +86,12 @@ task lists << {
     print "lists"
 }
 
-task classes << {
-
-
+task properties << {
 
 }
 
 task branchingAndLooping << {
-    "branching"
+    println "branching"
 
 }
 

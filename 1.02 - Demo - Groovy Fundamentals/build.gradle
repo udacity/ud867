@@ -1,1 +1,81 @@
-// Placeholder
+/*
+    Groovy exists to fill a hole for Java developers who need a scripting language. It's terse, expressive, interoperates extremely well with Java, and has some special features that make it ideally suited for creating domain specific languages.
+
+    Gradle provides its own Groovy distribution, so we don't even need to install Groovy. We can just put our Groovy code in a build.gradle, and then ask Gradle to do any task.
+*/
+
+task groovy << {}
+
+println "Hello Groovy!"
+
+/*
+    Most valid Java is also valid Groovy, and we can interoperate with Java, as well as access the standard library. Let's make a Java class.
+*/
+
+
+
+
+
+
+/*
+    Let's check out two super convinient Groovy features: dynamic typing, and string interpolation. Dynamic typing means that type checking happens at run time, which means you don't need to declare the types of variables. String interpolation is a feature that allows us to build up strings very conviently. 
+
+
+task stringsAndTypes << {
+
+
+    println "Let's do some math. 5 + 6 = ${5 + 6}"
+
+    // We declare a variable like so:
+    def foo = 6.5
+
+    // We can use the class property to 
+    println "foo is of type: ${foo.class} and has value: $foo"
+    foo = "a string"
+    println "foo is now of type: ${foo.class} and has value: $foo"
+
+    // TODO: Use string interpolation to print the square root of 127
+    // HINT: http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html
+    println "The square root of 127 is ${Math.sqrt(127)}"
+
+    // TODO: Assign the current date to foo and print it, along with its type
+    // HINT: http://docs.oracle.com/javase/7/docs/api/java/util/package-summary.html
+    foo = new java.util.Date()
+    println "foo is now of type: ${foo.class} and has value: $foo"
+}
+
+
+/*
+* Groovy syntax is based on Java, but you may have noticed a distinct lack of
+* parentheses and semi-colons. The latter are always optional, and parentheses can be omitted whenever a function is called with at least one argument, and the assignment of arguments to function calls is unambigious.
+*/
+
+task syntax << {
+
+    def hello = "Hello, Jeremy.";
+    def name = hello.substring(7, 13);
+
+    println name.toUpperCase();
+}
+
+task functionsAndClosures << {
+    //Functions are declared with Java-like syntax
+//    def fac(n) { n == 0 ? 1 : n * fac(n - 1) }
+//    assert 24 == fac(4)
+//    println double(5)
+
+    print "functions"
+}
+
+task lists << {
+    print "lists"
+}
+
+task properties << {
+
+}
+
+task branchingAndLooping << {
+    println "branching"
+
+}
