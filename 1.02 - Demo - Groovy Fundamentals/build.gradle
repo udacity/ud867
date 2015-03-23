@@ -34,13 +34,13 @@ def foo = 6.5
 println "foo has value: $foo"
 
 /*
-    We can also surround any Groovy code with a doller sign and curly brackets
+    We can also surround any Groovy code with a dollar sign and curly braces.
 */
 
 println "Let's do some math. 5 + 6 = ${5 + 6}"
 
 /*
-    We can reassign a variable to a different type, and we can also inspect the type of a variable like so.
+    We can reassign a variable to a different type, and we can also inspect the type of a variable using `foo.class`.
 */
 
 println "foo is of type: ${foo.class} and has value: $foo"
@@ -48,9 +48,9 @@ foo = "a string"
 println "foo is now of type: ${foo.class} and has value: $foo"
 
 /*
-    The `println` keyword is just a shortcut for `System.out.println`, but you've probably noticed that we're not using any parentheses, and there's not a semicolon in sight. The latter are always optional, and parentheses can be omitted whenever a function is called with at least one argument, and the assignment of arguments to function calls is unambigious.
+    The `println` keyword is just a shortcut for `System.out.println`, but you've probably noticed that we're not using any parentheses, and there's not a semicolon in sight. The latter are always optional, and parentheses can be omitted whenever a function is called with at least one argument, and the assignment of arguments to function calls is unambiguous.
 
-    These syntactial features are part of what make Groovy such a good choice for a domain specific language. Let's define a function.
+    These syntactic features are part of what make Groovy such a good choice for a domain specific language. Let's define a function.
 */
 
 def doubleIt(n) { 
@@ -65,7 +65,7 @@ foo = 5
 println "doubleIt($foo) = ${doubleIt(foo)}"
 
 /*
-    Even more interestingly, since the plus sign is overloaded, and concatinates string, we can call our function with a string as well.
+    Even more interestingly, since the plus sign is overloaded to concatenates strings, we can call our function with a string as well.
 */
 
 foo = "foobar"
@@ -93,11 +93,11 @@ oneArg 500
 twoArgs 200, 300
 noArgs()
 //noArgs // Doesn't work
-//twoArgs oneArg 500, 200 // Ambigious
+//twoArgs oneArg 500, 200 // This is ambigious
 twoArgs oneArg(500), 200
 
 /*
-    Groovy has another way to declare functions, called closures. Closures have two interesting features. First, they are just values that can be assigned to a variable, just like a number or a string. Second, they can capture variables from the scope in which they're declared.
+    Groovy has another way to declare functions called closures. Closures have two interesting features. First, they are just values that can be assigned to a variable, just like a number or a string. Second, they can capture variables from the scope in which they're declared.
 */
 
 def myClosure = {
@@ -116,7 +116,7 @@ bar()
 def doubleIt = { x -> x + x}
 
 /*
-    Groovy also allows for higher order functions.
+    Groovy also allows for higher order functions. That is, functions that take functions as arguments. Let's make a function that applies another function twice.
 */
 
 def applyTwice(func, arg){
@@ -127,7 +127,7 @@ foo = 5
 println "Applying doubleIt twice to $foo equals ${applyTwice(doubleIt, foo)}"
 
 /*
-    A language where functions are just objects that can be passed around is said to have "first class functions". Thie implications of this style of programming go quite deep and beyond the scope of this course. A search for "first class function" or "functional programming" will give you more information.
+    A language where functions are just objects that can be passed around is said to have "first class functions". The implications of this style of programming go quite deep and beyond the scope of this course. A search for "first class function" or "functional programming" will give you more information.
 */
 
 /*
