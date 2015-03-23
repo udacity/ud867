@@ -12,43 +12,138 @@ println "Hello Groovy!"
     Most valid Java is also valid Groovy, and we can interoperate with Java, as well as access the standard library. Let's make a Java class.
 */
 
-
-
-
-
-
-/*
-    Let's check out two super convinient Groovy features: dynamic typing, and string interpolation. Dynamic typing means that type checking happens at run time, which means you don't need to declare the types of variables. String interpolation is a feature that allows us to build up strings very conviently. 
-
-
-task stringsAndTypes << {
-
-
-    println "Let's do some math. 5 + 6 = ${5 + 6}"
-
-    // We declare a variable like so:
-    def foo = 6.5
-
-    // We can use the class property to 
-    println "foo is of type: ${foo.class} and has value: $foo"
-    foo = "a string"
-    println "foo is now of type: ${foo.class} and has value: $foo"
-
-    // TODO: Use string interpolation to print the square root of 127
-    // HINT: http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html
-    println "The square root of 127 is ${Math.sqrt(127)}"
-
-    // TODO: Assign the current date to foo and print it, along with its type
-    // HINT: http://docs.oracle.com/javase/7/docs/api/java/util/package-summary.html
-    foo = new java.util.Date()
-    println "foo is now of type: ${foo.class} and has value: $foo"
+class JavaGreeter {
+    public static void sayHello() {
+        System.out.println("Hello Java!");
+    }
 }
 
+JavaGreeter greeter = new JavaGreeter()
+greeter.sayHello()
 
 /*
-* Groovy syntax is based on Java, but you may have noticed a distinct lack of
-* parentheses and semi-colons. The latter are always optional, and parentheses can be omitted whenever a function is called with at least one argument, and the assignment of arguments to function calls is unambigious.
+    Groovy is dynamically typed, which means type checking happens at run time. That also means you don't need to declare the types of variables. 
 */
+
+def foo = 6.5
+
+/*
+    Groovy makes is super easy to build up strings using string interpolation. A variable name prefaced with a doller sign will have the appropriate value inserted.
+*/
+
+println "foo has value: $foo"
+
+/*
+    We can also surround any Groovy code with a doller sign and curly brackets
+*/
+
+println "Let's do some math. 5 + 6 = ${5 + 6}"
+
+/*
+    We can reassign a variable to a different type, and we can also inspect the type of a variable like so.
+*/
+
+println "foo is of type: ${foo.class} and has value: $foo"
+foo = "a string"
+println "foo is now of type: ${foo.class} and has value: $foo"
+
+/*
+    The `println` keyword is just a shortcut for `System.out.println`, but you've probably noticed that we're not using any parentheses, and there's not a semicolon in sight. The latter are always optional, and parentheses can be omitted whenever a function is called with at least one argument, and the assignment of arguments to function calls is unambigious.
+
+    These syntactial features are part of what make Groovy such a good choice for a domain specific language. Let's define a function.
+*/
+
+def doubleIt(n) { 
+    n + n // Note we don't need a return statement
+}
+
+/*
+    Note that we don't need to specify the type of the arguments, nor the return type. We don't even need to supply a return statement. The last expression in the block is returned. Let's give it a try.
+*/
+
+foo = 5
+println "doubleIt($foo) = ${doubleIt(foo)}"
+
+/*
+    Even more interestingly, since the plus sign is overloaded, and concatinates string, we can call our function with a string as well.
+*/
+
+foo = "foobar"
+println "doubleIt($foo) = ${doubleIt(foo)}"
+
+/*
+    Let's try out the no parentheses hype.
+*/
+
+def noArgs() {
+    println "Called the no args function"
+}
+
+def oneArg(x) {
+    println "Called the 1 arg function with $x"
+    x
+}
+
+def twoArgs(x, y) {
+    println "Called the 2 arg function with $x and $y"
+    x + y
+}
+
+oneArg 500
+twoArgs 200, 300
+noArgs()
+//noArgs // Doesn't work
+//twoArgs oneArg 500, 200 // Ambigious
+twoArgs oneArg(500), 200
+
+/*
+    Groovy has another way to declare functions, called closures. Closures have two interesting features. First, they are just values that can be assigned to a variable, just like a number or a string. Second, they can capture variables from the scope in which they're declared.
+
+    The 
+*/
+
+def myClosure = {
+    println "Hello from a closure"
+    println "The value of foo is $foo"
+}
+
+myClosure()
+
+/*
+    Closures have a different notation for arguments.
+*/
+
+def doubleIt = { x -> x + x}
+
+/*
+    Groovy also allows for higher order functions.
+*/
+
+def applyTwice(func, arg){
+    func (func (arg))
+}
+
+foo = 5
+println "Applying doubleIt twice to $foo equals ${applyTwice(doubleIt, foo)}"
+
+/*
+    Groovy has classes and objects very similar to Java. Groovy automatically generates getters and setters for class properties.  
+*/
+
+class GroovyGreeter {
+    String greeting = "Default greeting"
+    def printGreeting(){println greeting}
+}
+
+def myGroovyGreeter = new GroovyGreeter()
+
+myGroovyGreeter.printGreeting()
+
+
+
+
+
+
 
 task syntax << {
 
