@@ -17,6 +17,8 @@
 // TODO: Use the Gradle wrapper to execute the task "hello"
 
 task hello {
+	description "Hey student! Run this one :D"
+	group "Our demo"
     doLast {
         println "Hello World!" // TODO: Modify this line to print your name
     }
