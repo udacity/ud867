@@ -86,13 +86,13 @@ task myTask6 {
 task myTask7 {
 	description("Description") // Function call works
 	group = "Some group" // Assignment also works
-	doLast { // We can also omit the parantheses, because Groovy magic
+	doLast { // We can also omit the parentheses, because Groovy magic
 		println "Here's the action"
 	}
 }
 
 /*
- * The only gotcha is that you must include the equals sign or parenthases when
+ * The only gotcha is that you must include the equals sign or parentheses when
  * assigning a collection to a property.
  */
 
