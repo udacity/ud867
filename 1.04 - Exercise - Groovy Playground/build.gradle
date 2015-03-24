@@ -1,99 +1,63 @@
 /*
- * Welcome to our Groovy playground! You don't need to know a ton of Groovy to
- * work with Gradle, but it helps to know the basics. We'll explore some useful 
- * features, and we'll look at the docs to see where we can go for more
- * information.
- *
- * Groovy was chosen for the language of Gradle build scripts because it allows
- * for tremendous flexibility inside a compact domain specific language, all in
- * a context that will be familiar to Java developers.
- *
- * Since all Gradle build scripts are Groovy, instead of installing Groovy, 
- * we'll just put our Groovy in the actions of tasks!
- */
-
+    In these exercises we'll explore the Groovy features most relevant to Gradle build scripts. Each topic will be contained in the action of a Gradle task, so to test run your code you'll need to run that particular task. If you get stuck, check out the code in the Groovy Fundamentals demo, or check the solution.gradle file in this directory. 
+*/
 
 /*
- * Java still works
- */
+    Let's check out two super convinient Groovy features: dynamic typing, and string interpolation. Dynamic typing means that type checking happens at run time, which means you don't need to declare the types of variables. String interpolation is a feature that allows us to build up strings very conviently.
 
-task runSomeJava << {
-
-
-}
-
-
-
-
-/*
- * Let's check out two super convinient Groovy features: dynamic typing,
- * and string interpolation. Dynamic typing means that type checking happens
- * at run time, which means you don't need to declare the types of variables.
- * String interpolation is a feature that allows us to build up strings very
- * conviently.
- *
- * Just run the stringsAndTypes task to get started! Note that Gradle allows
- * you to abbriviate task names. You can run this task using `gradle sAT`
- */
+    Just run the stringsAndTypes task to get started! Note that Gradle allows you to abbriviate task names. You can run this task using `gradle sAT`
+*/
 
 task stringsAndTypes << {
+    // TODO: Create a variable named foo and assign it the value 4.2
+    def foo = 4.2
 
-
-    println "Let's do some math. 5 + 6 = ${5 + 6}"
-
-    // We declare a variable like so:
-    def foo = 6.5
-
-    // We can use the class property to 
+    // TODO: Print the value and class of foo
     println "foo is of type: ${foo.class} and has value: $foo"
-    foo = "a string"
-    println "foo is now of type: ${foo.class} and has value: $foo"
 
     // TODO: Use string interpolation to print the square root of 127
     // HINT: http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html
     println "The square root of 127 is ${Math.sqrt(127)}"
 
     // TODO: Assign the current date to foo and print it, along with its type
-    // HINT: http://docs.oracle.com/javase/7/docs/api/java/util/package-summary.html
+    // HINT: 
+    // http://docs.oracle.com/javase/7/docs/api/java/util/package-summary.html
     foo = new java.util.Date()
     println "foo is now of type: ${foo.class} and has value: $foo"
-}
 
 
-/*
-* Groovy syntax is based on Java, but you may have noticed a distinct lack of
-* parentheses and semi-colons. The latter are always optional, and parentheses can be omitted whenever a function is called with at least one argument, and the assignment of arguments to function calls is unambigious.
-*/
-
-task syntax << {
-
+    // TODO: Use the `substring` method to extract my name from this string
     def hello = "Hello, Jeremy.";
     def name = hello.substring(7, 13);
 
+    // TODO: Use `toUpperCase` to capitalize and print my name
     println name.toUpperCase();
 }
 
-task functionsAndClosures << {
-    //Functions are declared with Java-like syntax
-//    def fac(n) { n == 0 ? 1 : n * fac(n - 1) }
-//    assert 24 == fac(4)
-//    println double(5)
+/*
+    Let's look at closures
+*/
 
-    print "functions"
+task closures << {
+    // TODO: Declare a closure that takes two arguments and adds them together
+    // HINT: http://groovy.codehaus.org/Closures
+    def addTwo = {x, y -> x + y}
+
+    // TODO: Call your closure with arguments 17 and 25, and print the result
+    // Beware that something like `println addTwo 17, 25` is ambigious
 }
 
 task lists << {
-    print "lists"
-}
+    // TODO: Declare a list containing 5 of your favoite candies
+    // HINT: Try searching for "groovy list literal"
 
-task properties << {
-
-}
-
-task branchingAndLooping << {
-    println "branching"
+    // TODO: Create a new list of your candies in all caps
+    // HINT: http://groovy.codehaus.org/Tutorial+2+-+Code+as+data,+or+closures
 
 }
+
+
+
 
 
 

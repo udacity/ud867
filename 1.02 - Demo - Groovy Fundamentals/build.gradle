@@ -177,4 +177,9 @@ def greetingClosure = {
 greetingClosure.delegate = myGroovyGreeter
 greetingClosure() // This works as `greeting` is a property of the delegate
 
+/*
+    Congrats on completing our whirlwind tour of Groovy. There are may resources to help you learn more, including:
 
+    http://learnxinyminutes.com/docs/groovy/
+    http://groovy.codehaus.org/User+Guide
+*/
