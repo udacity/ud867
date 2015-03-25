@@ -48,3 +48,39 @@ and a solution.gradle file are also provided.
 * 2.12 - Exercise - Work with Unit Tests
 * 2.13 - Demo - Advanced Gradle Wrapper
 * 2.14 - Exercise - Configure the Gradle Wrapper
+
+## Lesson 3
+
+* 3.01 - Demo - Importing Gradle Projects
+* 3.02 - Exercise - Import a Java Project
+* 3.03 - Demo - The Default Android Build Scripts
+* 3.04 - Demo - Build Types
+* 3.05 - Exercise - Configure Build Types
+* 3.06 - Demo - Declaring Flavors
+* 3.07 - Exercise - Declare Flavors
+* 3.08 - Demo - Flavor-Specific Dependencies
+* 3.09 - Demo - Manifest Merging
+* 3.10 - Exercise - Add a Flavor-Specific Activity
+* 3.11 - Demo - Configuring Automatically Generated Tasks
+
+## Lesson 4
+
+* 4.01 - Demo - Creating a Java Library
+* 4.02 - Exercise - Create a Java Library
+* 4.03 - Demo - Creating an Android Library
+* 4.04 - Demo - Project Dependencies
+* 4.05 - Exercise - Configure Project Dependencies
+* 4.06 - Demo - Ceating a Keystore
+* 4.07 - Demo - Adding a Signing Configuration
+* 4.08 - Exercise - Configure Signing
+* 4.09 - Demo - Multidex Support
+* 4.10 - Demo - Configuring Proguard
+* 4.11 - Exercise - Configure Proguard
+* 4.12 - Demo - Android Unit Testing
+* 4.13 - Exercise - Set up Unit Testing
+
+## Final Project
+
+
+
+

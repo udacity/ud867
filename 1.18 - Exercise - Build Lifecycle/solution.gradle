@@ -1,8 +1,4 @@
 
-
-
-
-
 task test {
     doLast {
         println "1: I'm in ur action"
