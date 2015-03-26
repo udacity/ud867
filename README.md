@@ -1,6 +1,6 @@
-# ud867: Building Android and Java with Gradle
+# ud867: Building Android and Java with Gradle (Name TBD)
 
-Welcome to the demos and exercises accompaining ud867 at Udacity!
+Welcome to the demos and exercises accompanying ud867 at Udacity!
 
 Each directory contains a README.md or solution.gradle that will explain either
 the concept being explored or the exercise at hand. For each exercise, hints
@@ -67,7 +67,7 @@ and a solution.gradle file are also provided.
 * 4.03 - Demo - Creating an Android Library
 * 4.04 - Demo - Project Dependencies
 * 4.05 - Exercise - Configure Project Dependencies
-* 4.06 - Demo - Ceating a Keystore
+* 4.06 - Demo - Creating a Keystore
 * 4.07 - Demo - Adding a Signing Configuration
 * 4.08 - Exercise - Configure Signing
 * 4.09 - Demo - Multidex Support
