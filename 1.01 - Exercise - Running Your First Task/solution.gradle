@@ -1,14 +1,27 @@
 /*
     Solution:
 
-    1. Execute the following command in your terminal
-    
+    On Mac/Linux, you can use the Gradle wrapper to run the `hello` task using:
+
         ./gradlew hello
+
+    If you're running into permissions issues, try:
+
+        sh gradlew hello
+
+    On Windows, it's simply:
+
+        gradlew hello
+
+    To tell Gradle to use this file as the build script instead of the default build.gradle, use:
+
+        ./gradlew -b solution.gradle hello
 */
 
 task hello {
     doLast {
-        println "Hello, Jeremy" // 2. This statement has simply been modified to include my name.
+        // 2. This statement has simply been modified to include my name.
+        println "Hello, Jeremy"
     }
 }
 
