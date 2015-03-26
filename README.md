@@ -1,6 +1,6 @@
 # ud867: Building Android and Java with Gradle
 
-Welcome to the demos and exercises accompaining ud867 at Udacity! 
+Welcome to the demos and exercises accompaining ud867 at Udacity!
 
 Each directory contains a README.md or solution.gradle that will explain either
 the concept being explored or the exercise at hand. For each exercise, hints
@@ -10,7 +10,7 @@ and a solution.gradle file are also provided.
 
 ## Lesson 1
 
-* 1.01 - Exercise - Running Your First Task
+* 1.01 - Exercise - Run Your First Task
 * 1.02 - Demo - Groovy Fundamentals
 * 1.03 - Merged, will renumber when we're all done
 * 1.04 - Exercise - Groovy Playground
