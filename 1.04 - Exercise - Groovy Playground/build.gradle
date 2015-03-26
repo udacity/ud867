@@ -1,5 +1,5 @@
 /*
-    In these exercises we'll explore the Groovy features most relevant to Gradle build scripts. Each topic will be contained in the action of a Gradle task, so to test run your code you'll need to run that particular task. If you get stuck, check out the code in the Groovy Fundamentals demo, or check the solution.gradle file in this directory. 
+    In these exercises we'll explore the Groovy features most relevant to Gradle build scripts. Each topic will be contained in the action of a Gradle task, so to test run your code you'll need to run that particular task. If you get stuck, check out the code in the Groovy Fundamentals demo, or check the solution.gradle file in this directory.
 */
 
 /*
@@ -20,7 +20,7 @@ task stringsAndTypes << {
     println "The square root of 127 is ${Math.sqrt(127)}"
 
     // TODO: Assign the current date to foo and print it, along with its type
-    // HINT: 
+    // HINT:
     // http://docs.oracle.com/javase/7/docs/api/java/util/package-summary.html
     foo = new java.util.Date()
     println "foo is now of type: ${foo.class} and has value: $foo"
@@ -55,9 +55,3 @@ task lists << {
     // HINT: http://groovy.codehaus.org/Tutorial+2+-+Code+as+data,+or+closures
 
 }
-
-
-
-
-
-

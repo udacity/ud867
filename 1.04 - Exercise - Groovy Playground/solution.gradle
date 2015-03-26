@@ -1,18 +1,6 @@
 
 
-
-
-
-
-
-
-
-
-
-
 task foobar << {
 	def foo = "bar"
     println "$foo + foo = ${foo + 'foo'}"
-    println "$foo + foo = foo + 'foo'"
-
 }
