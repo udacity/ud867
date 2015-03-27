@@ -1,7 +1,7 @@
 /*
     In this series of exercises you'll be developing your knowledge of task
-    dependencies. For these exercieses we've provided some tasks for you.
-    The tasks are all steps requird to pepare a cup of coffee. The end 
+    dependencies. For these exercises we've provided some tasks for you.
+    The tasks are all steps required to prepare a cup of coffee. The end
     result is to be able to prepare either a black or sweetened cup of
     coffee.
 
@@ -12,7 +12,7 @@
     coffee requires me to first brew it.
 
     2. Configure dependencies for the "drink" and "addSweetener" tasks
-    such that adding sweetner requires that my coffee be poured and if
+    such that adding sweetener requires that my coffee be poured and if
     I am adding sweetener, I shouldn't drink my coffee until I've done
     so.
 
@@ -26,7 +26,7 @@
 
     Hint: When considering an "optional" build step, such as sweetening
     my coffee, a "dependsOn" relationship isn't quite appropriate. I
-    don't always want to add sweetener in my coffee, but IF I do, I 
+    don't always want to add sweetener in my coffee, but IF I do, I
     should do so before I take a drink. Take a look at the Gradle user
     guide for more information.
 
