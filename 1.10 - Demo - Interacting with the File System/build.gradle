@@ -7,7 +7,7 @@ task copyTask(type: Copy)
 
 /*
     Of course, this task won't actually do anything because we haven't told it 
-    want file we would like copied and to where. The simplest example is 
+    what file we would like copied and to where. The simplest example is 
     simply to copy the contents of one folder into another. We use the Copy 
     task's "from" method to add sources and the "into" method to specify the 
     destination. The result of the following copy task will imply be to copy 
@@ -21,11 +21,11 @@ task copyImages(type: Copy) {
 
 /*
     The Copy task also supports more advanced configuration like filtering. We 
-    can explicitly tell Gradle files to include to exclude. Our filters can use 
-    wildcards, allowing us to things like include all files that match a 
-    certain pattern or have a particular file extension. Let configure our task 
-    to only include JPEG images by calling the "include" method and passing a 
-    file pattern.
+    can explicitly tell Gradle which files to include to exclude. Our filters 
+    can use wildcards, allowing us to do things like include all files that 
+    match a certain pattern or have a particular file extension. Let configure 
+    our task to only include JPEG images by calling the "include" method and 
+    passing a file pattern.
 */
 
 task copyJpegs(type: Copy) {
@@ -72,7 +72,7 @@ task copyImageFolders(type: Copy) {
     difference is that instead of copying the files to a target directory, 
     files are bundled into an archive file. Using our simple Copy task example, 
     let's create a Zip file that includes all the files in our "images" 
-    directory. We use the Zip tasks "baseName" and "destinationDir"  properties 
+    directory. We use the Zip task's "baseName" and "destinationDir" properties 
     to tell Gradle what to name the file and where to create it, respectively. 
     Note that the "destinationDir" property takes a Java File object. Luckily 
     the Gradle Project interface provides a convenience method for us for 
