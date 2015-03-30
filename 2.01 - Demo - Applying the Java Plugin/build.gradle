@@ -1,5 +1,7 @@
 /*
-	The Java plugin for Gradle allows us to perform a ton of common tasks related to building Java project. The Gradle user guide has great documentation to help you get started with Java.
+	The Java plugin for Gradle allows us to perform a ton of common tasks 
+    related to building Java project. The Gradle user guide has great 
+    documentation to help you get started with Java.
 
 	Here's the Java quickstart guide:
 	https://www.gradle.org/docs/current/userguide/tutorial_java_projects.html
@@ -7,8 +9,9 @@
 	And here's the deeper Java plugin documentation:
 	https://www.gradle.org/docs/current/userguide/java_plugin.html
 
-	We have some very simply
-*/
+	Appling the Java plugin is simple, we need only add a single line to our
+    build script.
+ */
 
 apply plugin: "java"
 
