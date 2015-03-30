@@ -1,5 +1,5 @@
 /*
-    Now that we can declare tasks, it's time to think about the relationships between tasks. For example, in a Java build, we can't JAR up our library before compiling our sources. We model these relationships by task dependencies and ordering. 
+    Now that we can declare tasks, it's time to think about the relationships between tasks. For example, in a Java build, we can't JAR up our library before compiling our sources. We model these relationships by task dependencies and ordering.
 
     We'll discuss three ways to configure the relationships between tasks: `dependsOn`, `finalizedBy`, and `mustRunAfter`.
 
@@ -67,7 +67,7 @@ task putOnScent {
  */
 
 task getReady {
-    // Rememeber that when assigning a collection to a property, we need the 
+    // Remember that when assigning a collection to a property, we need the
     // equals sign
     dependsOn = ["takeShower", "eatBreakfast", "putOnShoes"]
 }
