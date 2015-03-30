@@ -1,0 +1,22 @@
+/* You may often come across situations where there's a part of your build
+script that you'll want to change somewhat regularly. While you're well on your
+way to being a build master, the other developers using your build might not be
+so familiar with Gradle. This is especially true if you expect an automated
+system to be running your build.
+
+Gradle allows you to parametrize your build by adding properties to the project
+object from outside your build script. There are three ways to do this, command
+line arguments, a properties.gradle file, and environment variables.
+
+Let's create a task
+
+
+
+
+
+task bundleWeb(type: Zip) {
+    baseName = 'web'
+    destinationDir = file(webOutputDir)
+
+    from 'src/web'
+}
