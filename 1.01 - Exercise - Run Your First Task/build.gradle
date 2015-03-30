@@ -1,13 +1,16 @@
-/*
-    In this simple Gradle build script we have defined a single task named "hello". As you can see, the task's action simply prints the string "Hello World" to the standard out. 
+/* In this simple Gradle build script we have defined a single task named
+"hello". As you can see, the task's action simply prints the string "Hello
+World" to the standard out.
 
-    Since we haven't installed Gradle yet, we'll execute this task using the Gradle wrapper. The wrapper is a script that will download and install a specified version of Gradle.
+Since we haven't installed Gradle yet, we'll execute this task using the Gradle
+wrapper. The wrapper is a script that will download and install a specified
+version of Gradle.
 
     Challenges:
     1. Use the Gradle wrapper to execute the task "hello".
     2. Modify the action of this task so it instead prints your name.
 
-    Remember that you can always look at the solution.gradle file for guidance!
+Remember that you can always look at the solution.gradle file for guidance!
 */
 
 // TODO: Use the Gradle wrapper to execute the task "hello"
@@ -18,6 +21,18 @@ task hello {
     group "Our demo"
     doLast {
     // TODO: Modify this line to print your name, then run this task again
-        println "Hello World!" 
+        println "Hello World!"
     }
 }
+
+
+
+/*  If you want to get ahead of the curve, this would be a great time to get the
+Gradle Daemon set up. Gradle takes a while to start up each time, mostly because
+it needs to spin up an instance of the JVM. The daemon will hang around in the
+background keeping the JVM alive, making future Gradle invocations faster. On
+Mac/Linux, you can configure Gradle to use daemon using the following line:
+
+echo "org.gradle.daemon = True" >> ~/.gradle/gradle.properties
+
+*/
