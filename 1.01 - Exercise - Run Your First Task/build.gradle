@@ -25,14 +25,27 @@ task hello {
     }
 }
 
+/*  Once you've installed Gradle, you no longer need to use the wrapper script,
+and you can simply use the `gradle` command. */
+
+/* This would be a great time to get the Gradle Daemon set up. Gradle takes a
+while to start up each time, mostly because it needs to spin up an instance of
+the JVM. The daemon will hang around in the background keeping the JVM alive,
+making future Gradle invocations faster.
+
+Gradle stores information in a hidden .gradle directory in your home directory.
+To configure Gradle to use the daemon by default, you can put a
+gradle.properties file in that directory containing the line
+
+    org.gradle.daemon = true
 
 
-/*  If you want to get ahead of the curve, this would be a great time to get the
-Gradle Daemon set up. Gradle takes a while to start up each time, mostly because
-it needs to spin up an instance of the JVM. The daemon will hang around in the
-background keeping the JVM alive, making future Gradle invocations faster. On
-Mac/Linux, you can configure Gradle to use daemon using the following line:
 
-echo "org.gradle.daemon = True" >> ~/.gradle/gradle.properties
+On Mac/Linux, you can configure Gradle
+to always use the daemon by running  following line:
+
+echo "org.gradle.daemon=true" >> ~/.gradle/gradle.properties
+
+On Windoes
 
 */

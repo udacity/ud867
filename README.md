@@ -11,6 +11,7 @@ and a solution.gradle file are also provided.
 ## Lesson 1
 
 * 1.01 - Exercise - Run Your First Task
+* 1.01a - Exercise - Install Groovy (will renumber when we're all done)
 * 1.02 - Demo - Groovy Fundamentals
 * 1.03 - Merged, will renumber when we're all done
 * 1.04 - Exercise - Groovy Playground

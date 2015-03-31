@@ -1,0 +1,22 @@
+
+
+
+
+
+
+
+
+
+
+/*  Once you've installed Gradle, you no longer need to use the wrapper script,
+and you can simply use the `gradle` command. */
+
+/* This would be a great time to get the
+Gradle Daemon set up. Gradle takes a while to start up each time, mostly because
+it needs to spin up an instance of the JVM. The daemon will hang around in the
+background keeping the JVM alive, making future Gradle invocations faster. On
+Mac/Linux, you can configure Gradle to use daemon using the following line:
+
+echo "org.gradle.daemon = True" >> ~/.gradle/gradle.properties
+
+*/
