@@ -12,6 +12,12 @@
        of commons-io.
     3. Add a file dependency that includes all the jars in the 'libs' directory.
     4. Run the 'printDependencies' task to verify the dependencies.
+
+    Hint: You can search for available dependencies in Maven Central online. 
+    Use the following website to find the correct group, name and version
+    for commons-io.
+
+    http://search.maven.org/
  */
 
 apply plugin: 'java'
