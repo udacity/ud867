@@ -1,1 +1,21 @@
-// Placeholder
+/*
+    In this set of exercises we'll be working with Gradle's dependency 
+    management features. Specifically, we'll be declaring repositories and
+    dependency for our project. We've already applied the Java plugin, so no
+    need to do that. Also, we've supplied a simply task you can use to see all
+    the dependencies that have been configured for the 'compile' configuration.
+
+    Exercises:
+
+    1. Configure Maven Central as a repository
+    2. Add a dependency to the 'compile' configuration for the latest version
+       of commons-io.
+    3. Add a file dependency that includes all the jars in the 'libs' directory.
+    4. Run the 'printDependencies' task to verify the dependencies.
+ */
+
+apply plugin: 'java'
+
+task printDependencies << {
+    configurations.compile.each { println it.name }
+}
