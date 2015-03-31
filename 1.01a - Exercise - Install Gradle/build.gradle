@@ -1,9 +1,25 @@
+/*
 
+Typically, whenever we're working with an existing Gradle project, we'll be using the wrapper, because that way we can ensure that everyone working on the project is using the same version of Gradle.
 
+For our purposes, however, it'll be a bit of pain to generate Gradle wrapper scripts for every demo and exercise, so we'll use a local installation instead.
 
+There are a bunch of ways to install Gradle. If you're on Mac and a Homebrew user (and if you aren't you really should be), you can install Gradle with a simple `brew install gradle`. Another option for Mac and Linux is to head over to http://gvmtool.net/ and install the Groovy Environment Manager, and use that to install Gradle. If neither of those options appeals to you, we'll go through the manual installation process for both Windows and Mac.
 
+To install Gradle manually, we need to do three things. First we need to download Gradle. Next we need to put it where we want it on our machine. And finally we need to let the system know where to find it. We'll do the Mac. instructions first. Skip below for the Windows instructions
 
+Mac instructions:
 
+First, head over to https://gradle.org/downloads/, and download the latest version of Gradle. Next, we'll unzip Gradle and move it to where we want it to live. Our recommendation is in `/usr/local/gradle`. Then we need to add some lines to the /.bash_profile file to tell the system where to find our new installation of Gradle. You can do all these steps manually, but the easiest way is to paste the whole big block of instructions below into your terminal. Note that you may need to change the version number on the first and third lines.
+
+unzip ~/Downloads/gradle-2.3-all.zip -d /usr/local/gradle/ &&\
+echo '# Adding Gradle to system path
+export GRADLE_HOME=/usr/local/gradle/gradle-2.3
+PATH=$GRADLE_HOME/bin:$PATH
+export PATH
+# Turning on the Gradle daemon by default
+export GRADLE_OPTS="-Dorg.gradle.daemon=true"' >> ~/.bash_profile &&\
+source ~/.bash_profile
 
 
 
@@ -15,7 +31,7 @@ and you can simply use the `gradle` command. */
 Gradle Daemon set up. Gradle takes a while to start up each time, mostly because
 it needs to spin up an instance of the JVM. The daemon will hang around in the
 background keeping the JVM alive, making future Gradle invocations faster. On
-Mac/Linux, you can configure Gradle to use daemon using the following line:
+Mac, you can configure Gradle to use daemon using the following line:
 
 echo "org.gradle.daemon = True" >> ~/.gradle/gradle.properties
 
