@@ -1,0 +1,10 @@
+/*
+    Solution:
+ */
+
+apply plugin: 'java' // 1. Apply the Java plugin to the project
+
+task solutionExecute(type: JavaExec) {
+    main = "com.udacity.gradle.Person"
+    classpath = sourceSets.main.runtimeClasspath
+}

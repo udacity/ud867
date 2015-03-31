@@ -1,1 +1,33 @@
-// Placeholder
+/*
+
+
+
+Use import project targeting this gradle file
+
+Select Cancel on the use gradle wrapper box
+
+let it use it's local version of gradle
+
+change view to project layout
+
+open gradle pane on the right to view tasks
+
+Tell thm about the referesh button on the gradle tasks pane
+
+TODO: Figure out when the gradle console actually get's used
+
+Suspect that the gradle console is only used for multiproject builds, but need to confirm
+
+Also show where to open the terminal
+
+*/
+
+
+task helloWorld << {
+    println "Hello from Android Studio"
+}
+
+task otherTask(dependsOn: helloWorld) << {
+
+    println "Hello from the other task"
+}
