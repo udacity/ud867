@@ -1,1 +1,27 @@
-// Placeholder
+/*
+    We talked about the Gradle wrapper briefly at the beginning of the first
+    lesson. The Gradle wrapper is comprised of a pair of scripts, a shell script
+    for Unix and Mac operating systems, and a batch script for Windows. These 
+    execute your build via a wrapper that will automatically download Gradle if
+    it hasn't done so already. Essentially, the wrapper allows developers to
+    use Gradle to build your project without have to actually download and 
+    install Gradle itself.
+
+    The Gradle wrapper can be initialized by running the 'wrapper' task. The
+    'wrapper' task is available on every Gradle project. This task will set up
+    the wrapper by generating the wrapper scripts as well as adding the wrapper
+    jar and properties files to your project. The wrapper scripts are placed in
+    the root of your project directory and the other files in the 
+    'gradle/wrapper' directory.
+
+    We can now run our Gradle build by using the wrapper scripts. We use the 
+    scripts identically to how we would the 'gradle' command. 
+
+        $ ./gradlew tasks
+
+    
+ */
+
+wrapper {
+    gradleVersion = '2.2'
+}
