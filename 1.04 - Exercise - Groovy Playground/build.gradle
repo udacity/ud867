@@ -3,35 +3,28 @@
 */
 
 /*
-    Let's check out two super convinient Groovy features: dynamic typing, and string interpolation. Dynamic typing means that type checking happens at run time, which means you don't need to declare the types of variables. String interpolation is a feature that allows us to build up strings very conviently.
+    Let's check out two super convenient Groovy features: dynamic typing, and string interpolation. Dynamic typing means that type checking happens at run time, which means you don't need to declare the types of variables. String interpolation is a feature that allows us to build up strings very conveniently.
 
-    Just run the stringsAndTypes task to get started! Note that Gradle allows you to abbriviate task names. You can run this task using `gradle sAT`
+    Just run the stringsAndTypes task to get started! Note that Gradle allows you to abbreviate task names. You can run this task using `gradle sAT`
 */
 
 task stringsAndTypes << {
     // TODO: Create a variable named foo and assign it the value 4.2
-    def foo = 4.2
 
     // TODO: Print the value and class of foo
-    println "foo is of type: ${foo.class} and has value: $foo"
 
     // TODO: Use string interpolation to print the square root of 127
     // HINT: http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html
-    println "The square root of 127 is ${Math.sqrt(127)}"
 
     // TODO: Assign the current date to foo and print it, along with its type
     // HINT:
     // http://docs.oracle.com/javase/7/docs/api/java/util/package-summary.html
-    foo = new java.util.Date()
-    println "foo is now of type: ${foo.class} and has value: $foo"
-
 
     // TODO: Use the `substring` method to extract my name from this string
     def hello = "Hello, Jeremy.";
-    def name = hello.substring(7, 13);
 
     // TODO: Use `toUpperCase` to capitalize and print my name
-    println name.toUpperCase();
+
 }
 
 /*
@@ -41,17 +34,18 @@ task stringsAndTypes << {
 task closures << {
     // TODO: Declare a closure that takes two arguments and adds them together
     // HINT: http://groovy.codehaus.org/Closures
-    def addTwo = {x, y -> x + y}
 
     // TODO: Call your closure with arguments 17 and 25, and print the result
-    // Beware that something like `println addTwo 17, 25` is ambigious
+    // Beware that something like `println addTwo 17, 25` is ambiguous
 }
 
 task lists << {
-    // TODO: Declare a list containing 5 of your favoite candies
+    // TODO: Declare a list containing 5 of your favorite candies
     // HINT: Try searching for "groovy list literal"
 
     // TODO: Create a new list of your candies in all caps
     // HINT: http://groovy.codehaus.org/Tutorial+2+-+Code+as+data,+or+closures
+
+    // TODO: Print each capital candy
 
 }
