@@ -9,7 +9,7 @@ To install Gradle manually, we need to do three things. First we need to downloa
 
 ******************* Mac Instructions *************
 
-First, head over to https://gradle.org/downloads/, and download the latest version of Gradle. Next, we'll unzip Gradle and move it to where we want it to live. Our recommendation is in `/usr/local/gradle`. Then we need to add some lines to the /.bash_profile file to tell the system where to find our new installation of Gradle. You can do all these steps manually, but the easiest way is to paste the whole big block of instructions below into your terminal. Note that you may need to change the version number on the first and third lines.
+First, head over to https://gradle.org/downloads/, and download the latest version of Gradle. Next, we'll unzip Gradle and move it to where we want it to live. Our recommendation is in `/usr/local/gradle`. Then we need to add some lines to the /.bash_profile file to tell the system where to find our new installation of Gradle. You can do all these steps manually, but the easiest way is to paste the whole big block of instructions below into your terminal. Note that you may need to change the version number on the first and third lines. This instruction also adds an environment variable that turns on the Gradle daemon by default.
 
 unzip ~/Downloads/gradle-2.3-all.zip -d /usr/local/gradle/ &&\
 echo '# Adding Gradle to system path
@@ -19,6 +19,8 @@ export PATH
 # Turning on the Gradle daemon by default
 export GRADLE_OPTS="-Dorg.gradle.daemon=true"' >> ~/.bash_profile &&\
 source ~/.bash_profile
+
+When you're done, run `gradle --version` to ensure the installation is complete.
 
 ******************* Windows Instructions *******************
 
@@ -36,20 +38,21 @@ Your path will then look something like:
 
     <a bunch of directories>;%GRADLE_HOME%\bin
 
+When you're done, run `gradle --version` to ensure the installation is complete.
+
+Finally, let's add a properties file to tell Gradle to use the daemon by default. All we need to do is put a file named gradle.properties in C:\Users\<your username>\.gradle, and add the line `org.gralde.daemon=true`.
+
 ******************* When you're done *******************
 
 Once you've installed Gradle, you no longer need to use the wrapper script,
 and you can simply use the `gradle` command. To see if Gradle was installed successfully, try running `gradle --version`.
 
-Try using `gradle helloWorld` to run the task below using your new local installation.
+To see the effect of the Gradle daemon, first run `gradle --stop` to stop the daemon, then run `gradle helloWorld`, and note how long it takes. Then run `gradle helloWorld` again, and see how much faster the second run is.
 */
 
-task << helloWorld {
+task helloWorld << {
     println "Hello, World!"
 }
-
-
-
 
 /*
 ************ Java Installation Instructions **********
