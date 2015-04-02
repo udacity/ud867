@@ -40,7 +40,7 @@ Your path will then look something like:
 
 When you're done, run `gradle --version` to ensure the installation is complete.
 
-Finally, let's add a properties file to tell Gradle to use the daemon by default. All we need to do is put a file named gradle.properties in C:\Users\<your username>\.gradle, and add the line `org.gralde.daemon=true`.
+Finally, let's add a properties file to tell Gradle to use the daemon by default. All we need to do is put a file named gradle.properties in C:\Users\<your username>\.gradle, and add the line `org.gradle.daemon=true`.
 
 ******************* When you're done *******************
 
