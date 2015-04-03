@@ -24,13 +24,11 @@ Oh right. We need to pass in the value of the greeting we want to use. Let's
 first do this using a gradle.properties file. We'll create that file, and add
 the line:
 
-greeting = "Hello from a properties file"
+    greeting = "Hello from a properties file"
 
-Now if we run `printGreeting` again, we get the output we expect.
+Now if we run `printGreeting` again, we get the output we expect. The other way to set properties is on the command line. Let's run
 
-The other way to set properties is on the command line. Let's run
-
-gradle -Pgreeting="Hello from the command line" pG
+    gradle -Pgreeting="Hello from the command line" pG
 
 Note that the `greeting` property is now defined in two places, the gradle.properties file, and from the commend line. The command line value overrides the value in the properties file.
 

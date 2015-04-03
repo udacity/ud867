@@ -30,7 +30,7 @@ This course is specifically concerned with the app build process, not writing ap
 * 1.13 - Exercise - Gradle Properties
 * 1.14 - Demo - Creating Custom Task Types
 * 1.15 - Exercise - Creating Your Own Task Type
-* 1.16 - Exercise - Logging From Gradle
+* 1.16-Exercise-InvestigateLogging
 * 1.17 - Exercise - Task Rules
 * 1.18 - Exercise - Build Lifecycle
 

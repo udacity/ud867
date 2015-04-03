@@ -55,10 +55,9 @@ dependency relationship, but if we're running both, we would really like the
 unit tests to run before the integration tests.
 
 To continue our morning routine example, let's consider showering and putting
-on a scent like perfume or cologne. Putting on a scent doesn't require
-showering, and showering doesn't require putting on a scent, but if we're
-going to both take a shower and also put on a scent, we should take the shower
-first. Let's create those tasks. */
+on a fragrance like perfume or cologne. Putting on a fragrance doesn't require
+showering, and showering doesn't require putting on a fragrance, but if we're
+going to both take a shower and also put on a fragrance, we should take the shower first. Let's create those tasks and the relationship between them. */
 
 task takeShower {
     doLast {
@@ -66,14 +65,14 @@ task takeShower {
     }
 }
 
-task putOnScent {
+task putOnFragrance {
     shouldRunAfter "takeShower"
     doLast{
         println "Smellin' fresh!"
     }
 }
 
-/* Now if we run `gradle putOnScent takeShower`, we see that we do the tasks
+/* Now if we run `gradle putOnFragrance takeShower`, we see that we do the tasks
 in the proper order.
 
 Let's check out a few other things we can do with task dependencies. We can

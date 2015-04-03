@@ -1,14 +1,14 @@
 /*
- * In this series of exercises you'll be exploring how Gradle handles various 
+ * In this series of exercises you'll be exploring how Gradle handles various
  * logging outputs during the build process. We'll look at how to add logging
  * statements to your build as well as how to use the various command line
- * otions to adjust the amount of logging output we recieve. 
+ * otions to adjust the amount of logging output we recieve.
  *
- * Exercises: 
- * 
+ * Exercises:
+ *
  * 1. Add logging statements at the beginning and end of the task action for
  *    the HelloTask at the INFO level.
- * 2. Execute the "hello" task with the appropriate command line options such 
+ * 2. Execute the "hello" task with the appropriate command line options such
  *    that our newly added logging statements are shown in the console output.
  * 3. Modify the `println()` call in our task action to instead by a logging
  *    statement at the LIFECYCLE level.
