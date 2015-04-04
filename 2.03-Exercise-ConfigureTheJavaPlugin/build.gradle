@@ -1,5 +1,5 @@
 /*
-    In this series of exercises we'll be building on our existing knowledge of 
+    In this series of exercises we'll be building on our existing knowledge of
     the Java plugin. While the Java plugin defaults are sufficient for many
     projects, we will typically need to add additional configuration.
 
@@ -14,7 +14,7 @@
     5. Confirm that the build JAR contains classes from the 'java' source
        directory.
 
-    Hint: Take a look at the Gradle DSL documentaiton for the Jar task for 
+    Hint: Take a look at the Gradle DSL documentation for the Jar task for
     information on modifying the generated manifest.
 
     http://gradle.org/docs/current/dsl/org.gradle.api.tasks.bundling.Jar.html

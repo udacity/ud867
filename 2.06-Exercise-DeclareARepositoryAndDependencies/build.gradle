@@ -1,7 +1,7 @@
 /*
-    In this set of exercises we'll be working with Gradle's dependency 
+    In this set of exercises we'll be working with Gradle's dependency
     management features. Specifically, we'll be declaring repositories and
-    dependency for our project. We've already applied the Java plugin, so no
+    dependencies for our project. We've already applied the Java plugin, so no
     need to do that. Also, we've supplied a simply task you can use to see all
     the dependencies that have been configured for the 'compile' configuration.
 
@@ -13,7 +13,7 @@
     3. Add a file dependency that includes all the jars in the 'libs' directory.
     4. Run the 'printDependencies' task to verify the dependencies.
 
-    Hint: You can search for available dependencies in Maven Central online. 
+    Hint: You can search for available dependencies in Maven Central online.
     Use the following website to find the correct group, name and version
     for commons-io.
 

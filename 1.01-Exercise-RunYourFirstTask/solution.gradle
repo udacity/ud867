@@ -1,29 +1,30 @@
 /*
-    Solution:
 
-    On Mac/Linux, you can use the Gradle wrapper to run the `hello` task using:
+On Mac/Linux, you can use the Gradle wrapper to run the `hello` task using:
 
-        ./gradlew hello
+    ./gradlew hello
 
-    If you're running into permissions issues, try:
+If you're running into permissions issues, try:
 
-        sh gradlew hello
+    sh gradlew hello
 
-    On Windows, it's simply:
+On Windows, it's simply:
 
-        gradlew hello
+    gradlew hello
 
-    To tell Gradle to use this file as the build script instead of the default build.gradle, use:
+To tell Gradle to use this solution file as the build script instead of the
+default build.gradle, use:
 
-        ./gradlew -b solution.gradle hello
+    ./gradlew -b solution.gradle hello
+
+I hope this first exercise was fun! They'll get tougher, I promise. Oh, and in
+case you were wondering, my favorite candy is jelly beans.
+
 */
 
 task hello {
     doLast {
-        // 2. This statement has simply been modified to include my name.
+        // This statement has simply been modified to include my name.
         println "Hello, Jeremy"
     }
 }
-
-
-// Btw, my favorite candy is Jelly Beans :)

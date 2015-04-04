@@ -1,5 +1,0 @@
-/*
-    Solution:
- */
-
-apply plugin: 'java' // 1. Apply the Java plugin to the project

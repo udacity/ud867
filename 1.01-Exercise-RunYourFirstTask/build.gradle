@@ -1,51 +1,28 @@
-/* In this simple Gradle build script we have defined a single task named
+/*
+
+Welcome to the first exercise in ud867! Have fun, and remember that you can
+always check out the solution.gradle file for help!
+
+In this simple Gradle build script we have defined a single task named
 "hello". As you can see, the task's action simply prints the string "Hello
-World" to the standard out.
+World" to the standard output.
 
-Since we haven't installed Gradle yet, we'll execute this task using the Gradle
-wrapper. The wrapper is a script that will download and install a specified
-version of Gradle.
+Since we haven't installed Gradle yet, we'll execute this task using the
+Gradle wrapper. The wrapper is a script that will download and install a
+specified version of Gradle.
 
-    Challenges:
-    1. Use the Gradle wrapper to execute the task "hello".
-    2. Modify the action of this task so it instead prints your name.
+Challenges:
+  1. Use the Gradle wrapper to execute the task "hello".
+  2. Modify the action of this task so it instead prints your name.
 
-Remember that you can always look at the solution.gradle file for guidance!
+Remember that you can always look at the solution.gradle file for Help!
+
 */
-
-// TODO: Use the Gradle wrapper to execute the task "hello"
-// HINT: Go check out the solution.gradle file!
 
 task hello {
     description "Hey student! Run this one :D"
     group "Our demo"
     doLast {
-    // TODO: Modify this line to print your name, then run this task again
         println "Hello World!"
     }
 }
-
-/*  Once you've installed Gradle, you no longer need to use the wrapper script,
-and you can simply use the `gradle` command. */
-
-/* This would be a great time to get the Gradle Daemon set up. Gradle takes a
-while to start up each time, mostly because it needs to spin up an instance of
-the JVM. The daemon will hang around in the background keeping the JVM alive,
-making future Gradle invocations faster.
-
-Gradle stores information in a hidden .gradle directory in your home directory.
-To configure Gradle to use the daemon by default, you can put a
-gradle.properties file in that directory containing the line
-
-    org.gradle.daemon = true
-
-
-
-On Mac/Linux, you can configure Gradle
-to always use the daemon by running  following line:
-
-echo "org.gradle.daemon=true" >> ~/.gradle/gradle.properties
-
-On Windoes
-
-*/

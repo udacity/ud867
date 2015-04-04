@@ -1,6 +1,6 @@
 /*
-    In this series of execises we will be working with configurations. We've 
-    provided some source code that requires some additional dependencies in 
+    In this series of exercises we will be working with configurations. We've
+    provided some source code that requires some additional dependencies in
     order to properly compile.
 
     Exercises:
@@ -11,12 +11,12 @@
        the 'deps' configuration.
     4. Build the project and ensure there are no errors.
     5. Add a task called 'zipDeps' that creates a Zip file including all the
-       files from the 'deps' configuration. Assign a classifer of 'deps' to the
+       files from the 'deps' configuration. Assign a classifier of 'deps' to the
        archive.
     6. Run the 'zipDeps' task and confirm it includes the 'guava' JAR.
 
     Hint: Take a look at the Configuration DSL Reference page for how to make
-    a configuration extend from another.
+    one configuration extend from another.
 
     http://gradle.org/docs/current/dsl/org.gradle.api.artifacts.Configuration.html
  */

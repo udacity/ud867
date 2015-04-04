@@ -7,9 +7,9 @@ Gradle provides its own Groovy distribution, so we don't even need to install
 Groovy. We can just put our Groovy code in a build.gradle file, and then ask
 Gradle to do anything that requires reading the build script.
 
-We'll just declare a task called `groovy` that doesn't do anything. To run this
-script, just execute the `groovy` task. Check out the solution to the "Run Your
-First Task" exercise for a refresher on how to run tasks.
+We'll just declare a task called `groovy` that doesn't do anything. To run
+this script, just execute the `groovy` task. Check out the solution to the
+"Run Your First Task" exercise for a refresher on how to run tasks.
 
 If you're using Sublime Text, you can turn on Groovy syntax coloring by
 selecting View -> Syntax -> Open all with current extension as... -> Groovy */
@@ -18,8 +18,8 @@ task groovy << {}
 
 println "Hello Groovy!"
 
-/* Most valid Java is also valid Groovy, and we can interoperates with Java, as
-well as access the standard library. Let's make a Java class. */
+/* Most valid Java is also valid Groovy, and we can interoperates with Java,
+as well as access the standard library. Let's make a Java class. */
 
 class JavaGreeter {
     public static void sayHello() {
@@ -35,13 +35,14 @@ That also means you don't need to declare the types of variables. */
 
 def foo = 6.5
 
-/* Groovy makes is super easy to build up strings using string interpolation. A
-variable name prefaced with a dollar sign will have the appropriate value
+/* Groovy makes is super easy to build up strings using string interpolation.
+A variable name prefaced with a dollar sign will have the appropriate value
 inserted. */
 
 println "foo has value: $foo"
 
-/* We can also surround any Groovy code with a dollar sign and curly braces. */
+/* We can also surround any Groovy code with a dollar sign and curly braces.
+*/
 
 println "Let's do some math. 5 + 6 = ${5 + 6}"
 
@@ -53,8 +54,8 @@ foo = "a string"
 println "foo is now of type: ${foo.class} and has value: $foo"
 
 /* The `println` keyword is just a shortcut for `System.out.println`, but
-you've probably noticed that we're not using any parentheses, and there's not a
-semicolon in sight. The latter are always optional, and parentheses can be
+you've probably noticed that we're not using any parentheses, and there's not
+a semicolon in sight. The latter are always optional, and parentheses can be
 omitted whenever a function is called with at least one argument, and the
 assignment of arguments to function calls is unambiguous.
 
@@ -65,9 +66,9 @@ def doubleIt(n) {
     n + n // Note we don't need a return statement
 }
 
-/* Note that we don't need to specify the type of the arguments, nor the return
-type. We don't even need to supply a return statement. The last expression in
-the block is returned. Let's give it a try. */
+/* Note that we don't need to specify the type of the arguments, nor the
+return type. We don't even need to supply a return statement. The last
+expression in the block is returned. Let's give it a try. */
 
 foo = 5
 println "doubleIt($foo) = ${doubleIt(foo)}"
@@ -102,8 +103,8 @@ noArgs()
 twoArgs oneArg(500), 200 // Fixed the ambiguity
 
 /* Groovy has another way to declare functions called closures. Closures have
-two interesting features. First, they are just values that can be assigned to a
-variable, just like a number or a string. Second, they can capture variables
+two interesting features. First, they are just values that can be assigned to
+a variable, just like a number or a string. Second, they can capture variables
 from the scope in which they're declared. */
 
 def myClosure = {

@@ -1,9 +1,9 @@
 /*
     Gradle groups dependencies into what it calls Configurations. You can think
-    of configurations as just buckets to put dependencies in. We've already 
+    of configurations as just buckets to put dependencies in. We've already
     been working with configurations. So far we've been adding dependencies to
     the 'compile' configuration, which is created by the 'Java' plugin. The
-    Java plugin creates other configurations as well, such as runtime, 
+    Java plugin creates other configurations as well, such as runtime,
     testCompile and testRuntime. Each configuration is used for a different
     purpose by the Java plugin. The 'compile' configuration is used to create
     the main source compile classpath, and 'testCompile' for our test code.
@@ -24,10 +24,10 @@ dependencies {
 
 /*
     Here we have added a dependencies to the 'testCompile' configuration. This
-    dependency will only be available from our test code. Additionally, 
-    configurations can extend from other configurations, meaning that 
+    dependency will only be available from our test code. Additionally,
+    configurations can extend from other configurations, meaning that
     dependencies from one will be included in another. In the case of the Java
-    plugin, the 'testCompile' configuration extends from the 'compile' 
+    plugin, the 'testCompile' configuration extends from the 'compile'
     configuration, which means that 'compile' dependencies are included in
     'testCompile'. We can verify this by running a dependency report.
 
@@ -37,10 +37,10 @@ dependencies {
     'commons-logging' dependency, however, 'testCompile' contains both 'junit'
     and 'commons-logging'.
 
-    We can additionaly create new configurations. This is useful for organizing
+    We can additionally create new configurations. This is useful for organizing
     dependencies that don't necessarily belong to one of the configurations
     created by the Java plugin, or in cases where you aren't using the Java
-    plugin. Creating a new configuration is simply, just add it to the 
+    plugin. Creating a new configuration is simply, just add it to the
     `configurations` script block. We can then assign dependencies to this
     configuration.
  */
@@ -55,14 +55,14 @@ dependencies {
 
 /*
     We can now run a dependency report to see that we have a new project
-    configuraiton named 'custon' with the 'guava' dependency.
+    configuration named 'custom' with the 'guava' dependency.
 
         $ gradle dependencies
 
     Configurations are really just fancy file collections and they implement the
     same interface so we can treat them as such. This means configurations can
     be used anywhere a file collection can be used, such as in Copy tasks. This
-    is useful when we want to download some dependencies from a remote 
+    is useful when we want to download some dependencies from a remote
     repository and bundle them in our project somehow.
  */
 

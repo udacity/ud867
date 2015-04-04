@@ -4,7 +4,7 @@
     store for artifacts. In this section we'll go over how to configure
     repositories in your build script. We'll start with how to declare a flat
     directory repository. A flat directory repository should be used for
-    dependencies that aren't manageed in remote repositories and instead are
+    dependencies that aren't managed in remote repositories and instead are
     included as part of our project. Configuring a repository in our Gradle
     build script is simple. All repository configuration is done inside a
     `repositories { }` script block. For a flat directory repository we add
@@ -18,10 +18,10 @@ repositories {
 }
 
 /*
-    As well as flat directory repositories, Gradle also supports resolving 
+    As well as flat directory repositories, Gradle also supports resolving
     managed dependencies from Maven and Ivy repositories. The syntax for both
     is the same. Simply place your configuration in an `ivy` or `maven` block.
-    For both Ivy and Maven repositories, the only required configuration 
+    For both Ivy and Maven repositories, the only required configuration
     element is the location of the repository, expressed as a URL.
  */
 
@@ -33,7 +33,7 @@ repositories {
 
 /*
     In some cases, credentials may be required to access a repository. You can
-    easily provide a username and password by placing them inside a 
+    easily provide a username and password by placing them inside a
     `credentials` block.
  */
 
@@ -48,7 +48,7 @@ repositories {
 }
 
 /*
-    Gradle supports a number of protocols for accessing repositories. In 
+    Gradle supports a number of protocols for accessing repositories. In
     addition to the standard HTTP and HTTPS, Gradle also supports SFTP and file
     based repositories.
  */
@@ -61,8 +61,8 @@ repositories {
 
 /*
     The `repositories` script block also allows you to use shortcut methods for
-    commonly used repositories such as Maven Central, Maven Local, or jCenter. 
-    Simply call the appropriate method and the repository will by automatically 
+    commonly used repositories such as Maven Central, Maven Local, or jCenter.
+    Simply call the appropriate method and the repository will by automatically
     added.
  */
 

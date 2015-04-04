@@ -1,14 +1,14 @@
 /*
     Now that we've configured repositories, we can now define dependencies
     to artifacts contained in those repositories. Dependencies that are resolved
-    from repositories are referred to as 'external module dependencies'. 
+    from repositories are referred to as 'external module dependencies'.
     Dependencies are assigned to 'configurations'. We'll talk more about
-    configuration in detail later but for now you can simply consider them to 
+    configuration in detail later but for now you can simply consider them to
     be groups of related dependencies. For the examples here we'll be adding
-    dependencies to the 'compile' configuraiton which is added by the Java
+    dependencies to the 'compile' configuration which is added by the Java
     plugin. Dependencies are configured in the `dependencies { }` script block.
-    The syntax used is the name of the configuration we want to add the 
-    dependency to, followed by a dependency notation. External module 
+    The syntax used is the name of the configuration we want to add the
+    dependency to, followed by a dependency notation. External module
     dependencies are identified by their group, name and version, like so.
  */
 
@@ -28,9 +28,9 @@ dependencies {
     In some cases we may not be able to use managed dependencies, that is,
     dependencies that are stored in artifact repositories. In those cases, we
     simply have files that we want to add as dependencies, typically by just
-    adding them to our project's classpath. We call these simply, file 
+    adding them to our project's classpath. We call these simply, file
     dependencies, since we are depending on an actual file that lives somewhere
-    on the file system, most commonly, inside our project somehwere. File
+    on the file system, most commonly, inside our project somewhere. File
     dependencies are declared very similarly to module dependencies, however,
     instead of a dependency notation, we simply use a `FileCollection` or
     `FileTree`. In this example, we are simply adding two JAR files as
@@ -43,7 +43,7 @@ dependencies {
 
 /*
     We can also use a `FileTree`, which allows us to do things like specify
-    filters. This is useful for including a number of files withing a
+    filters. This is useful for including a number of files within a
     directory.
  */
 

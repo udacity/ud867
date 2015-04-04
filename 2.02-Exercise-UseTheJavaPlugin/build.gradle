@@ -1,5 +1,11 @@
 /*
-    In this series of exercises we will be working with the Java plugin and 
+
+Let's build an run some Java
+
+Let's use the Java plugin to create a JAR! This directory has a super simple Java some Java source in.
+
+
+    In this series of exercises we will be working with the Java plugin and
     some of the functionality it adds to our build. Specifically, we'l be using
     the Java plugin to package our compiled code into a JAR file. We've provided
     a simple project with a single class for you to practice with.
