@@ -1,5 +1,10 @@
 /*
-    Welcome to the solutions to the Groovy Playground exercise! You can run these tasks by telling Gradle to use this build script, instead of the default build.gradle. Run `gradle -b solution.gradle stringsAndTypes` to run the task below.
+
+Welcome to the solutions to the Groovy Playground exercise! You can run these
+tasks by telling Gradle to use this build script, instead of the default
+build.gradle. Run `gradle -b solution.gradle stringsAndTypes` to run the task
+below.
+
 */
 
 task stringsAndTypes << {
