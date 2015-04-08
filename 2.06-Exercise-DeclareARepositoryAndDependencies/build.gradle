@@ -2,7 +2,7 @@
     In this set of exercises we'll be working with Gradle's dependency
     management features. Specifically, we'll be declaring repositories and
     dependencies for our project. We've already applied the Java plugin, so no
-    need to do that. Also, we've supplied a simply task you can use to see all
+    need to do that. Also, we've supplied a simple task you can use to see all
     the dependencies that have been configured for the 'compile' configuration.
 
     Exercises:

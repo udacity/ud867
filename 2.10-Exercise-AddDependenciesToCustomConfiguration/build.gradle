@@ -1,25 +1,27 @@
 /*
-    In this series of exercises we will be working with configurations. We've
-    provided some source code that requires some additional dependencies in
-    order to properly compile.
 
-    Exercises:
+In this series of exercises we will be working with configurations. We've
+provided some source code that requires some additional dependencies in order
+to properly compile.
 
-    1. Create a new configuration called 'deps'
-    2. Make the 'compile' configuration extend from the 'deps' configuration.
-    3. Add a dependency to the latest version of Google's 'guava' library to
-       the 'deps' configuration.
-    4. Build the project and ensure there are no errors.
-    5. Add a task called 'zipDeps' that creates a Zip file including all the
-       files from the 'deps' configuration. Assign a classifier of 'deps' to the
-       archive.
-    6. Run the 'zipDeps' task and confirm it includes the 'guava' JAR.
+Exercises:
 
-    Hint: Take a look at the Configuration DSL Reference page for how to make
-    one configuration extend from another.
+1. Create a new configuration called 'deps'
+2. Make the 'compile' configuration extend from the 'deps' configuration.
+3. Add a dependency to the latest version of Google's 'guava' library to
+   the 'deps' configuration.
+4. Build the project and ensure there are no errors.
+5. Add a task called 'zipDeps' that creates a Zip file including all the
+   files from the 'deps' configuration. Assign a classifier of 'deps' to the
+   archive.
+6. Run the 'zipDeps' task and confirm it includes the 'guava' JAR.
 
-    http://gradle.org/docs/current/dsl/org.gradle.api.artifacts.Configuration.html
- */
+Hint: Take a look at the Configuration DSL Reference page for how to make
+one configuration extend from another.
+
+http://gradle.org/docs/current/dsl/org.gradle.api.artifacts.Configuration.html
+
+*/
 
 apply plugin: 'java'
 

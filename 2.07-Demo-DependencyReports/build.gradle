@@ -1,16 +1,18 @@
 /*
-    Gradle provides a couple of different ways to visualize dependencies. Two
-    separate reports are provided. A traditional dependency report which shows
-    the complete graph of dependencies. Additionally, Gradle provides a
-    dependency insight report for identifying how a particular dependency is
-    included in your project.
 
-    We'll start by taking a look at the regular dependency report. Here we have
-    a simple Java project with a single dependency, in this case, to the spring
-    core library. We can get a dependency report from Gradle by simply running
-    the 'dependencies' task.
+Gradle provides a couple of different ways to visualize dependencies. Two
+separate reports are provided. A traditional dependency report which shows the
+complete graph of dependencies. Additionally, Gradle provides a dependency
+insight report for identifying how a particular dependency is included in your
+project.
 
-        $ gradle dependencies
+We'll start by taking a look at the regular dependency report. Here we have a
+simple Java project with a single dependency, in this case, to the spring core
+library. We can get a dependency report from Gradle by simply running the
+'dependencies' task.
+
+    $ gradle dependencies
+
  */
 apply plugin: 'java'
 
@@ -23,57 +25,61 @@ dependencies {
 }
 
 /*
-    As you can see, Gradle displays all the project dependencies, as well as
-    transitive dependencies. The report also breaks out dependencies by each
-    configuration. If we want to see only the dependencies for a particular
-    configuration we can specify one with the '--configuration' command-line
-    option.
 
-        $ gradle dependencies --configuration runtime
+As you can see, Gradle displays all the project dependencies, as well as
+transitive dependencies. The report also breaks out dependencies by each
+configuration. If we want to see only the dependencies for a particular
+configuration we can specify one with the '--configuration' command-line
+option.
 
-    The dependency insight report shows details about how a particular
-    dependency is included in our project. This report is especially helpful
-    when identifying conflicts. To get a dependency insight report, run the
-    'dependencyInsight' task. You're required to specify the dependency you're
-    interested, which can be done with the '--dependency' command-line option.
-    Let's run an insight report on the 'commons-logging' dependency.
+    $ gradle dependencies --configuration runtime
 
-        $ gradle dependencyInsight --dependency commons-logging
+The dependency insight report shows details about how a particular dependency
+is included in our project. This report is especially helpful when identifying
+conflicts. To get a dependency insight report, run the 'dependencyInsight'
+task. You're required to specify the dependency you're interested, which can
+be done with the '--dependency' command-line option. Let's run an insight
+report on the 'commons-logging' dependency.
 
-    We can tell from the result of our report that 'commons-logging' is a
-    dependency of 'spring-core', which in turn is one of our project's compile
-    dependencies.
+    $ gradle dependencyInsight --dependency commons-logging
 
-    We mentioned that one of main usages of dependency reports is to help
-    idenfity dependency conflicts. Let's know introduce a conflict and see how
-    this affects the output of our reports. Let's add an explicit dependency to
-    version 1.2 of the 'commons-logging' library to our project.
- */
+We can tell from the result of our report that 'commons-logging' is a
+dependency of 'spring-core', which in turn is one of our project's compile
+dependencies.
+
+We mentioned that one of main usages of dependency reports is to help identify
+dependency conflicts. Let's know introduce a conflict and see how this affects
+the output of our reports. Let's add an explicit dependency to version 1.2 of
+the 'commons-logging' library to our project.
+
+*/
 
 dependencies {
     compile 'commons-logging:commons-logging:1.2'
 }
 
 /*
-    Let's start by running the dependencies task again.
 
-        $ gradle dependencies
+Let's start by running the dependencies task again.
 
-    As you can see, 'commons-logging' is now listed twice in our dependency
-    report. In this case you can see that our project depends on version 1.2,
-    where as 'spring-core' depends on version 1.1.3. This introduces a conflict
-    of course, which Gradle will then attempt to resolve. By default, Gradle
-    resolves version conflicts to the newest version, in this case 1.2. In our
-    report this is indicated with the arrow, showing us that version 1.2 is
-    being chosen over 1.1.3.
+    $ gradle dependencies
 
-    We can get similar information from the dependency insight report. Let's
-    run this report and see the results.
+As you can see, 'commons-logging' is now listed twice in our dependency
+report. In this case you can see that our project depends on version 1.2,
+where as 'spring-core' depends on version 1.1.3. This introduces a conflict of
+course, which Gradle will then attempt to resolve. By default, Gradle resolves
+version conflicts to the newest version, in this case 1.2. In our report this
+is indicated with the arrow, showing us that version 1.2 is being chosen over
+1.1.3.
 
-        $ gradle dependencyInsight --dependency commons-logging
+We can get similar information from the dependency insight report. Let's run
+this report and see the results.
 
-    Again we can see that the dependency is show twice in the report. At the top
-    we see that Gradle has chosen version 1.2. Additionally, Gradle displays the
-    reason this particular version was chosen. In this case, it was chose due to
-    dependency conflict resolution.
- */
+    $ gradle dependencyInsight --dependency commons-logging
+
+Again we can see that the dependency is show twice in the report. At the top
+we see that Gradle has chosen version 1.2. Additionally, Gradle displays the
+reason this particular version was chosen. In this case, it was chosen due to
+dependency conflict resolution.
+
+*/

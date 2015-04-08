@@ -1,36 +1,75 @@
 /*
-The Java plugin for Gradle allows us to perform a ton of common tasks
-related to building Java project. The Gradle user guide has great
-documentation to help you get started with Java.
 
-Appling the Java plugin is simple, we need only add a single line to our build script.
- */
-
-apply plugin: "java"
-
-/* Now if we run `gradle tasks
-
+Applying the Java plugin is simple, we need only add a single line to our
+build script.
 
 */
 
-
-
-
+apply plugin: "java"
 
 
 
 /*
 
+Now if we run
+
+    gradle tasks --all
+
+We find a wealth of capabilities that Gradle can handle for us! There are a
+bunch of tasks that perform specific operations on our sources, but there are
+four main tasks that aggregate related operations: assemble, check, build, and
+clean. These are the four tasks we'll use most often.
+
+Assemble is what creates the output we're interested in. This is usually a
+JAR, but can be more interesting artifacts. Check runs any tests we've set up.
+Build depends on both assemble and check, so that's what we'll use most often.
+Finally, clean just deletes all the build output.
+
+We've got a trivial Java project in this folder, so we'll try running
+
+    gradle assemble
+
+When we have a look at the newly created /build directory, we see where our
+Person source was compiled to Person.class, and we can also find our JAR.
+
+You might be thinking to yourself "I thought there wasn't going to be any
+magic. This sure seems like magic... How did Gradle know where to find my
+source code?"
+
+I promise there's no magic. Gradle just has a lot of very sensible defaults,
+like, for instance, it assumes that your Java sources live in a folder named
+`src/main/java`. This, like most everything else in Gradle, can be configured,
+and we'll show how shortly.
+
+One more important thing to know how to do, and that's run the project we just
+built. You might have noticed that the Java plugin doesn't add any tasks for
+running your code, and that's because the JavaExec task is already part of the
+core Gradle functionality. Here's how to run our code:
+
+*/
 
 
+task execute(type: JavaExec) {
+    main = "com.udacity.gradle.Person"
+    // We'll talk about this shortly
+    classpath = sourceSets.main.runtimeClasspath
+}
 
-    Here's the Java quickstart guide:
+/*
+
+There's a number of resources that it would be a great idea to take a look at
+right now. The first is the Gradle Java quickstart guide
+
     https://www.gradle.org/docs/current/userguide/tutorial_java_projects.html
 
-    And here's the deeper Java plugin documentation:
+The Gradle user guide also has much more in-depth documentation on the Gradle
+plugin
+
     https://www.gradle.org/docs/current/userguide/java_plugin.html
 
+Finally, check out the Gradle DSL reference for more info on the JavaExec task
+type:
 
-
+    https://gradle.org/docs/current/dsl/org.gradle.api.tasks.JavaExec.html
 
 */

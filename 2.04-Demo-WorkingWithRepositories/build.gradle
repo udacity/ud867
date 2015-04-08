@@ -1,15 +1,20 @@
 /*
-    One of the key components of Gradle's dependency management is support for
-    various types of repositories. A repository is simply some structured
-    store for artifacts. In this section we'll go over how to configure
-    repositories in your build script. We'll start with how to declare a flat
-    directory repository. A flat directory repository should be used for
-    dependencies that aren't managed in remote repositories and instead are
-    included as part of our project. Configuring a repository in our Gradle
-    build script is simple. All repository configuration is done inside a
-    `repositories { }` script block. For a flat directory repository we add
-    a `flatDir` block and configure the directories we want to include.
- */
+
+To add a dependency to a Gradle project, we need to do three things. First we
+need to declare the repository to fetch the dependency from. Second we need to
+determine when the dependency will be used, and third we need to add the
+dependency to the appropriate configuration.
+
+In this section we'll go over how to configure repositories in your build
+script. We'll start with how to declare a flat directory repository. A flat
+directory repository should be used for dependencies that aren't managed in
+remote repositories and instead are included as part of our project.
+Configuring a repository in our Gradle build script is simple. All repository
+configuration is done inside a `repositories { }` script block. For a flat
+directory repository we add a `flatDir` block and configure the directories we
+want to include.
+
+*/
 
 repositories {
     flatDir {
@@ -18,12 +23,14 @@ repositories {
 }
 
 /*
-    As well as flat directory repositories, Gradle also supports resolving
-    managed dependencies from Maven and Ivy repositories. The syntax for both
-    is the same. Simply place your configuration in an `ivy` or `maven` block.
-    For both Ivy and Maven repositories, the only required configuration
-    element is the location of the repository, expressed as a URL.
- */
+
+As well as flat directory repositories, Gradle also supports resolving managed
+dependencies from Maven and Ivy repositories. The syntax for both is the same.
+Simply place your configuration in an `ivy` or `maven` block. For both Ivy and
+Maven repositories, the only required configuration element is the location of
+the repository, expressed as a URL.
+
+*/
 
 repositories {
     maven {
@@ -32,10 +39,12 @@ repositories {
 }
 
 /*
-    In some cases, credentials may be required to access a repository. You can
-    easily provide a username and password by placing them inside a
-    `credentials` block.
- */
+
+In some cases, credentials may be required to access a repository. You can
+easily provide a username and password by placing them inside a `credentials`
+block.
+
+*/
 
 repositories {
     ivy {
@@ -48,10 +57,12 @@ repositories {
 }
 
 /*
-    Gradle supports a number of protocols for accessing repositories. In
-    addition to the standard HTTP and HTTPS, Gradle also supports SFTP and file
-    based repositories.
- */
+
+Gradle supports a number of protocols for accessing repositories. In addition
+to the standard HTTP and HTTPS, Gradle also supports SFTP and file based
+repositories.
+
+*/
 
 repositories {
     ivy {
@@ -60,11 +71,13 @@ repositories {
 }
 
 /*
-    The `repositories` script block also allows you to use shortcut methods for
-    commonly used repositories such as Maven Central, Maven Local, or jCenter.
-    Simply call the appropriate method and the repository will by automatically
-    added.
- */
+
+The `repositories` script block also allows you to use shortcut methods for
+commonly used repositories such as Maven Central, Maven Local, or jCenter.
+Simply call the appropriate method and the repository will by automatically
+added. This is by far the most common way to declare a repository.
+
+*/
 
 repositories {
     mavenCentral()
