@@ -62,7 +62,7 @@ dependencies {
 We can now run a dependency report to see that we have a new project
 configuration named 'custom' with the 'guava' dependency.
 
-        $ gradle dependencies
+    $ gradle dependencies
 
 Configurations are really just fancy file collections and they implement the
 same interface so we can treat them as such. This means configurations can be
