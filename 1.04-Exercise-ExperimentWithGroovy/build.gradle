@@ -1,14 +1,17 @@
 /*
-    In these exercises we'll explore the Groovy features most relevant to Gradle build scripts. Each topic will be contained in the action of a Gradle task, so to test run your code you'll need to run that particular task. If you get stuck, check out the code in the Groovy Fundamentals demo, or check the solution.gradle file in this directory.
-*/
 
-/*
-    Let's check out two super convenient Groovy features: dynamic typing, and string interpolation. Dynamic typing means that type checking happens at run time, which means you don't need to declare the types of variables. String interpolation is a feature that allows us to build up strings very conveniently.
+In these exercises we'll explore the Groovy features most relevant to Gradle
+build scripts. Each topic will be contained in the action of a Gradle task, so
+to test run your code you'll need to run that particular task. If you get
+stuck, check out the solution.gradle file in this directory.
 
-    Just run the stringsAndTypes task to get started! Note that Gradle allows you to abbreviate task names. You can run this task using `gradle sAT`
 */
 
 task stringsAndTypes << {
+    // TODO: Run `$ gradle sAT`
+    println "Nice work abbreviating the task name"
+
+
     // TODO: Create a variable named foo and assign it the value 4.2
 
     // TODO: Print the value and class of foo
@@ -26,10 +29,6 @@ task stringsAndTypes << {
     // TODO: Use `toUpperCase` to capitalize and print my name
 
 }
-
-/*
-    Let's look at closures
-*/
 
 task closures << {
     // TODO: Declare a closure that takes two arguments and adds them together

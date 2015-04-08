@@ -4,15 +4,23 @@ Whenever we're working with an existing Gradle project, we'll be using the
 wrapper, because that way we can ensure that everyone working on the project
 is using the same version of Gradle.
 
-If you want to create a new Gradle build, however, you'll need a local
-installation of Gradle. These instructions assume you have an installation of
-the Java Development Kit. If not (you can check by running `java -version`),
-skip below to the Java installation instructions.
+If you want to create a new Gradle project, however, you'll need a local
+installation of Gradle. First make sure you have an installation of by running
+
+    $ java -version
+
+The output should be something like:
+
+    java version "1.8.0_40"
+    Java(TM) SE Runtime Environment (build 1.8.0_40-b27)
+    Java HotSpot(TM) 64-Bit Server VM (build 25.40-b25, mixed mode)
+
+If not, skip below to find Java installation instructions.
 
 There are a bunch of ways to install Gradle. If you're on Mac and use Homebrew
-(and if you don't you really should), you can install Gradle with a simple
+(and if you don't you really should), you can install Gradle with
 
-    `brew install gradle`.
+    $ brew install gradle
 
 Another option for Mac and Linux users is to head over to http://gvmtool.net/
 and install the Groovy Environment Manager, and use that to install Gradle. If
@@ -21,7 +29,7 @@ installation process for both Windows and Mac.
 
 To install Gradle manually, we need to do three things. First we need to
 download Gradle. Next we need to put it where we want it on our machine. And
-finally we need to let the system know where to find it. We'll do the Mac.
+finally we need to let the system know where to find it. We'll do the Mac
 instructions first. Skip below for the Windows instructions
 
 ******************* Mac Instructions *************
@@ -29,11 +37,11 @@ instructions first. Skip below for the Windows instructions
 First, head over to https://gradle.org/downloads/, and download the latest
 version of Gradle. Next, we'll unzip Gradle and move it to where we want it to
 live. Our recommendation is in `/usr/local/gradle`. Then we need to add some
-lines to the /.bash_profile file to tell the system where to find our new
+lines to our /.bash_profile file to tell the system where to find our new
 installation of Gradle. You can do all these steps manually, but the easiest
 way is to paste the whole big block of instructions below into your terminal.
 Note that you may need to change the version number on the first and third
-lines. This instruction also adds an environment variable that turns on the
+lines. This command also adds an environment variable that turns on the
 Gradle daemon by default.
 
 unzip ~/Downloads/gradle-2.3-all.zip -d /usr/local/gradle/ &&\
@@ -45,11 +53,7 @@ export PATH
 export GRADLE_OPTS="-Dorg.gradle.daemon=true"' >> ~/.bash_profile &&\
 source ~/.bash_profile
 
-When you're done, run `gradle --version` to ensure the installation is
-complete.
-
 ******************* Windows Instructions *******************
-
 
 First, head over to https://gradle.org/downloads/, and download the latest
 version of Gradle. Next, we'll unzip Gradle and move it to where we want it to
@@ -72,30 +76,42 @@ When you're done, run `gradle --version` to ensure the installation is
 complete.
 
 Finally, let's add a properties file to tell Gradle to use the daemon by
-default. All we need to do is put a file named gradle.properties in
-C:\Users\<your username>\.gradle, and add the line `org.gradlie.daemon=true`.
+default. All we need to do is put a file named `gradle.properties` in
+C:\Users\<your username>\.gradle, and add the line `org.gradle.daemon=true`.
 
 ******************* When you're done *******************
 
 Once you've installed Gradle, you no longer need to use the wrapper script,
 and you can simply use the `gradle` command. To see if Gradle was installed
-successfully, try running `gradle --version`.
+successfully, try running
 
-To see the effect of the Gradle daemon, first run `gradle --stop` to stop the
-daemon, then run `gradle helloWorld`, and note how long it takes. Then run
-`gradle helloWorld` again, and see how much faster the second run is. */
+    $ gradle --version
+
+To see the effect of the Gradle daemon, first run
+
+    $ gradle --stop
+
+to ensure the daemon is stopped, then run the `helloWorld` task using
+
+    $ gradle helloWorld
+
+and note how long it takes. Then run the `helloWorld` task again and see how
+much faster the second run is.
+
+*/
 
 task helloWorld << {
     println "Hello, World!"
 }
 
 /*
+
 ************ Java Installation Instructions **********
 
 These instructions will explain how to get the Java Development Kit set up on
 your machine. There are three phases. First we need to download the JDK, then
 we need to move the downloaded files to where we want them to live, and
-finally we need to tell the system where to
+finally we need to tell the system where to find your new installation.
 
 Before following these instructions, check to make sure you haven't already
 installed Java by running `java -version`. If the output is something like the
@@ -153,7 +169,9 @@ The variable name should be : JAVA_HOME
 The variable value should be your install location. At the time of this
 writing it should be: C:\Program Files\Java\jdk1.8.0_40
 
-You can now test your Java installation by running `java -version`.
+You can now test your Java installation by running
+
+    $ java -version
 
 Awesome work! You can now complete your Gradle installation!
 */

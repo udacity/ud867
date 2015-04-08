@@ -3,7 +3,7 @@
 Now that we have some Groovy under our belts, we're in a much better position
 to understand what's going on in a Gradle build script. Just like a closure
 can have a delegate object, the entire build script delegates to a project
-object. All the keywords in the gradle DSL are properties of, or methods on,
+object. All the keywords in the Gradle DSL are properties of, or methods on,
 the project object.
 
 For instance, the project object has a method called `task` for declaring
@@ -39,8 +39,7 @@ can knock off the quotes.
 
 For more info, check out Mark's post on Stack Overflow here:
 
-http://stackoverflow.com/questions/27584463/understing-the-groovy-syntax-in-a
--gradle-task-definition
+http://stackoverflow.com/questions/27584463/understing-the-groovy-syntax-in-a-gradle-task-definition
 
 */
 
@@ -48,8 +47,8 @@ task myTask4
 
 /*
 
-Here we have the standard way to declare a task. Now, since the task is a
-Groovy object we can set its properties and access its methods. Let's add a
+Here we have the standard way to declare a task. Since the task is a Groovy
+object we can set its properties and access its methods. Let's add a
 description and a group to this task.
 
 */
@@ -138,6 +137,7 @@ task myTask7 {
 
 One more important piece of syntax. There are some task properties you can set
 using the following syntax:
+
 */
 
 task myTask8(description: "Another description") << {
@@ -149,8 +149,7 @@ task myTask8(description: "Another description") << {
 Not all task properties can be set this way, however. Check out this list for
 the complete story:
 
-http://gradle.org/docs/current/javadoc/org/gradle/api/tasks/TaskContainer.html
-#create(java.util.Map)
+http://gradle.org/docs/current/javadoc/org/gradle/api/tasks/TaskContainer.html#create(java.util.Map)
 
 The choice to set properties here or in the configuration block or even later
 on in the script is mostly up to readability, except for one case. If you are

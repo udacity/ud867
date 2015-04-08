@@ -2,12 +2,20 @@
 
 Welcome to the solutions to the Groovy Playground exercise! You can run these
 tasks by telling Gradle to use this build script, instead of the default
-build.gradle. Run `gradle -b solution.gradle stringsAndTypes` to run the task
-below.
+build.gradle. To run the task below, use:
+
+    $ gradle -b solution.gradle stringsAndTypes
+
+or, more compactly
+
+    $ gradle -b solution.gradle sAT
 
 */
 
 task stringsAndTypes << {
+    // TODO: Run `$ gradle sAT`
+    println "Nice work abbreviating the task name"
+
     // TODO: Create a variable named foo and assign it the value 4.2
     def foo = 4.2
 
@@ -32,10 +40,6 @@ task stringsAndTypes << {
     // TODO: Use `toUpperCase` to capitalize and print my name
     println name.toUpperCase();
 }
-
-/*
-    Let's look at closures
-*/
 
 task closures << {
     // TODO: Declare a closure that takes two arguments and adds them together
