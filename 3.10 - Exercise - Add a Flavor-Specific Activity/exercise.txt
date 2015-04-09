@@ -1,0 +1,11 @@
+In this series of exercises we'll be adding variant specific capabilities. You
+will be required to add an additional activity to the 'paid' product flavor,
+which will then only be available in the paid version of the application.
+
+Exercises:
+
+1. Import the project into Android Studio.
+2. Build the project and deploy it onto a device (or emulator).
+
+If you need help, take a look at the solution project located in the 'solution' 
+folder.

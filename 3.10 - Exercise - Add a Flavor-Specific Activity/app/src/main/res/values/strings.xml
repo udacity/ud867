@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Variant Activities</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcome_message">Lesson 3 Exercise: Variant-specific Activities</string>
+</resources>
