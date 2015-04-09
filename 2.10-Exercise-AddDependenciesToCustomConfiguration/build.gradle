@@ -12,8 +12,8 @@ Exercises:
    the 'deps' configuration.
 4. Build the project and ensure there are no errors.
 5. Add a task called 'zipDeps' that creates a Zip file including all the
-   files from the 'deps' configuration. Assign a classifier of 'deps' to the
-   archive.
+   files from the 'deps' configuration. Assign a baseName of dependencyArchive
+   and a  classifier of 'deps' to the archive.
 6. Run the 'zipDeps' task and confirm it includes the 'guava' JAR.
 
 Hint: Take a look at the Configuration DSL Reference page for how to make
