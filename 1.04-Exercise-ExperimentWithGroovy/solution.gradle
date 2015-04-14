@@ -34,12 +34,13 @@ task stringsAndTypes << {
 
 
     // TODO: Use the `substring` method to extract my name from this string
-    def hello = "Hello, Jeremy.";
-    def name = hello.substring(7, 13);
+    def hello = "Hello, Jeremy."
+    def name = hello.substring(7, 13)
 
     // TODO: Use `toUpperCase` to capitalize and print my name
-    println name.toUpperCase();
+    println name.toUpperCase()
 }
+
 
 task closures << {
     // TODO: Declare a closure that takes two arguments and adds them together
@@ -58,13 +59,14 @@ task lists << {
 
     // TODO: Create a new list of your candies in all caps
     // HINT: http://groovy.codehaus.org/Tutorial+2+-+Code+as+data,+or+closures
-    def capitalCandies = candyList.collect(it.toUpperCase())
+    def capitalCandies = candyList.collect{it.toUpperCase()}
 
     // TODO: Print each capital candy
-    capitalCandies.each(println it)
+    capitalCandies.each{println it}
 }
 
 task foobar << {
     def foo = "bar"
     println "$foo + foo equals ${foo + 'foo'}"
 }
+

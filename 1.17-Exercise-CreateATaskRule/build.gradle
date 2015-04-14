@@ -1,10 +1,9 @@
 /*
 
-In this exercise you'll be expected to define a task rule for your Gradle
-build script. We're using the same source files from the previous few
-exercises again. Task rules are a create way to define dynamic tasks. In this
-example, you'll be defining a task rule which will bundle our various source
-collections.
+In this exercise you'll define a task rule for your Gradle build script. We're
+using the same source files from the previous few exercises again. Task rules
+are a create way to define dynamic tasks. In this example, you'll be defining
+a task rule which will bundle our various source collections.
 
 Exercises:
 
