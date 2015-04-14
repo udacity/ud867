@@ -7,6 +7,9 @@ from the scope in which they're declared.
 
 */
 
+task groovy << {}
+
+foo = "One million dollars"
 def myClosure = {
     println "Hello from a closure"
     println "The value of foo is $foo"
