@@ -16,7 +16,9 @@ Exercises:
 4. Execute the "hello" task and confirm the output.
 5. Execute the "hello" task with the appropriate command line options such
    that the text "Hello World" is no longer written to the console output.
-6. CHALLENGE! Log "Catch me if you can" at DEBUG level, then use grep to find
+6. Uncomment and run the "derpy" task below, then use "--stacktrace" to find
+   the error.
+7. CHALLENGE! Log "Catch me if you can" at DEBUG level, then use grep to find
    that message in the logs.
 
 */
@@ -29,3 +31,9 @@ class HelloTask extends DefaultTask {
         println 'Hello World'
     }
 }
+
+/*
+task derpy << {
+    primp "Herp de derp"
+}
+*/

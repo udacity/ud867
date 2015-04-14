@@ -108,7 +108,7 @@ Oops, we put on our shoes before taking a shower! Let's put in another
 
 */
 
- putOnShoes.mustRunAfter takeShower
+putOnShoes.mustRunAfter takeShower
 
 /*
 

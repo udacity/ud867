@@ -17,9 +17,13 @@ class HelloTask extends DefaultTask {
 
 /*
 
+The error in the "derpy" is
+
+Caused by: org.gradle.api.internal.MissingMethodException: Could not find method primp() for arguments [Herp de derp] on root project '1.16-Exercise-InvestigateLogging'.
+
 Challenge solution!
 
 */
 
 logger.quiet "Catch me if you can"
-// gradle --debug hello | grep 'Catch me if you can'
+// gradle -b solution.gradle --debug hello | grep 'Catch me if you can'
