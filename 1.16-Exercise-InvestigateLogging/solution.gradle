@@ -1,6 +1,8 @@
 /*
- * Solution:
- */
+
+Solution:
+
+*/
 
 task hello(type: HelloTask)
 
@@ -12,3 +14,12 @@ class HelloTask extends DefaultTask {
         logger.info 'End HelloTask Action'
     }
 }
+
+/*
+
+Challenge solution!
+
+*/
+
+logger.quiet "Catch me if you can"
+// gradle --debug hello | grep 'Catch me if you can'
