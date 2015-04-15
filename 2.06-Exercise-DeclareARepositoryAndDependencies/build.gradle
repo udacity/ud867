@@ -23,7 +23,7 @@ for commons-io.
 
 http://search.maven.org/
 
- */
+*/
 
 apply plugin: 'java'
 

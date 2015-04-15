@@ -5,7 +5,8 @@ with a single class for you to practice with.
 
 Exercises:
 
-    1. Apply the Java plugin to your project.
-    2. Use the Gradle command-line to execute the appropriate task to build
-        a JAR file.
- */
+1. Apply the Java plugin to your project.
+2. Use the Gradle command-line to execute the appropriate task to build a JAR
+   file.
+
+*/

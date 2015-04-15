@@ -1,30 +1,30 @@
 /*
 
-We talked about the Gradle wrapper briefly at the beginning of the first
-lesson. The Gradle wrapper is comprised of a pair of scripts, a shell script
-for Unix and Mac operating systems, and a batch script for Windows. These
-execute your build via a wrapper that will automatically download Gradle if it
-hasn't done so already. Essentially, the wrapper allows developers to use
-Gradle to build your project without have to actually download and install
-Gradle itself.
+We used the Gradle wrapper way back at the start of this class to run our
+first task, before we had even installed Gradle. That's a pretty cool party
+trick, but the real strength of the wrapper is that you can put your build
+tool under version control, so everyone building your project is building it
+with the exact same tool.
 
-The Gradle wrapper can be initialized by running the 'wrapper' task. The
-'wrapper' task is available on every Gradle project. This task will set up the
-wrapper by generating the wrapper scripts as well as adding the wrapper JAR
-and properties files to your project. The wrapper scripts are placed in the
-root of your project directory and the other files in the 'gradle/wrapper'
-directory.
+The Gradle wrapper is comprised of four files. A JAR, a properties file, and a
+pair of scripts, a shell script for Unix and Mac, and a batch script for
+Windows. When you pass a command to one of these scripts, it will first check
+if Gradle is installed, download it if necessary, then execute your command.
 
-We can now run our Gradle build by using the wrapper scripts. We use the
-scripts identically to how we would the 'gradle' command.
+A wrapper can be created by running the built-in 'wrapper' task. The wrapper
+scripts are placed in the root of your project directory and the other files
+in the 'gradle/wrapper' directory.
+
+We can now run our Gradle build using the wrapper. We use the wrapper
+identically to how we would the 'gradle' command.
 
     $ ./gradlew tasks
 
 If this is the first time using the wrapper, it will go ahead and download the
 appropriate Gradle distribution and cache it locally. We can also explicitly
-configure what version of Gradle we would like to use by setting the
-`gradleVersion` property on the 'wrapper' task. Let's the version to '2.2' and
-run the 'wrapper' task again.
+configure what version of Gradle to use by setting the `gradleVersion`
+property on the 'wrapper' task. Let's the version to '2.2' and run the
+'wrapper' task again.
 
 */
 
@@ -34,7 +34,7 @@ wrapper {
 
 /*
 
-Again, if we haven't already downloaded this particular version of Gradle, the
+If we haven't already downloaded this particular version of Gradle, the
 wrapper will do so for us. Let's run the wrapper with the '--version' option
 to confirm we are using the correct version.
 
@@ -42,11 +42,11 @@ to confirm we are using the correct version.
 
 As you can see, the wrapper is now using version 2.2 of Gradle. This
 information is saved in the gradle-wrapper.properties file in the
-'gradle/wrapper' directory. We can alternatively set the wrapper version by
-modifying this file. Let's set the version back to 2.3 by changing the value
-of of the `distributionUrl` property.
+'gradle/wrapper' directory. We can also set the wrapper version by modifying
+this file. Let's set the version back to 2.3 by changing the value of of the
+`distributionUrl` property.
 
-Again, let's run the wrapper with the '--version' option and verify the
+Let's run the wrapper with the '--version' option and verify the
 result.
 
     $ ./gradlew --version

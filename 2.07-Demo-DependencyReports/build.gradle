@@ -1,19 +1,11 @@
 /*
 
-Gradle provides a couple of different ways to visualize dependencies. Two
-separate reports are provided. A traditional dependency report which shows the
-complete graph of dependencies. Additionally, Gradle provides a dependency
-insight report for identifying how a particular dependency is included in your
-project.
+Gradle provides a two ways to visualize dependencies: a traditional dependency
+report showing the complete graph of dependencies, and a dependency insight
+report showing how a particular dependency is included in your project.
 
-We'll start by taking a look at the regular dependency report. Here we have a
-simple Java project with a single dependency, in this case, to the spring core
-library. We can get a dependency report from Gradle by simply running the
-'dependencies' task.
+*/
 
-    $ gradle dependencies
-
- */
 apply plugin: 'java'
 
 repositories {
@@ -26,24 +18,29 @@ dependencies {
 
 /*
 
-As you can see, Gradle displays all the project dependencies, as well as
-transitive dependencies. The report also breaks out dependencies by each
-configuration. If we want to see only the dependencies for a particular
-configuration we can specify one with the '--configuration' command-line
-option.
+Here we have a simple Java project with a single dependency on the spring core
+library. We can get generate a dependency report by running the 'dependencies'
+task.
+
+    $ gradle dependencies
+
+Gradle displays the project dependencies, including transitive dependencies.
+The report also breaks out dependencies by each configuration. To see the
+dependencies for a particular configuration we can use the '--configuration'
+command-line option.
 
     $ gradle dependencies --configuration runtime
 
-The dependency insight report shows details about how a particular dependency
-is included in our project. This report is especially helpful when identifying
-conflicts. To get a dependency insight report, run the 'dependencyInsight'
-task. You're required to specify the dependency you're interested, which can
-be done with the '--dependency' command-line option. Let's run an insight
-report on the 'commons-logging' dependency.
+The dependency insight report shows how a particular dependency is included in
+our project. This report is especially helpful when identifying version
+conflicts. To run the 'dependencyInsight' task we need to specify the
+dependency we're interested in using the '--dependency' command-line option.
+
+Let's run an insight report on the 'commons-logging' dependency.
 
     $ gradle dependencyInsight --dependency commons-logging
 
-We can tell from the result of our report that 'commons-logging' is a
+We can tell from our report that 'commons-logging' is a
 dependency of 'spring-core', which in turn is one of our project's compile
 dependencies.
 

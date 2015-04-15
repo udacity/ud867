@@ -1,19 +1,20 @@
 /*
-    Solution:
+
+Solution:
 
 1. To generate the Gradle wrapper, run:
 
-    gradle wrapper
+    $ gradle wrapper
 
 2. To use the wrapper to run the `tasks` task, run:
 
-    ./gradlew tasks [Mac]
-    gradlew tasks [Windows]
+    $ ./gradlew tasks [Mac]
+    $ gradlew tasks [Windows]
 
 3. You can configure the `wrapper` task to use a different version of Gradle
 using the following:
 
- */
+*/
 
 wrapper {
     gradleVersion = '2.2.1'
@@ -23,9 +24,9 @@ wrapper {
 
 4. To use the updated version of the gradle Wrapper run the following:
 
-    gradle wrapper
-    ./gradlew -v [Mac]
-    gradlew -v [Windows]
+    $ gradle wrapper
+    $ ./gradlew -v [Mac]
+    $ gradlew -v [Windows]
 
 5. To get the wrapper to use the nightly build of Gradle, visit
 http://gradle.org/nightly/ and follow the instructions to edit your

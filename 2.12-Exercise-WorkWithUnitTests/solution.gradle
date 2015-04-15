@@ -1,6 +1,8 @@
 /*
-    Solution:
- */
+
+Solution:
+
+*/
 
 apply plugin: 'java'
 

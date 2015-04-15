@@ -1,18 +1,14 @@
 /*
 
-To add a dependency to a Gradle project, we need to do three things. First we
-need to declare the repository to fetch the dependency from. Second we need to
-determine when the dependency will be used, and third we need to add the
-dependency to the appropriate configuration.
+To add a dependency to a Gradle project, we first need to declare the
+repository to fetch the dependency from.
 
-In this section we'll go over how to configure repositories in your build
-script. We'll start with how to declare a flat directory repository. A flat
-directory repository should be used for dependencies that aren't managed in
-remote repositories and instead are included as part of our project.
-Configuring a repository in our Gradle build script is simple. All repository
-configuration is done inside a `repositories { }` script block. For a flat
-directory repository we add a `flatDir` block and configure the directories we
-want to include.
+The most basic sort of repository is just a folder full of JARs, which Gradle
+calls a flat directory repository.
+
+All repository configuration is done inside a `repositories { }` script block.
+For a flat directory repository we add a `flatDir` block and configure the
+directories we want to include.
 
 */
 
@@ -24,8 +20,28 @@ repositories {
 
 /*
 
-As well as flat directory repositories, Gradle also supports resolving managed
-dependencies from Maven and Ivy repositories. The syntax for both is the same.
+This is a great option if you're migrating an existing project to Gradle, or
+using a dependency that's not available from a remote repository, but it also means
+you forgo a lot Gradle's advanced dependency management features.
+
+The `repositories` script block also allows you to use shortcut methods for
+commonly used repositories such as Maven Central, Maven Local, or jCenter.
+Simply call the appropriate method and the repository will by automatically
+added. This is by far the most common way to declare a repository.
+
+*/
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    jcenter()
+}
+
+/*
+
+Gradle also supports resolving managed dependencies from Maven and Ivy
+repositories. The syntax for both is the same.
+
 Simply place your configuration in an `ivy` or `maven` block. For both Ivy and
 Maven repositories, the only required configuration element is the location of
 the repository, expressed as a URL.
@@ -68,19 +84,4 @@ repositories {
     ivy {
         url 'file:///home/user/repo'
     }
-}
-
-/*
-
-The `repositories` script block also allows you to use shortcut methods for
-commonly used repositories such as Maven Central, Maven Local, or jCenter.
-Simply call the appropriate method and the repository will by automatically
-added. This is by far the most common way to declare a repository.
-
-*/
-
-repositories {
-    mavenCentral()
-    mavenLocal()
-    jcenter()
 }
