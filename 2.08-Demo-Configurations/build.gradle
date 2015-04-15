@@ -1,7 +1,7 @@
 /*
 
 Different dependencies may be needed at different times in the build process.
-Logicially realted dependencies are grouped into configurations. So far we've
+Logically related dependencies are grouped into configurations. So far we've
 been adding dependencies to the 'compile' configuration, but the Java plugin
 creates other configurations as well, such as runtime, testCompile and
 testRuntime. The Java plugin ensures that the specified dependencies are on
