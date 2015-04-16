@@ -61,22 +61,17 @@ Let's start by running the dependencies task again.
 
     $ gradle dependencies
 
-As you can see, 'commons-logging' is now listed twice in our dependency
-report. In this case you can see that our project depends on version 1.2,
-where as 'spring-core' depends on version 1.1.3. This introduces a conflict of
-course, which Gradle will then attempt to resolve. By default, Gradle resolves
-version conflicts to the newest version, in this case 1.2. In our report this
-is indicated with the arrow, showing us that version 1.2 is being chosen over
-1.1.3.
+'commons-logging' is now listed twice in our dependency report. You can see
+that our project depends on version 1.2, where as 'spring-core' depends on
+version 1.1.3. This introduces a conflict, which Gradle will then attempt to
+resolve. By default, Gradle resolves version conflicts to the newest version,
+in this case 1.2. In our report this is indicated with the arrow, showing us
+that version 1.2 is being chosen over 1.1.3.
 
-We can get similar information from the dependency insight report. Let's run
-this report and see the results.
+We can get similar information from the dependency insight report.
 
     $ gradle dependencyInsight --dependency commons-logging
 
-Again we can see that the dependency is show twice in the report. At the top
-we see that Gradle has chosen version 1.2. Additionally, Gradle displays the
-reason this particular version was chosen. In this case, it was chosen due to
-dependency conflict resolution.
+Again we can see that the commons-logging is shown twice, once as a direct dependency of compile, and once as a transitive dependency of spring core.
 
 */
