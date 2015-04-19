@@ -1,17 +1,22 @@
 /*
-    In this series of exercises we will be working with the Java plugin and
-    some of the functionality it adds to our build. Specifically, we'l be using
-    the Java plugin to package our compiled code into a JAR file. We've provided
-    a simple project with a single class for you to practice with.
 
-    Exercises:
-
-    1. Apply the Java plugin to your project.
-    2. Use the Gradle command-line to execute the appropriate task to build
-       a JAR file.
+Let's move our joke telling code from our build script to a Java project, and
+build it from Android Studio. We've already written the joke, so all you need
+to do is:
 
 
-It's difficult to get Android studio to use the solution.gradle file, so to run our solution, you can either run from the command line with the -b flag, or uncomment the following line to essentially paste the contents of the solution file into this one.
+1. Apply the Java plugin to your project.
+2. Sync the Gradle project model with the Android Studio project model using
+   the tool bar icon.
+3. Browse through the tasks in the Gradle pane of Android Studio.
+4. Use the Gradle "Application" plugin to build and run JokeTeller.
+
+Hint: http://gradle.org/docs/current/userguide/application_plugin.html
+
+It's difficult to get Android studio to use the solution.gradle file, so to
+run our solution, you can either run from the command line with the -b flag,
+or uncomment the following line to essentially paste the contents of the
+solution file into this one.
 
 */
 

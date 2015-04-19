@@ -1,10 +1,22 @@
 /*
-    Solution:
- */
 
-apply plugin: 'java' // 1. Apply the Java plugin to the project
+Solution:
+
+*/
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "com.udacity.gradle.JokeTeller"
+
+/*
+
+Then use the `run` task to execute the project. Remember you can also execute
+Java using the built in JavaExec task type.
+
+*/
 
 task solutionExecute(type: JavaExec) {
-    main = "com.udacity.gradle.Person"
+    main = "com.udacity.gradle.JokeTeller"
     classpath = sourceSets.main.runtimeClasspath
 }
