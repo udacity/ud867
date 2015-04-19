@@ -2,6 +2,6 @@
 # Ignoring the wrapper in this folder, so Android Studio asks to build it
 
 gradlew
-gradle.bat
+gradlew.bat
 /gradle
 local.properties
