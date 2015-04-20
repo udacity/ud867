@@ -1,0 +1,12 @@
+
+android {
+
+    productFlavors {
+        free {
+            applicationId 'com.udacity.gradle.buildflavors.free'
+        }
+        paid {
+            applicationId 'com.udacity.gradle.buildflavors.paid'
+        }
+    }
+}
