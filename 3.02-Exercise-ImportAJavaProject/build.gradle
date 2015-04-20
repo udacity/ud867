@@ -20,4 +20,4 @@ solution file into this one.
 
 */
 
-//apply from: "solution.gradle"
+apply from: "solution.gradle"

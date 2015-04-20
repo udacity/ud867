@@ -1,6 +1,7 @@
 /*
 
-Let's define a trivial Gradle project to work with. This one doesn't compile or build anything, it just tells a joke.
+Let's define a trivial Gradle project to work with. This one doesn't compile
+or build anything, it just tells a joke.
 
 */
 
@@ -21,12 +22,12 @@ Studio will initially complain about an "Unregistered VCS root", go ahead and
 ignore that for now.
 
 Android Studio has already created a whole slew of new files. To see what's
-going on, open the project view by hitting Command-1, or click on the
-Project tab at the top left of the window. You still won't see anything for
-the moment, since the Project pane is configured to display only the files
-that are relevant for an Android build. Fix that by clicking on the Android
-drop down and selecting "Project". Now you can see this build.gradle file, as
-well as the files from the Gradle wrapper, and a bunch of extra stuff added by
+going on, open the project view by hitting Command-1, or click on the Project
+tab at the top left of the window. You still won't see anything for the
+moment, since the Project pane is configured to display only the files that
+are relevant for an Android build. Fix that by clicking on the Android drop
+down and selecting "Project". Now you can see this build.gradle file, as well
+as the files from the Gradle wrapper, and a bunch of extra stuff added by
 Android Studio.
 
 There are several ways to run Gradle tasks from Android Studio. The first is
@@ -41,7 +42,9 @@ the last couple lessons.
 
     $ ./gradlew tellJoke
 
-There's also an easier way to run Gradle tasks from Android studio, and that's by opening the Gradle pane on the right of the window. You can run tasks by double clicking. Let's try adding a second task to our project.
+There's also an easier way to run Gradle tasks from Android studio, and that's
+by opening the Gradle pane on the right of the window. You can run tasks by
+double clicking. Let's try adding a second task to our project.
 
 */
 
@@ -52,6 +55,11 @@ There's also an easier way to run Gradle tasks from Android studio, and that's b
 
 /*
 
-Note that to get Android Studio to recognize this new task, we need to trigger a sync between Gradle and Android Studio's internal model of our project. We can do that either by clicking on the blue circular arrows in the Gradle pane, or by clicking on the tool bar icon with the Gradle logo and Blue arrow.
+Note that to get Android Studio to recognize this new task, we need to trigger
+a sync between Gradle and Android Studio's internal model of our project. We
+can do that either by clicking on the blue circular arrows in the Gradle pane,
+or by clicking on the toolbar icon with the Gradle logo and Blue arrow.
+
+Now Android studio recognizes our new task, and we can run it from the Gradle pane.
 
 */

@@ -1,25 +1,25 @@
 /*
 
-    The Android plugin allows for defining different versions of your
-    application that will be built. Instead of managing completely separate
-    code bases for each version of our app, we simply describe the differences
-    between them and Gradle and the Android plugin take care of the rest. We
-    call these different versions of our app, variants.
+The Android plugin allows for defining different versions of your
+application that will be built. Instead of managing completely separate
+code bases for each version of our app, we simply describe the differences
+between them and Gradle and the Android plugin take care of the rest. We
+call these different versions of our app, variants.
 
-    A build variant is comprised of a combination of product flavors and build
-    types. We'll talk about product flavors later in this lesson. Built types
-    are used to control how our app is built and packaged. By default, every
-    app has two build types, debug and release. As the names imply, the debug
-    build type is primarily used during development, and the release build type
-    is for production. Also, by default, the debug build type is compiled with
-    debug symbols and signed with a debug key, allowing it to be installed on
-    development devices. Build types are defined in the `buildTypes { }` script
-    block. Here we can see that Android Studio has already added some additional
-    configuration to the release build type for us. Take note, although debug
-    isn't listed here, the debug build type still exists. In this case we are
-    disabling packaging optimizations by setting 'minifyEnabled' to false. Also
-    we are configuring where the Android plugin should look for proguard
-    configuration.
+A build variant is comprised of a combination of product flavors and build
+types. We'll talk about product flavors later in this lesson. Built types
+are used to control how our app is built and packaged. By default, every
+app has two build types, debug and release. As the names imply, the debug
+build type is primarily used during development, and the release build type
+is for production. Also, by default, the debug build type is compiled with
+debug symbols and signed with a debug key, allowing it to be installed on
+development devices. Build types are defined in the `buildTypes { }` script
+block. Here we can see that Android Studio has already added some additional
+configuration to the release build type for us. Take note, although debug
+isn't listed here, the debug build type still exists. In this case we are
+disabling packaging optimizations by setting 'minifyEnabled' to false. Also
+we are configuring where the Android plugin should look for proguard
+configuration.
 
  */
 
@@ -34,14 +34,16 @@ android {
 }
 
 /*
-    If we look at the available tasks for our project, you'll see that build
-    tasks for each build type. This is how we tell Gradle which variant to
-    build, by either running the 'assembleDebug' or 'assembleRelease' tasks
-    based on whether we want the debug or release build type, respectively.
 
-    In addition to the existing debug and release build types, we can easily
-    create new ones by simply adding them to the `buildTypes { }` script block.
-    Let's say we wanted to build type specifically used by QA testers.
+If we look at the available tasks for our project, you'll see that build tasks
+for each build type. This is how we tell Gradle which variant to build, by
+either running the 'assembleDebug' or 'assembleRelease' tasks based on whether
+we want the debug or release build type, respectively.
+
+In addition to the existing debug and release build types, we can easily
+create new ones by simply adding them to the `buildTypes { }` script block.
+Let's say we wanted to build type specifically used by QA testers.
+
  */
 
 android {
