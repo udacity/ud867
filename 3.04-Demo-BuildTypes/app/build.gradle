@@ -1,0 +1,59 @@
+/*
+
+Build types are defined in the `buildTypes { }` script block. Here we can see
+that Android Studio has already added some additional configuration to the
+release build type for us. Take note, although debug isn't listed here, the
+debug build type still exists. In this case we are disabling packaging
+optimizations by setting 'minifyEnabled' to false. Also we are configuring
+where the Android plugin should look for Proguard configuration. We'll talk
+more about proguard in lesson 4.
+
+*/
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.example.udacity.myapplication"
+        minSdkVersion 10
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+/*
+
+If we look at the available tasks for our project, you'll see that build tasks
+for each build type. This is how we tell Gradle which variant to build, by
+either running the 'assembleDebug' or 'assembleRelease' tasks based on whether
+we want the debug or release build type, respectively.
+
+Let's say we were building a game, and want to make a build for QA testing
+that's like the release build, except it bundles in cheats for infinite gold
+or to skip levels, or whatever. We can easily declare new build types by
+adding them to the `buildTypes { }` script block.
+
+ */
+
+android {
+    buildTypes {
+        qaTesting
+    }
+}
+
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:22.0.0'
+}
