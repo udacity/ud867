@@ -1,3 +1,45 @@
 /*
-
+    In addition to build types, product flavors are another way for us to 
+    describe variants of our application in our build. Flavors are similar to
+    build types except they are typically used to create different versions of
+    our app that users might install. A very common example is creating both a
+    free and paid version of your app. Unlike build types, the Android plugin 
+    does not create any for us default. If we want to declare some product 
+    flavors we do so just like we do with build types, except that we place 
+    them in a `productFlavors { }` script block. Let's go ahead and create our
+    free and paid flavors, and assign them unique application ids.
  */
+
+productFlavors {
+    free {
+        applicationId "com.udacity.gradle.flavors.free"
+    }
+    paid {
+        applicationId "com.udacity.gradle.flavors.paid"
+    }
+}
+
+/* 
+    By default, source that is located in the 'main' source set is included in 
+    all app variants, however, we when delcare additional flavors, the Android 
+    plugin automatically creates new source  sets for us that we can use to 
+    place flavor-specific code and resources. Not suprisingly, these source 
+    sets are simply named whatever we named our flavors. Continueing with our 
+    free vs paid example, for our 'free' product flavor, our Java code and 
+    resources for the 'free' variant would be located in 'src/free/java' and 
+    'src/free/res', respectively. When Gradle builds each app variant it will 
+    automatically bundle the additional source in each of the flavor-specific 
+    folders.
+
+    In addition to including addition sources in a flavor variant, we can place 
+    flavor-specific configuration in our Gradle build file. Basically, any 
+    configuration that we can put in `defaultConfig { }` script block, can also 
+    be placed in a flavor configuration block. For example, let's say the paid 
+    version of our app requires a new Android SDK.
+ */
+
+productFlavors {
+    paid {
+        minSdkVersion 21
+    }
+}
