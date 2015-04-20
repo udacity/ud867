@@ -1,19 +1,20 @@
 /*
-    So now that we've talked about how the Android handles variant-specific 
-    source sets, we'll next take a look at how it deals with merging of     
-    resources and overrides. Remember that we can specify Android resource 
-    files, in addition to Java source code in our variant source directories. 
-    In most cases, the majority of our source and resources will exist in the 
-    default source set, with only the differences specified in our build types 
-    or product flavors. For example, if we wanted to declare an additional 
-    string resource in our 'free' app, it would be pretty inconvenient to have 
-    to make a copy of the default strings.xml file and simply add the 
-    additional value. This would also mean we now have multiple copies of the 
-    same resources, that would have to be kept up to date. Instead, we can 
-    specify just the additional resource values that unique to our 'free' app 
-    and Android Gradle plugin will merge the resources together when it builds 
-    our app. For example, given a default resource file that looks something 
-    like this.
+
+So now that we've talked about how the Android handles variant-specific
+source sets, we'll next take a look at how it deals with merging of
+resources and overrides. Remember that we can specify Android resource  files,
+in addition to Java source code in our variant source directories.  In most
+cases, the majority of our source and resources will exist in the  default
+source set, with only the differences specified in our build types  or product
+flavors. For example, if we wanted to declare an additional  string resource
+in our 'free' app, it would be pretty inconvenient to have  to make a copy of
+the default strings.xml file and simply add the  additional value. This would
+also mean we now have multiple copies of the  same resources, that would have
+to be kept up to date. Instead, we can  specify just the additional resource
+values that unique to our 'free' app  and Android Gradle plugin will merge the
+resources together when it builds  our app. For example, given a default
+resource file that looks something  like this.
+
  */
 
 <resources>
@@ -23,9 +24,11 @@
 </resources>
 
 /*
-    Now, we'll go ahead and create a new resource file for our 'free' app 
-    flavor which just contains the additional string resource we want to 
-    delcare, like so.
+
+Now, we'll go ahead and create a new resource file for our 'free' app  flavor
+which just contains the additional string resource we want to  declare, like
+so.
+
  */
 
 <resources>
@@ -33,9 +36,11 @@
 </resources>
 
 /*
-    Now, when Gradle build the free variant of our app it will merge together 
-    all of the resources, both from the default source set and the free one. 
-    The final result will be something like this.
+
+Now, when Gradle build the free variant of our app it will merge together all
+of the resources, both from the default source set and the free one. The final
+result will be something like this.
+
  */
 
 <resources>
@@ -46,12 +51,13 @@
 </resources>
 
 /*
-    The Android plugin doesn't just do simply merging, it also handle 
-    overrides. This allows us to replace the value of resources in our 
-    variant-specific resource files. This works the same way, no need to make a 
-    copy of the original file, just specify the differences. Going back to the 
-    example before, let's say our strings.xml for our 'free' flavor looks like 
-    this.
+
+The Android plugin doesn't just do simply merging, it also handle overrides.
+This allows us to replace the value of resources in our variant-specific
+resource files. This works the same way, no need to make a copy of the
+original file, just specify the differences. Going back to the example before,
+let's say our strings.xml for our 'free' flavor looks like this.
+
  */
 
 <resources>
@@ -60,22 +66,22 @@
 </resources>
 
 /*
-    As you can see, we now have the string resource named 'hello_world' defined 
-    twice, once in the default resource file, and one in our 'free' variant. 
-    The resource merger will handle this case for us however. Rather than 
-    including the string twice, one of them will override the other, in the 
-    case, the 'free' resource will be the one included in the final app. The 
-    Android plugin follows and order of precidence when doing merges. If 
-    resources of the same name are found, those defined in build types are 
-    chosen over those in product flavors, and those in product flavors are 
-    chosen over the defaults. It's important to be aware of this order, since 
-    it affects the final outcome.
 
-    Additionally, merging doesn't just apply the resource files. Manifests are 
-    merged in much the same way. In many cases, changes to manifest properties 
-    like SDK versions or application id can be overriden in the build.gradle 
-    file itself. However, other itmes, like additional activities, need to live 
-    in an AndroidManifest.xml file. No worries, the Android plugin will merge 
-    these files for us too, and the same override rules are used as for 
-    resources.
+As you can see, we now have the string resource named 'hello_world' defined
+twice, once in the default resource file, and one in our 'free' variant. The
+resource merger will handle this case for us however. Rather than including
+the string twice, one of them will override the other, in the case, the 'free'
+resource will be the one included in the final app. The Android plugin follows
+and order of precedence when doing merges. If resources of the same name are
+found, those defined in build types are chosen over those in product flavors,
+and those in product flavors are chosen over the defaults. It's important to
+be aware of this order, since it affects the final outcome.
+
+Additionally, merging doesn't just apply the resource files. Manifests are
+merged in much the same way. In many cases, changes to manifest properties
+like SDK versions or application id can be overridden in the build.gradle file
+itself. However, other items, like additional activities, need to live in an
+AndroidManifest.xml file. No worries, the Android plugin will merge these
+files for us too, and the same override rules are used as for resources.
+
  */
