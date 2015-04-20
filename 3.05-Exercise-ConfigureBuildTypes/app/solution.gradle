@@ -1,0 +1,14 @@
+/*
+
+Solution
+
+*/
+
+android {
+    buildTypes {
+        debug {
+            applicationIdSuffix "debug"
+
+        }
+    }
+}

@@ -1,3 +1,22 @@
+/*
+
+In this series of exercises you'll we working with Android build types. Build
+types are a way of creating variants of your application. In this case, we'll
+be configuring one of the two default build types created for every Android
+project.
+
+Exercises:
+
+1. Import the project into Android Studio.
+2. Build the project and deploy it onto a device (or emulator). Note the
+   application id shown on the main activity.
+3. Set the application id suffix for the 'debug' build type to 'debug.
+4. Rebuild your project and deploy it onto your device.
+5. Confirm that the application id shown includes the configured suffix.
+
+*/
+
+
 apply plugin: 'com.android.application'
 
 android {
@@ -6,7 +25,7 @@ android {
 
     defaultConfig {
         applicationId "com.udacity.gradle.buildtypes"
-        minSdkVersion 19
+        minSdkVersion 10
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
@@ -18,6 +37,15 @@ android {
         }
     }
 }
+
+/*
+
+To use our solution, uncomment the following line.
+
+*/
+
+// apply from:"solution.gradle"
+
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
