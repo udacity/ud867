@@ -1,3 +1,15 @@
+/*
+
+There's a whole lot going on in the default Android build scripts. For
+starters, this is actually a multi-project build, and the Android app itself
+is a subproject. We'll talk all about multi project builds in lesson 4, but
+It's set up that way so it's easy to add other sub-projects that we want to
+build together with the app, like libraries, or even a back-end.
+
+There are two things to note in this build script. First, we declare a buildscript dependency on 'com.android.tools.build:gradle:1.1.0'. This is where the Android plugin for Gradle lives.
+
+*/
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
@@ -12,8 +24,22 @@ buildscript {
     }
 }
 
+/*
+
+Second, we'll talk about this part of the Gradle API soon, but this block adds
+the jcenter repository to every subproject of the build.
+
+*/
+
 allprojects {
     repositories {
         jcenter()
     }
 }
+
+/*
+
+Let's take a look at the build script specifically for the Android app, which
+is in the /app directory.
+
+*/

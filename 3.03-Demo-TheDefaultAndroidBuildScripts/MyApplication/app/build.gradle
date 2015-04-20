@@ -1,3 +1,16 @@
+/*
+
+Here's the build script specifically for the Android app. Note that it first
+applies the Android plugin, which it fetched from jcenter. All configuration
+of the Android plugin happens in the `android` configuration block. All that's
+absolutely required is are the first two lines defining the SDK version and
+the build tools version. The `defaultConfig` block configures attributes of
+the Android Manifest. We'll talk about the `buildTypes` block momentarily.
+
+*/
+
+
+
 apply plugin: 'com.android.application'
 
 android {
@@ -18,6 +31,14 @@ android {
         }
     }
 }
+
+/*
+
+This block works just like Java dependencies. This declares compile time
+dependencies on every JAR in the `libs` directory, and on the Android support
+library.
+
+*/
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])

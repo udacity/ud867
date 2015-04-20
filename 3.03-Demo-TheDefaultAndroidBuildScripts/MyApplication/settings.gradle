@@ -1,1 +1,9 @@
+/*
+
+We'll talk more about this file in lesson 4, but suffice it to say that this
+tells Gradle what subprojects to include.
+
+*/
+
+
 include ':app'
