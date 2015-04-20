@@ -1,6 +1,6 @@
 /*
     The Android plugin allows for defining different versions of your 
-    application that will be build. Instead of managing completely separate
+    application that will be built. Instead of managing completely separate
     code bases for each version of our app, we simply describe the differences
     between them and Gradle and the Android plugin take care of the rest. We 
     call these different versions of our app, variants.
