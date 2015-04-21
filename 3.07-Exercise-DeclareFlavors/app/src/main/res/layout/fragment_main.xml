@@ -6,7 +6,9 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".MainActivity$PlaceholderFragment">
 
-    <TextView android:text="@string/welcome_message" android:layout_width="wrap_content"
+    <TextView
+        android:text="@string/welcome_message"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/welcome_message_textview" />
 
@@ -14,10 +16,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Product Flavor: "
+        android:text="@string/product_flavor_heading"
         android:id="@+id/textView"
         android:layout_below="@+id/welcome_message_textview"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,7 +31,16 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/product_flavor_textview"
         android:layout_alignTop="@+id/textView"
+        android:layout_toRightOf="@+id/textView"
         android:layout_toEndOf="@+id/textView"
         android:text="@string/product_flavor_name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_below="@+id/product_flavor_textview"
+        android:text="@string/joke"
+        />
 
 </RelativeLayout>
