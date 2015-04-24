@@ -1,9 +1,0 @@
-/*
-
-We'll talk more about this file in lesson 4, but suffice it to say that this
-tells Gradle what sub-projects to include.
-
-*/
-
-
-include ':app'

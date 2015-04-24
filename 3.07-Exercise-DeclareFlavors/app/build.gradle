@@ -1,8 +1,7 @@
 /*
 
 In this series of exercises we'll be experimenting with Android product
-flavors. Flavors are similar to build types, in that they are dimension of a
-build variant. In this exercise you'll be implementing one of the most common
+flavors. In this exercise you'll be implementing one of the most common
 product flavor use cases, free and premium app variants. You'll be asked to
 create two new product flavors. Some additional resources are already provided
 for each product flavor.
@@ -45,7 +44,7 @@ android {
 
 Uncomment the following line to use our solution.
 
- */
+*/
 
 //apply from:"solution.gradle"
 

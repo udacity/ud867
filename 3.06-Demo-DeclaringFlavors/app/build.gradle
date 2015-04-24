@@ -1,10 +1,10 @@
 /*
 
-Let's make an app with a free version and a paid version. Unlike build types,
-the Android plugin does not create any for us default. If we want to declare
-some product flavors we do so just like we do with build types, except that we
-place them in a `productFlavors { }` script block. Let's go ahead and create
-our free and paid flavors, and assign them unique application ids.
+Let's make an app with a free flavor and a paid flavor. Unlike build types,
+the Android plugin does not create any product flavors for us default. If we
+want to declare some flavors we do so just like we do with build types, except
+that we place them in a `productFlavors { }` script block. Let's go ahead and
+create our free and paid flavors, and assign them unique application ids.
 
 */
 
@@ -21,6 +21,7 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -42,7 +43,7 @@ android {
 
 By default, source that is located in the 'main' source set is included in all
 app variants, however, we when declare additional flavors, the Android plugin
-automatically creates new source  sets for us that we can use to place flavor-
+automatically creates new source sets for us that we can use to place flavor-
 specific code and resources. Not surprisingly, these source sets are simply
 named whatever we named our flavors. Continuing with our free vs paid example,
 for our 'free' product flavor, our Java code and resources for the 'free'
@@ -64,10 +65,10 @@ our free message. If we select paidDebug and run our app again, we get our
 paid message!
 
 In addition to including addition sources in a flavor variant, we can place
-flavor-specific configuration in our Gradle build file. Basically, any
-configuration that we can put in `defaultConfig { }` script block, can also be
-placed in a flavor configuration block. For example, let's say the paid
-version of our app requires a new Android SDK.
+flavor-specific configuration in our Gradle build file. Any configuration that
+we can put in `defaultConfig { }` script block can also be placed in a flavor
+configuration block. For example, let's say the paid version of our app
+requires a new Android SDK. We can enforce that like so:
 
 */
 

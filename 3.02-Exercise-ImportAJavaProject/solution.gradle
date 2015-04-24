@@ -7,6 +7,7 @@ Solution:
 apply plugin: 'java'
 apply plugin: 'application'
 
+// This line tell the application plugin what class to run
 mainClassName = "com.udacity.gradle.JokeTeller"
 
 /*

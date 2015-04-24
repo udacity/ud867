@@ -12,8 +12,8 @@ task tellJoke << {
 
 /*
 
-Let's try importing this project into Android Studio. Open Android Studio, and
-from the splash screen, select "Import project(Eclipse ADT, Gradle, etc.), or
+Let's import this project into Android Studio. Open Android Studio, and
+from the splash screen, select "Import project(Eclipse ADT, Gradle, etc.)", or
 select File > New > Import Project, navigate to this build.gradle file, and
 hit OK.
 
@@ -44,7 +44,9 @@ the last couple lessons.
 
 There's also an easier way to run Gradle tasks from Android studio, and that's
 by opening the Gradle pane on the right of the window. You can run tasks by
-double clicking. Let's try adding a second task to our project.
+double clicking.
+
+Let's try adding a second task to our project.
 
 */
 
@@ -60,6 +62,7 @@ a sync between Gradle and Android Studio's internal model of our project. We
 can do that either by clicking on the blue circular arrows in the Gradle pane,
 or by clicking on the toolbar icon with the Gradle logo and Blue arrow.
 
-Now Android studio recognizes our new task, and we can run it from the Gradle pane.
+Now Android studio recognizes our new task, and we can run it from the Gradle
+pane.
 
 */

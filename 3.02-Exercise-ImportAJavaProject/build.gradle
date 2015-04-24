@@ -4,7 +4,6 @@ Let's move our joke telling code from our build script to a Java project, and
 build it from Android Studio. We've already written the joke, so all you need
 to do is:
 
-
 1. Apply the Java plugin to your project.
 2. Sync the Gradle project model with the Android Studio project model using
    the tool bar icon.
@@ -20,4 +19,4 @@ solution file into this one.
 
 */
 
-apply from: "solution.gradle"
+//apply from: "solution.gradle"

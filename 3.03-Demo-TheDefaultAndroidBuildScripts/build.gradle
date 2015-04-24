@@ -12,7 +12,8 @@ where the Android plugin for Gradle lives.
 
 */
 
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// Top-level build file where you can add configuration options common to all
+// sub-projects/modules.
 
 buildscript {
     repositories {
@@ -28,8 +29,8 @@ buildscript {
 
 /*
 
-Second, we'll talk about this part of the Gradle API soon, but this block adds
-the jcenter repository to every subproject of the build.
+Second this block adds the jcenter repository to every subproject of the
+build. We'll talk about this multi-project stuff in lesson 4.
 
 */
 
