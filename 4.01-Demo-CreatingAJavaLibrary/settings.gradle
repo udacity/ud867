@@ -1,10 +1,12 @@
 /*
 
-The settings.gradle file is where we tell Gradle what subprojects to include in the multi-project build. We already have the :app project for the Android app, and we'll add :javaJokes
+The settings.gradle file is where we tell Gradle what subprojects to include
+in the multi-project build. We already have the :app project for the Android
+app, and we'll add :javaJokes
 
-Finally, we need to add the dependency to the app project. Let's head over the build.gradle file in the app directory.
+Finally, we need to add the dependency to the app project. Let's head over the
+build.gradle file in the app directory.
 
 */
-
 
 include ':app', ':javaJokes'

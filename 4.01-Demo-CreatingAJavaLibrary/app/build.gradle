@@ -33,7 +33,8 @@ dependencies {
 
 /*
 
-Finally, we need to actually use the library. Give the textView in fragment_main.xml an id, we used textView. Then in MainActivityFragment, add:
+Finally, we need to actually use the library. Give the textView in
+fragment_main.xml an id, we used textView. Then in MainActivityFragment, add:
 
     import com.udacity.gradle.jokes.Joker;
 
@@ -50,7 +51,9 @@ Then replace onCreateView in MainActivityFragment with the following.
         return rootView;
     }
 
-Then we're ready to build! When you run the build, watch the Gradle Console, which you can open at the bottom right of Android Studio. You'll notice something like this:
+Then we're ready to build! When you run the build, watch the Gradle Console,
+which you can open at the bottom right of Android Studio. You'll notice
+something like this:
 
 :app:preBuild UP-TO-DATE
 :app:preDebugBuild UP-TO-DATE
@@ -65,7 +68,8 @@ Then we're ready to build! When you run the build, watch the Gradle Console, whi
 :app:prepareComAndroidSupportSupportV42210Library UP-TO-DATE
 :app:prepareDebugDependencies
 
-The app project was running some tasks, then the javaJokes project jumped in to create a JAR for the app project to use!
+The app project was running some tasks, then the javaJokes project jumped in
+to create a JAR for the app project to use!
 
 That's all there is to it to add a Java library project to an Android Studio build!
 
