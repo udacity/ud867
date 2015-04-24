@@ -6,9 +6,10 @@ is a subproject. We'll talk all about multi project builds in lesson 4, but
 It's set up that way so it's easy to add other sub-projects that we want to
 build together with the app, like libraries, or even a back-end.
 
-There are two things to note in this build script. First, we declare a
-buildscript dependency on 'com.android.tools.build:gradle:1.1.0'. This is
-where the Android plugin for Gradle lives.
+This build.gradle file is for the root project. There are two things to note
+in this file. First, we declare a buildscript dependency on
+'com.android.tools.build:gradle:1.1.0'. This is where the Android plugin for
+Gradle lives.
 
 */
 
