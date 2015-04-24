@@ -1,1 +1,29 @@
+/*
+
+We're just making a standard Java project, following all the default conventions. That means our build.gradle is all of one line:
+
+*/
+
 apply plugin:"java"
+
+/*
+
+We can now create our joke telling library. We'll create a file at
+
+javaJokes/src/main/java/com/udacity/gradle/jokes/Joker.java
+
+With contents:
+
+package com.udacity.gradle.jokes;
+
+public class Joker {
+    public String getJoke(){
+        return "This is totally a funny joke";
+    }
+}
+
+Now if we want to, we can navigate to the javaJokes directory and run Gradle tasks like usual. However, our app project doesn't yet know anything about our library. What we really need to do is declare a compile dependency on the output of this project. To do that, we need to add this Gradle project to the same multi-project build as the app. Let's head over to the settings.gradle file in the project root.
+
+
+*/
+

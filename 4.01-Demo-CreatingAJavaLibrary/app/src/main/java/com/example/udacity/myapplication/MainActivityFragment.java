@@ -24,9 +24,6 @@ public class MainActivityFragment extends Fragment {
         TextView textView = (TextView) rootView.findViewById(R.id.textView);
         Joker myJoker = new Joker();
         textView.setText(myJoker.getJoke());
-
-
-
         return rootView;
     }
 }
