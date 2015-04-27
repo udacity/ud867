@@ -1,4 +1,4 @@
-package com.example.udacity.mylibrary;
+package com.udacity.example.myapplication;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

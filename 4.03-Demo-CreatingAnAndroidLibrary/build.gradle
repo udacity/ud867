@@ -1,3 +1,17 @@
+/*
+
+While it's totally possible to add an Android library project manually, it's a lot easier to use the wizard. Navigate to
+
+
+New > New Module > Phone and Tablet Application > Android Library
+
+
+*/
+
+
+
+
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {

@@ -1,4 +1,4 @@
-package com.example.udacity.myapplication;
+package com.udacity.example.myapplication;
 
 import android.content.Intent;
 import android.support.v4.app.Fragment;
@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.udacity.mylibrary.ImageActivity;
+import com.udacity.example.mylibrary.ImageActivity;
 /**
  * A placeholder fragment containing a simple view.
  */

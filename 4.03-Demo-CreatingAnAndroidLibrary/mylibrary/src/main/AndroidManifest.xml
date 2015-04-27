@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.udacity.mylibrary" >
+    package="com.udacity.example.mylibrary" >
 
     <application
         android:allowBackup="true"
         android:label="@string/app_name" >
         <activity
-            android:name=".ImageActivity"
+            android:name="com.udacity.example.mylibrary.ImageActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

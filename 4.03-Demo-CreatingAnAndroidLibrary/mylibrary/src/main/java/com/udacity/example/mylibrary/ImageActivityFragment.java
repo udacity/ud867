@@ -1,4 +1,4 @@
-package com.example.udacity.mylibrary;
+package com.udacity.example.mylibrary;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;

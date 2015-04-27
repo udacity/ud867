@@ -1,4 +1,4 @@
-package com.example.udacity.mylibrary;
+package com.udacity.example.mylibrary;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
