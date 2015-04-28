@@ -23,8 +23,16 @@ android {
     }
 }
 
+/*
+
+Here we have a project that's using Google Play Services to display test ads
+on a free flavor. Since we don't need Play Services on the paid flavor, we can
+assign our dependency to the freeCompile configuration.
+
+*/
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.1.1'
-    compile 'com.google.android.gms:play-services:7.0.0'
+    freeCompile 'com.google.android.gms:play-services:7.0.0'
 }
