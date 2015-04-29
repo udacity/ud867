@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application>
-        <activity android:name="com.udacity.gradle.variantactivities.paid.PaidActivity"
-            android:label="@string/title_activity_paid"></activity>
+        <activity android:name="com.udacity.gradle.flavorspecificactivity.paid.JokeActivity"
+            android:label="@string/title_activity_joke"></activity>
     </application>
 
 </manifest>

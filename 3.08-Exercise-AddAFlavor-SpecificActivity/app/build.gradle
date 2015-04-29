@@ -1,23 +1,26 @@
 /*
 
-In this series of exercises we'll be adding variant specific capabilities. You
-will be required to add an additional activity to the 'paid' product flavor,
-which will then only be available in the paid version of the application.
+Now let's add an entirely new activity to one flavor. We'll make an app where both flavors present a "Tell Joke" button. In the paid flavor that button will launch a new activity that displays a joke, while the free flavor will display a toast telling the user to upgrade to the paid version.
 
 Exercises:
 
 1. Import the project into Android Studio.
 2. Build the project and deploy it onto a device (or emulator).
-3. Add a new activity to the paid flavor.
-4. Add a button to the fragment 'FlavorFragment' in the paid favor which
-   launches you new activity.
-5. Build and deploy both flavors of you app again to confirm that the new
-   activity is only in the paid app variant.
+3. Declare free and paid flavors, and replicate MainActivity across the flavors.
+4. Build and deploy both flavors of your app to confirm that everything still works.
+4. Add an activity to the paid flavor that tells a joke. Remember the manifest!
+5. Change the action of the button such that it launches your new activity.
+6. Build and deploy both flavors of your app to confirm that the new activity is only in the paid flavor.
+
 
 If you need help, take a look at the solution project located in the 'solution'
 folder.
 
 */
+
+
+
+
 
 apply plugin: 'com.android.application'
 
@@ -26,7 +29,7 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "com.udacity.gradle.variantactivities"
+        applicationId "com.udacity.gradle.flavorspecificactivity"
         minSdkVersion 10
         targetSdkVersion 22
         versionCode 1
@@ -38,17 +41,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    productFlavors {
-        paid {
-            applicationId "com.udacity.gradle.variantactivities.paid"
-        }
-        free {
-            applicationId "com.udacity.gradle.variantactivities.free"
-        }
-    }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:22.1.0'
+    compile 'com.android.support:appcompat-v7:22.1.1'
 }
