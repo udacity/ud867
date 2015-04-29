@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">Proguard</string>
-
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="welcome_message">Lesson 4: Proguard</string>
 </resources>
