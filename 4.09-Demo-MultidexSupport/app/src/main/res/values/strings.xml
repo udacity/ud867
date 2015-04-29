@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">Multidex</string>
-
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">MultiDex</string>
+    <string name="hello_world">Congrats! You got multidexing working :D</string>
     <string name="action_settings">Settings</string>
 </resources>
