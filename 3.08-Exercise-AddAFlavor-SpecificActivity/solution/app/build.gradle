@@ -25,7 +25,6 @@ android {
     }
     productFlavors{
         free {
-
             applicationId "com.udacity.gradle.flavorspecificactivity.free"
         }
         paid {

@@ -4,7 +4,8 @@ Let's make an app with a free flavor and a paid flavor. Unlike build types,
 the Android plugin does not create any product flavors for us default. If we
 want to declare some flavors we do so just like we do with build types, except
 that we place them in a `productFlavors { }` script block. Let's go ahead and
-create our free and paid flavors, and assign them unique application ids.
+create our free and paid flavors, and assign them unique application ids. That
+way we can install both flavors on the same device.
 
 */
 

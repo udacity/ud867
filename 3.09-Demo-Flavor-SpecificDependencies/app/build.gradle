@@ -18,8 +18,12 @@ android {
         }
     }
     productFlavors{
-        free {}
-        paid {}
+        free {
+            applicationId "com.udacity.gradle.adsupported.free"
+        }
+        paid {
+            applicationId "com.udacity.gradle.adsupported.paid"
+        }
     }
 }
 
