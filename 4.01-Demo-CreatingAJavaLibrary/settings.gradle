@@ -10,8 +10,9 @@ Now javaJokes is a subproject, and if we run
 
 We see that both app and javaJokes are subprojects.
 
-Finally, if we want to use code from javaJokes in our app project, we need to declare a project dependency. Let's head over the
-build.gradle file in the app directory.
+Finally, if we want to use code from javaJokes in our app project, we need to
+declare a project dependency. Let's head over the build.gradle file in the app
+directory.
 
 */
 

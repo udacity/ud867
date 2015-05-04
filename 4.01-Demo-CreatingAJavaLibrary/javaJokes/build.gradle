@@ -19,37 +19,39 @@ dependencies {
 
 We can now create our joke telling library. We'll create a file at
 
-javaJokes/src/main/java/com/udacity/gradle/jokes/Joker.java
+    javaJokes/src/main/java/com/udacity/gradle/jokes/Joker.java
 
 With contents:
 
-package com.udacity.gradle.jokes;
+    package com.udacity.gradle.jokes;
 
-public class Joker {
-    public String getJoke(){
-        return "This is totally a funny joke";
+    public class Joker {
+        public String getJoke(){
+            return "This is totally a funny joke";
+        }
     }
-}
 
 Now if we want to, we can navigate to the javaJokes directory and run Gradle
 tasks like usual. If we also add
 
-javaJokes/src/main/java/com/udacity/gradle/jokes/Joker.java
+    javaJokes/src/main/java/com/udacity/gradle/jokes/Joker.java
 
-package com.udacity.gradle.jokes.test;
+With contents:
 
-import com.udacity.gradle.jokes.Joker;
-import org.junit.Test;
+    package com.udacity.gradle.jokes.test;
 
-public class JokerTest {
-    @Test
-    public void test() {
-        Joker joker = new Joker();
-        assert joker.getJoke().length() != 0;
+    import com.udacity.gradle.jokes.Joker;
+    import org.junit.Test;
+
+    public class JokerTest {
+        @Test
+        public void test() {
+            Joker joker = new Joker();
+            assert joker.getJoke().length() != 0;
+        }
     }
-}
 
-We can test our library in isolation. using
+We can then test our library in isolation using
 
     $ gradle test
 
