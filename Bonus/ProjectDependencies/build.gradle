@@ -1,4 +1,4 @@
-// Add the 'base' plugin to all our projects to get some 
+// Add the 'base' plugin to all our projects to get some
 // sensible defaults such as 'clean' task and zip file names.
 allprojects {
     apply plugin: 'base'
@@ -9,11 +9,11 @@ project(':projA') {
     configurations {
         docs
     }
-    
+
     task zip(type: Zip) {
         from 'foo.txt'
     }
-    
+
     artifacts {
         docs zip
     }
@@ -24,12 +24,12 @@ project(':projB') {
     configurations {
         deps
     }
-    
+
     dependencies {
         // create a dependency to 'projA' 'docs' configuration.
         deps project(path: ':projA', configuration: 'docs')
     }
-    
+
     task copyDeps(type: Copy) {
         from configurations.deps
         into "$buildDir/deps"
