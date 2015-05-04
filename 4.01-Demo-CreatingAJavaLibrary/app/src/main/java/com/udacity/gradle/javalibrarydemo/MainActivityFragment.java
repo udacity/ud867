@@ -1,4 +1,4 @@
-package com.example.udacity.myapplication;
+package com.udacity.gradle.javalibrarydemo;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -21,7 +21,7 @@ public class MainActivityFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-        TextView textView = (TextView) rootView.findViewById(R.id.textView);
+        TextView textView = (TextView) rootView.findViewById(R.id.text_view);
         Joker myJoker = new Joker();
         textView.setText(myJoker.getJoke());
         return rootView;

@@ -1,4 +1,4 @@
-package com.example.udacity.myapplication;
+package com.udacity.gradle.javalibrarydemo;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -1,11 +1,19 @@
 /*
 
 We're just making a standard Java project, following all the default
-conventions. That means our build.gradle is all of one line:
+conventions. That means our build.gradle is super simple:
 
 */
 
 apply plugin:"java"
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.11'
+}
 
 /*
 
@@ -24,12 +32,31 @@ public class Joker {
 }
 
 Now if we want to, we can navigate to the javaJokes directory and run Gradle
-tasks like usual. However, our app project doesn't yet know anything about our
+tasks like usual. If we also add
+
+javaJokes/src/main/java/com/udacity/gradle/jokes/Joker.java
+
+package com.udacity.gradle.jokes.test;
+
+import com.udacity.gradle.jokes.Joker;
+import org.junit.Test;
+
+public class JokerTest {
+    @Test
+    public void test() {
+        Joker joker = new Joker();
+        assert joker.getJoke().length() != 0;
+    }
+}
+
+We can test our library in isolation. using
+
+    $ gradle test
+
+However, our app project doesn't yet know anything about our
 library. What we really need to do is declare a compile dependency on the
 output of this project. To do that, we need to add this Gradle project to the
 same multi-project build as the app. Let's head over to the settings.gradle
 file in the project root.
 
-
 */
-
