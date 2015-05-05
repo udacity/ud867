@@ -12,8 +12,8 @@ task tellJoke << {
 
 /*
 
-Let's import this project into Android Studio. Open Android Studio, and
-from the splash screen, select "Import project(Eclipse ADT, Gradle, etc.)", or
+Let's import this project into Android Studio. Open Android Studio, and from
+the splash screen, select "Import project(Eclipse ADT, Gradle, etc.)", or
 select File > New > Import Project, navigate to this build.gradle file, and
 hit OK.
 
@@ -31,9 +31,9 @@ as the files from the Gradle wrapper, and a bunch of extra stuff added by
 Android Studio.
 
 There are several ways to run Gradle tasks from Android Studio. The first is
-from the terminal at the bottom left. Note that before you can use the Gradle
-wrapper created by Android Studio, you'll need to add execution permissions
-for the wrapper script, like so:
+from the terminal at the bottom left. Note that the first time you use the
+Gradle wrapper created by Android Studio, you may need to add execution
+permissions for the wrapper script, like so:
 
     $ chmod +x gradlew
 
@@ -64,5 +64,23 @@ or by clicking on the toolbar icon with the Gradle logo and Blue arrow.
 
 Now Android studio recognizes our new task, and we can run it from the Gradle
 pane.
+
+A moment ago, we just had a build.gradle file, and now we've got a directory
+totally full of obscure files and directories. Unfortunately IDEs tend to do
+that. Let's take a look at the various files, and figure out why they're all
+there.
+
+The .gradle directory is where Gradle stores information for incremental build
+support. The .idea directory is where Android Studio stores its model of your
+project. The build directory is where your build outputs would go, if this
+build generated any. For now it's just holding onto some information related
+to the synchronization between Gradle's project model and Android Studio's
+project model. Finally, you know the gradle directory. That's where the
+wrapper jar and properties are stored.
+
+In the root folder, we have the .iml file, which stores more information on
+Android Studio's project model. We have our build.gradle file, and the
+familiar wrapper scripts. We also have local.properties file that Gradle will
+use later to find the location of the Android SDK.
 
 */
