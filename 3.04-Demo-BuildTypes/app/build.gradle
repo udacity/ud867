@@ -34,7 +34,7 @@ android {
 /*
 
 If we look at the available tasks for our project, you'll see tasks
-corresponding to  each build type. We can generate the debug APK by running
+corresponding to each build type. We can generate the debug APK by running
 'assembleDebug', and similarly we get the release APK by running
 'assembleRelease'.
 
