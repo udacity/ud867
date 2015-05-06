@@ -8,7 +8,9 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
 
-    <TextView android:text="@string/free_greeting" android:layout_width="wrap_content"
+    <TextView
+        android:text="@string/free_greeting"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
 
