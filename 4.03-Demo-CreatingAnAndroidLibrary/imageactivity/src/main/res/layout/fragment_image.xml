@@ -3,13 +3,20 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivityFragment">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".ImageActivityFragment">
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_text"
-        android:onClick="launchLibraryActivity"
+        android:id="@+id/libraryWelcomeTextView"
+        android:text="@string/library_welcome_text"
+        />
+
+    <ImageView
+        android:layout_below="@id/libraryWelcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gradlelogo"
         />
 
 </RelativeLayout>

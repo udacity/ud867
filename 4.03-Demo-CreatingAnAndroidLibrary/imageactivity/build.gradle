@@ -1,11 +1,17 @@
-apply plugin: 'com.android.application'
+
+
+
+
+
+
+
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 22
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "com.udacity.gradle.androidlibrarydemo"
         minSdkVersion 10
         targetSdkVersion 22
         versionCode 1
@@ -19,17 +25,7 @@ android {
     }
 }
 
-/*
-
-Now if we add a compile time dependency on the imageactivity project, we can
-now access classes and resources declared in that library! Let's wire up a
-button to launch the activity from our library.
-
-*/
-
-
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.1.1'
-    compile project(":imageactivity")
 }
