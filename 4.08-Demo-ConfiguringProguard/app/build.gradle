@@ -6,7 +6,7 @@ Proguard.
 
 Proguard can do a lot of interesting stuff, including obfuscating your code by
 giving all your classes and methods meaningless names. That's mostly of
-interest if you're really worries about your code being reverse engineered.
+interest if you're really worried about your code being reverse engineered.
 For our purposes, however, the properties we want to configure on our build
 type are minifyEnabled and shrinkResources.
 
@@ -65,5 +65,5 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.1.1'
-    compile 'com.google.android.gms:play-services:7.0.0'
+    compile 'com.google.android.gms:play-services:7.3.0'
 }

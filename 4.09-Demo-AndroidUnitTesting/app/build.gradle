@@ -3,6 +3,7 @@
 
 
 
+
 Method i in android.util.Log not mocked.
 
 */
@@ -27,8 +28,12 @@ android {
     }
 
     productFlavors {
-        free
-        paid
+        free {
+            applicationId "com.udacity.gradle.testing.free"
+        }
+        paid {
+            applicationId "com.udacity.gradle.testing.paid"
+        }
     }
 
     buildTypes {
