@@ -1,16 +1,17 @@
 package com.udacity.gradle.testingexercise;
 
 
+import android.os.Build;
+
 import java.util.Date;
 
 public class DeviceInfoGenerator {
 
-
-    static String getDeviceInfo(){
-        return android.os.Build.DEVICE;
+    public static String getDeviceInfo(){
+        return Build.MODEL;
     }
 
-    static String getDate(){
+    public static String getDate(){
         return new Date().toString();
     }
 }

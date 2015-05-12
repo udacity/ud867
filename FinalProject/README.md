@@ -9,7 +9,10 @@ GCE module and passes them to the Android Library for display.
 
 ## Why this Project
 
-As Android projects grow in complexity, it becomes necessary to customize the behavior of the Gradle build tool, allowing automation of repetitive tasks. Particularly, factoring functionality into libraries and creating product flavors allow for much bigger projects with minimal added complexity.
+As Android projects grow in complexity, it becomes necessary to customize the
+behavior of the Gradle build tool, allowing automation of repetitive tasks.
+Particularly, factoring functionality into libraries and creating product
+flavors allow for much bigger projects with minimal added complexity.
 
 ##What Will I Learn?
 
@@ -23,10 +26,6 @@ You will learn the role of Gradle in building Android Apps and how to use Gradle
 * Configure an integration test suite that runs against the local App Engine development server
 
 ##How Do I Complete this Project?
-
-
-
-
 
 ### Stage 0: Starting Point
 
@@ -111,7 +110,7 @@ http://www.tutorialspoint.com/android/android_loading_spinner.htm
 
 To tie it all together, create a Gradle task that:
 
-1. Launches the GCE dev server
+1. Launches the GCE local development server
 2. Runs all tests
 3. Shuts the server down again
 
@@ -131,8 +130,8 @@ To tie it all together, create a Gradle task that:
 
 ### Optional Components
 
-To receive “exceeds specifications”, your app must fully implement all of the following items.
+To receive "exceeds specifications", your app must fully implement all of the following items.
 
 * The free app variant displays interstitial ads between the main activity and the joke-displaying activity.
 * The app displays a loading indicator while the joke is being fetched from the server.
-* The root build.gradle file contains a task that will start up the GCE dev server, run all Android tests, then shutdown the dev server.
+* The root build.gradle file contains a task that will start up the GCE development server, run all Android tests, then shutdown the development server.
