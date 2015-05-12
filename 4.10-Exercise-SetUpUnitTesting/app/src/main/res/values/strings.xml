@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">TestingExercise</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">Testing Exercise</string>
+    <string name="description">This app is pulling information from two sources, one of which relies on the presence of the Android framework, and one of which can be tested in isolation. It\'s up to you to figure out which is which, and test them appropriately.</string>
     <string name="action_settings">Settings</string>
+    <string name="device">Device: </string>
+    <string name="date">Date: </string>
 </resources>
