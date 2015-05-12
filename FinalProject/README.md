@@ -7,11 +7,30 @@ of four modules. A Java library that provides jokes, a Google Could Endpoints
 activity for displaying jokes, and an Android app that fetches jokes from the
 GCE module and passes them to the Android Library for display.
 
-## Stages
+## Why this Project
 
-### Stage 0. Starting Point
+As Android projects grow in complexity, it becomes necessary to customize the behavior of the Gradle build tool, allowing automation of repetitive tasks. Particularly, factoring functionality into libraries and creating product flavors allow for much bigger projects with minimal added complexity.
 
-This is the starting point for the final project, which we'll provide to you.
+##What Will I Learn?
+
+You will learn the role of Gradle in building Android Apps and how to use Gradle to manage apps of increasing complexity. You'll learn to:
+
+* Add free and paid flavors to an app, and set up your build to share code between them
+* Factor reusable functionality into a Java library
+* Factor reusable Android functionality into an Android library
+* Configure a multi project build to compile your libraries and app
+* Use the Gradle App Engine plugin to deploy a backend
+* Configure an integration test suite that runs against the local App Engine development server
+
+##How Do I Complete this Project?
+
+
+
+
+
+### Stage 0: Starting Point
+
+This is the starting point for the final project, which is provided to you in the [course repository](https://github.com/udacity/ud867/tree/master/FinalProject).
 It contains an activity with a banner ad and a button that purports to tell a
 joke, but actually just complains. The banner ad was set up following the
 instructions here:
@@ -95,3 +114,25 @@ To tie it all together, create a Gradle task that:
 1. Launches the GCE dev server
 2. Runs all tests
 3. Shuts the server down again
+
+# Rubric
+
+### Required Components
+
+* Project contains a Java library for supplying jokes
+* Project contains an Android library with an activity that displays jokes passed to it as intent extras.
+* Project contains a Google Cloud Endpoints module that supplies jokes from the Java library. Project loads jokes from GCE module via an async task.
+* Project contains connected tests to verify that the async task is indeed loading jokes.
+* Project contains paid/free flavors. The paid flavor has no ads, and no unnecessary dependencies.
+
+### Required Behavior
+
+* App retrieves jokes from Google Cloud Endpoints module and displays them via an Activity from the Android Library.
+
+### Optional Components
+
+To receive “exceeds specifications”, your app must fully implement all of the following items.
+
+* The free app variant displays interstitial ads between the main activity and the joke-displaying activity.
+* The app displays a loading indicator while the joke is being fetched from the server.
+* The root build.gradle file contains a task that will start up the GCE dev server, run all Android tests, then shutdown the dev server.
