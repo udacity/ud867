@@ -74,7 +74,7 @@ https://github.com/GoogleCloudPlatform/gradle-appengine-templates/tree/master/He
 
 Introduce a project dependency between your Java library and your GCE module,
 and modify the GCE starter code to pull jokes from your Java library. Create
-an Async task to retrieve jokes. Made the button kick off a task to retrieve a
+an Async task to retrieve jokes. Make the button kick off a task to retrieve a
 joke, then launch the activity from your Android Library to display it.
 
 ### Stage 4: Add Functional Tests
@@ -89,18 +89,18 @@ dependencies you can) from the paid flavor.
 
 ## Optional Tasks
 
-To exceed expectations, do the following.
+To exceed expectations, do the following:
 
 ### Add Interstitial Ad
 
 Follow these instructions to add an interstitial ad to the free version.
-Display the add after the user hits the button, and before the joke is shown.
+Display the add after the user hits the button, but before the joke is shown.
 
 https://developers.google.com/mobile-ads-sdk/docs/admob/android/interstitial
 
 ### Add Loading Indicator
 
-Add a loading indicator that is shown while the joke is being retrieved, and
+Add a loading indicator that is shown while the joke is being retrieved and
 disappears when the joke is ready. The following tutorial is a good place to
 start:
 
