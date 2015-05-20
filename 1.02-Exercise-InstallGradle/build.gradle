@@ -41,8 +41,9 @@ lines to our /.bash_profile file to tell the system where to find our new
 installation of Gradle. You can do all these steps manually, but the easiest
 way is to paste the whole big block of instructions below into your terminal.
 Note that you may need to change the version number on the first and third
-lines. This command also adds an environment variable that turns on the
-Gradle daemon by default.
+lines. This command also adds an environment variable that turns on the Gradle
+daemon by default. Note that you may need to run the following command with
+`sudo` out in front.
 
 unzip ~/Downloads/gradle-2.3-all.zip -d /usr/local/gradle/ &&\
 echo '# Adding Gradle to system path
