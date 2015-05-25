@@ -11,11 +11,13 @@ Since we haven't installed Gradle yet, we'll execute this task using the
 Gradle wrapper. The wrapper is a script that will download and install a
 specified version of Gradle.
 
-Challenges:
-  1. Use the Gradle wrapper to execute the task "hello".
-  2. Modify the action of this task so it instead prints your name.
+Remember that you can always look at the solution.gradle file for help!
 
-Remember that you can always look at the solution.gradle file for Help!
+Challenges:
+  1. Find the solution.gradle file in this directory.
+  2. Use the Gradle wrapper to execute the task "hello".
+  3. Modify the action of this task so it instead prints your name.
+  4. Figure out my favorite type of candy.
 
 */
 
