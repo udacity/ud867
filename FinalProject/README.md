@@ -27,7 +27,7 @@ You will learn the role of Gradle in building Android Apps and how to use Gradle
 
 ##How Do I Complete this Project?
 
-### Stage 0: Starting Point
+### Step 0: Starting Point
 
 This is the starting point for the final project, which is provided to you in the [course repository](https://github.com/udacity/ud867/tree/master/FinalProject).
 It contains an activity with a banner ad and a button that purports to tell a
@@ -42,7 +42,7 @@ Android SDK Manager.
 When you can build an deploy this starter code to an emulator, you're ready to
 move on.
 
-### Stage 1: Create a Java library
+### Step 1: Create a Java library
 
 Your first task is to create a Java library that provides jokes. Create a new
 Gradle Java project either using the Android Studio wizard, or by hand. Then
@@ -52,7 +52,7 @@ you need review, check out demo 4.01 from the course code.
 Make the button display a toast showing a joke retrieved from your Java joke
 telling library.
 
-### Stage 2: Create an Android Library
+### Step 2: Create an Android Library
 
 Create an Android Library containing an Activity that will display a joke
 passed to it as an intent extra. Wire up project dependencies so that the
@@ -63,7 +63,7 @@ refresher on intent extras, check out;
 
 http://developer.android.com/guide/components/intents-filters.html
 
-### Stage 3: Create GCE Module
+### Step 3: Create GCE Module
 
 This next task will be pretty tricky. Instead of pulling jokes directly from
 our Java library, we'll set up a Google Cloud Endpoints development server,
@@ -77,12 +77,12 @@ and modify the GCE starter code to pull jokes from your Java library. Create
 an Async task to retrieve jokes. Make the button kick off a task to retrieve a
 joke, then launch the activity from your Android Library to display it.
 
-### Stage 4: Add Functional Tests
+### Step 4: Add Functional Tests
 
 Add code to test that your Async task successfully retrieves a non-empty
 string. For a refresher on setting up Android tests, check out demo 4.09.
 
-### Stage 5: Add a Paid Flavor
+### Step 5: Add a Paid Flavor
 
 Add free and paid product flavors to your app. Remove the ad (and any
 dependencies you can) from the paid flavor.
