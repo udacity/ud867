@@ -19,7 +19,7 @@ dependencies {
 /*
 
 Here we have a simple Java project with a single dependency on the spring core
-library. We can get generate a dependency report by running the 'dependencies'
+library. We can generate a dependency report by running the 'dependencies'
 task.
 
     $ gradle dependencies

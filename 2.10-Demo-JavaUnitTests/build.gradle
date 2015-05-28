@@ -21,7 +21,7 @@ tests passed.
 
 Gradle also provides detailed reports on our test execution. These reports are
 placed in the 'build/reports' directory. Let's take a look at one of these
-reports.
+reports. On Mac you can use:
 
     $ open build/reports/tests/index.html
 

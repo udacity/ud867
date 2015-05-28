@@ -6,7 +6,7 @@ to properly compile.
 
 Exercises:
 
-1. Create a new configuration called 'deps'
+1. Create a new configuration called 'deps'.
 2. Make the 'compile' configuration extend from the 'deps' configuration.
 3. Add a dependency to the latest version of Google's 'guava' library to
    the 'deps' configuration.

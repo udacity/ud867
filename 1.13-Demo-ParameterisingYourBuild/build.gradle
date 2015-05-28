@@ -8,7 +8,7 @@ system to be running your build.
 
 Gradle allows you to parametrize your build by adding properties to the
 project object from outside your build script. There are two main ways to do
-this, a gradle.properties file, and command line arguments.
+this: a gradle.properties file, and command line arguments.
 
 Let's create a task that prints a greeting.
 
@@ -36,7 +36,7 @@ way to set properties is on the command line. Let's run
     gradle -Pgreeting="Hello from the command line" pG
 
 Note that the `greeting` property is now defined in two places, the
-gradle.properties file, and from the commend line. The command line value
+gradle.properties file, and from the command line. The command line value
 overrides the value in the properties file.
 
 There's a third way to use Gradle properties, and that's from inside the build

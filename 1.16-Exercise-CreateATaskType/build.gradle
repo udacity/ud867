@@ -3,7 +3,7 @@
 In this exercise you'll be creating your own custom task class. Instead of
 configuring ad-hoc tasks in a build script, we can define a task as a regular
 Java or Groovy class that can then be reused throughout your build scripts.
-Remember, a Gradle build script is just a Groovy script, so you can write you
+Remember, a Gradle build script is just a Groovy script, so you can write your
 class definition in-line in the script itself.
 
 Exercises:

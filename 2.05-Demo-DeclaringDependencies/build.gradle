@@ -32,9 +32,9 @@ dependencies {
 
 /*
 
-In some cases we we simply have files that we want to add as dependencies.
-File dependencies are declared very similarly to managed dependencies,
-however, instead of a dependency notation, we simply use a `FileCollection` or
+In some cases we simply have files that we want to add as dependencies. File
+dependencies are declared very similarly to managed dependencies, however,
+instead of a dependency notation, we simply use a `FileCollection` or
 `FileTree`. In this example, we are simply adding two JAR files as
 dependencies by creating a `FileCollection`.
 
