@@ -44,7 +44,7 @@ task stringsAndTypes << {
 
 task closures << {
     // TODO: Declare a closure that takes two arguments and adds them together
-    // HINT: http://groovy.codehaus.org/Closures
+    // HINT: http://www.groovy-lang.org/closures.html
     def addTwo = {x, y -> x + y}
 
     // TODO: Call your closure with arguments 17 and 25, and print the result
@@ -58,7 +58,7 @@ task lists << {
     def candyList = ["Tomatoes","Carrots","Spinach","Radishes","Beef"]
 
     // TODO: Create a new list of your candies in all caps
-    // HINT: http://groovy.codehaus.org/Tutorial+2+-+Code+as+data,+or+closures
+    // HINT: http://mrhaki.blogspot.ca/2010/05/groovy-goodness-use-collect-with.html
     def capitalCandies = candyList.collect{it.toUpperCase()}
 
     // TODO: Print each capital candy
