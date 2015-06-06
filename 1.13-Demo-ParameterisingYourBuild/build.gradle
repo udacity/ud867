@@ -55,6 +55,6 @@ ext {
 Side note, you can also set properties via system environment variables. Check
 out the following section of the user guide for more info:
 
-https://gradle.org/docs/current/userguide/tutorial_this_and_that.html
+https://docs.gradle.org/current/userguide/userguide_single.html#build_environment
 
 */
