@@ -1,21 +1,3 @@
-/*
-
-In this exercise you will set up unit tests and connected tests for a simple Android app.
-
-Exercises:
-
-    1. Set up unit tests that verify the initial count and increment methods of the ClickCounter class
-    2. Set up connected tests that test that clicking on the button actually increments the value displayed
-
-To complete the latter task, check out:
-
-    https://developer.android.com/training/activity-testing/activity-ui-testing.html
-
-*/
-
-
-
-
 apply plugin: 'com.android.application'
 
 android {
@@ -40,4 +22,5 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.2.0'
+    testCompile 'junit:junit:4.12'
 }
