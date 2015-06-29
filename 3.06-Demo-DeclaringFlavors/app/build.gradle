@@ -1,5 +1,11 @@
 /*
 
+In addition to build types, product flavors are another way for us to describe
+variants of our application in our build. Flavors are similar to build types
+except they are typically used to create different versions of our app that
+users might install. A very common example is creating both a free and paid
+version of your app.
+
 Let's make an app with a free flavor and a paid flavor. Unlike build types,
 the Android plugin does not create any product flavors for us default. If we
 want to declare some flavors we do so just like we do with build types, except
