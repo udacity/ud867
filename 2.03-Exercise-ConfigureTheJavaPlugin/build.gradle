@@ -18,11 +18,11 @@ Exercises:
 Hint: Take a look at the Gradle DSL documentation for the Jar task for
 information on modifying the generated manifest.
 
-http://gradle.org/docs/current/dsl/org.gradle.api.tasks.bundling.Jar.html
+https://docs.gradle.org/current/dsl/org.gradle.api.tasks.bundling.Jar.html
 
 Also, you can find information on configuring source sets in the Gradle
 User Guide chapter regarding the Java plugin.
 
-http://gradle.org/docs/current/userguide/java_plugin.html#sec:source_sets
+https://docs.gradle.org/current/userguide/java_plugin.html#sec:source_sets
 
 */
