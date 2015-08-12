@@ -30,7 +30,7 @@
     should do so before I take a drink. Take a look at the Gradle user
     guide for more information.
 
-    http://gradle.org/docs/current/userguide/more_about_tasks.html#sec:ordering_tasks
+    https://docs.gradle.org/current/userguide/more_about_tasks.html#sec:ordering_tasks
 */
 
 task brew {
