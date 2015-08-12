@@ -10,7 +10,7 @@ to do is:
 3. Browse through the tasks in the Gradle pane of Android Studio.
 4. Use the Gradle "Application" plugin to build and run JokeTeller.
 
-Hint: http://gradle.org/docs/current/userguide/application_plugin.html
+Hint: https://docs.gradle.org/current/userguide/application_plugin.html
 
 It's difficult to get Android studio to use the solution.gradle file, so to
 run our solution, you can either run from the command line with the -b flag,
