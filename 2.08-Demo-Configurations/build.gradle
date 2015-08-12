@@ -20,7 +20,7 @@ repositories {
 
 dependencies {
     compile 'commons-logging:commons-logging:1.1.3'
-    testCompile 'junit:junit:4.11'
+    testCompile 'junit:junit:4.12'
 }
 
 /*
