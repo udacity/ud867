@@ -17,6 +17,14 @@ dependencies {
 
 /*
 
+There is one additional wrinkle, however. Android doesn't yet run Java 8, so any Java libraries we want to use on Android will need to be compiled with Java 7. The Java plugin makes this very easy to configure. We just need the following line:
+
+*/
+
+sourceCompatibility = 1.7
+
+/*
+
 We can now create our joke telling library. We'll create a file at
 
     javaJokes/src/main/java/com/udacity/gradle/jokes/Joker.java

@@ -5,7 +5,8 @@ app, and not one, but two Java libraries!
 
 2. Manually add a Java module with a class called JokeSmith with a getJoke()
 method. Feel free to supply a funny joke, or just a debug method, if
-you're no fun.
+you're no fun. Remember to set sourceCompatibility = 1.7, so your library is
+usable on Android.
 
 3. Add your new module to your settings.gradle file
 
