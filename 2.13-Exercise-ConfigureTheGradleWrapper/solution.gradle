@@ -29,7 +29,7 @@ wrapper {
     $ gradlew -v [Windows]
 
 5. To get the wrapper to use the nightly build of Gradle, visit
-http://gradle.org/nightly/ and follow the instructions to edit your
+http://gradle.org/gradle-nightly-build/ and follow the instructions to edit your
 gradle.properties file. When you're done, your gradle.properties file should
 look something like this:
 

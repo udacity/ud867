@@ -133,6 +133,6 @@ sort of thing that's difficult or impossible hard to do with other build
 tools. For more information about tasks, check out this section of the Gradle
 user guide for more info:
 
-    https://gradle.org/docs/current/userguide/more_about_tasks.html
+    https://docs.gradle.org/current/userguide/more_about_tasks.html
 
 */

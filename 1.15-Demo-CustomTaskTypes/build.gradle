@@ -78,6 +78,6 @@ task helloName(type: HelloNameTask) {
 
 For more info, check out chapter 58 of the Gradle user guide:
 
-https://gradle.org/docs/current/userguide/custom_tasks.html
+https://docs.gradle.org/current/userguide/custom_tasks.html
 
 */

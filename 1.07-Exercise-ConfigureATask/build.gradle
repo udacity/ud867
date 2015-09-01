@@ -15,6 +15,6 @@ description.
 
 Hint: Don't forget about the solution file!
 
-http://gradle.org/docs/current/dsl/org.gradle.api.Task.html#org.gradle.api.Task:description
+https://docs.gradle.org/current/dsl/org.gradle.api.Task.html#org.gradle.api.Task:description
 
 */

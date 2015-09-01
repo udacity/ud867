@@ -149,7 +149,7 @@ task myTask8(description: "Another description") << {
 Not all task properties can be set this way, however. Check out this list for
 the complete story:
 
-http://gradle.org/docs/current/javadoc/org/gradle/api/tasks/TaskContainer.html#create(java.util.Map)
+https://docs.gradle.org/current/javadoc/org/gradle/api/tasks/TaskContainer.html#create(java.util.Map)
 
 The choice to set properties here or in the configuration block or even later
 on in the script is mostly up to readability, except for one case. If you are

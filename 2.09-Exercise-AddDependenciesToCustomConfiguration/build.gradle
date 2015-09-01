@@ -19,7 +19,7 @@ Exercises:
 Hint: Take a look at the Configuration DSL Reference page for how to make
 one configuration extend from another.
 
-http://gradle.org/docs/current/dsl/org.gradle.api.artifacts.Configuration.html
+https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.Configuration.html
 
 */
 
