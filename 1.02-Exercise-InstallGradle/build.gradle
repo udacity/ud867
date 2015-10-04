@@ -46,9 +46,9 @@ third lines. This command also adds an environment variable that turns on the
 Gradle daemon by default. Note that you may need to run the following command
 with `sudo` out in front.
 
-unzip ~/Downloads/gradle-2.6-all.zip -d /usr/local/gradle/ &&\
+unzip ~/Downloads/gradle-2.7-all.zip -d /usr/local/gradle/ &&\
 echo '# Adding Gradle to system path
-export GRADLE_HOME=/usr/local/gradle/gradle-2.6
+export GRADLE_HOME=/usr/local/gradle/gradle-2.7
 PATH=$GRADLE_HOME/bin:$PATH
 export PATH
 # Turning on the Gradle daemon by default
@@ -60,14 +60,14 @@ source ~/.bash_profile
 First, head over to https://gradle.org/downloads/, and download the latest
 version of Gradle. Note that we want the complete distribution. Next, we'll
 unzip Gradle and move it to where we want it to live. Our recommendation is in
-`C:\gradle-2.6`.
+`C:\gradle-2.7`.
 
 To tell Windows where to find Gradle, we need to add an environment variable.
 Navigate to the Control Panel > System > Advanced system settings > Advanced >
 Environment Variables... > System variables > New...
 
 Set the variable name to: GRADLE_HOME Set the variable value to the location
-you unzipped Gradle if you followed our suggestion it should be: C:\gradle-2.6
+you unzipped Gradle if you followed our suggestion it should be: C:\gradle-2.7
 
 Then edit the PATH user variable by appending: ;%GRADLE_HOME%\bin
 
