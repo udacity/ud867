@@ -17,7 +17,10 @@ dependencies {
 
 /*
 
-There is one additional wrinkle, however. Android doesn't yet run Java 8, so any Java libraries we want to use on Android will need to be compiled with Java 7. The Java plugin makes this very easy to configure. We just need the following line:
+There is one additional wrinkle, however. Android doesn't yet run Java 8, so any
+Java libraries we want to use on Android will need to be compiled with Java 7.
+The Java plugin makes this very easy to configure. We just need the following
+line:
 
 */
 
