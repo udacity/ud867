@@ -72,7 +72,7 @@ We can also add actions to the start of the list using `doFirst`.
 
 */
 
-myTask4.doFirst {println "Do this last"}
+myTask4.doFirst {println "Do this first"}
 
 /*
 
