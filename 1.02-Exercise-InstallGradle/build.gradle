@@ -22,9 +22,9 @@ There are a bunch of ways to install Gradle. If you're on Mac and use Homebrew
 
     $ brew install gradle
 
-Another option for Mac and Linux users is to head over to http://gvmtool.net/
-and install the Groovy Environment Manager, and use that to install Gradle. If
-neither of those options appeals to you, we'll go through the manual
+Another option for Mac and Linux users is to head over to http://sdkman.io/
+and install the Software Development Kit Manager, and use that to install
+Gradle. If neither of those options appeals to you, we'll go through the manual
 installation process for both Windows and Mac.
 
 To install Gradle manually, we need to do three things. First we need to
