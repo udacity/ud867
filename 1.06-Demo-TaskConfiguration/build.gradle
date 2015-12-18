@@ -7,7 +7,7 @@ object. All the keywords in the Gradle DSL are properties of, or methods on,
 the project object.
 
 For instance, the project object has a method called `task` for declaring
-tasks. It accepts a the name of a new task and a configuration closure, which
+tasks. It accepts a name of a new task and a configuration closure, which
 we'll talk about shortly.
 
 */
