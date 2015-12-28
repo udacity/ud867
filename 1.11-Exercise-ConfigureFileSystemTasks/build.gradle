@@ -5,7 +5,7 @@
 
     Exercises:
 
-    1. Create a task named "copyWeb". This task should peform the following:
+    1. Create a task named "copyWeb". This task should perform the following:
         a) Copy files from "src/web" to a folder "build/web".
         b) Copy all .txt files from "src/docs" to folder "build/web/help".
 
