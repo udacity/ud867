@@ -2,11 +2,17 @@
     Solution:
 */
 
-task hello { // 1. Define a task named `hello`
-    group = 'udacity' // 2. Add task to "udacity" group
-    description = 'This is my first Gradle task' // 3. Set a description
+// 1. Define a task named `hello`
+task hello {
 
-    doLast { // 4. Add a task action which prints to the console
+    // We can also set a group to organize tasks
+    group = 'udacity'
+
+    // 2. Set a description
+    description = 'This is my first Gradle task'
+
+    // 3. Add a task action which prints to the console
+    doLast {
         println 'Hello World!'
     }
 }
