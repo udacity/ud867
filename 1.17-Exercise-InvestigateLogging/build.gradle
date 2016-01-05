@@ -11,7 +11,7 @@ Exercises:
    the HelloTask at the INFO level.
 2. Execute the "hello" task with the appropriate command line options such
    that our newly added logging statements are shown in the console output.
-3. Modify the `println()` call in our task action to instead by a logging
+3. Modify the `println()` call in our task action to instead be a logging
    statement at the LIFECYCLE level.
 4. Execute the "hello" task and confirm the output.
 5. Execute the "hello" task with the appropriate command line options such
