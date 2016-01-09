@@ -18,8 +18,8 @@ Exercises:
    that the text "Hello World" is no longer written to the console output.
 6. Uncomment and run the "derpy" task below, then use "--stacktrace" to find
    the error.
-7. CHALLENGE! Log "Catch me if you can" at DEBUG level, then use grep to find
-   that message in the logs.
+7. CHALLENGE! Log "Catch me if you can" at DEBUG level, then use grep (or
+    findstr on Windows) to find that message in the logs.
 
 */
 

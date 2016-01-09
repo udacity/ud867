@@ -25,6 +25,10 @@ Challenge solution:
 
     $ gradle -b solution.gradle --debug hello | grep 'Catch me if you can'
 
+or in Windows:
+
+    $ gradle -b solution.gradle --debug hello | findstr 'Catch me if you can'
+
 */
 
 logger.debug "Catch me if you can"
@@ -34,6 +38,10 @@ logger.debug "Catch me if you can"
 Solution to the quiz question.
 
     $ gradle -b solution.gradle --debug hello2 | grep 'Hello World'
+
+or in Windows:
+
+    $ gradle -b solution.gradle --debug hello2 | findstr 'Hello World'
 
 */
 
