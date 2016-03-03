@@ -34,7 +34,7 @@ well as access the standard library. Let's make a Java class.
 */
 
 class JavaGreeter {
-    public static void sayHello() {
+    public void sayHello() {
         System.out.println("Hello Java!");
     }
 }

@@ -6,7 +6,7 @@
 task hello {
 
     // We can also set a group to organize tasks
-    group = 'udacity'
+    group = 'Udacity'
 
     // 2. Set a description
     description = 'This is my first Gradle task'

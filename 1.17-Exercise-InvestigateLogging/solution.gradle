@@ -27,7 +27,7 @@ Challenge solution:
 
 or in Windows:
 
-    $ gradle -b solution.gradle --debug hello | findstr 'Catch me if you can'
+    $ gradle -b solution.gradle --debug hello | findstr "Catch me if you can"
 
 */
 
@@ -41,7 +41,7 @@ Solution to the quiz question.
 
 or in Windows:
 
-    $ gradle -b solution.gradle --debug hello2 | findstr 'Hello World'
+    $ gradle -b solution.gradle --debug hello2 | findstr "Hello World"
 
 */
 

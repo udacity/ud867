@@ -32,7 +32,7 @@ download Gradle. Next we need to put it where we want it on our machine. And
 finally we need to let the system know where to find it. We'll do the Mac
 instructions first. Skip below for the Windows instructions
 
-******************* Mac Instructions *************
+******************* Mac/Linux Instructions *************
 
 First, head over to https://gradle.org/downloads/, and download the latest
 version of Gradle. Note that we want the complete distribution. Next, we'll
@@ -69,11 +69,11 @@ Environment Variables... > System variables > New...
 Set the variable name to: GRADLE_HOME Set the variable value to the location
 you unzipped Gradle if you followed our suggestion it should be: C:\gradle-2.7
 
-Then edit the PATH user variable by appending: ;%GRADLE_HOME%\bin
+Then edit the PATH user variable by appending: ;%GRADLE_HOME%\bin\
 
 Your path will then look something like:
 
-    <a bunch of directories>;%GRADLE_HOME%\bin
+    <a bunch of directories>;%GRADLE_HOME%\bin\
 
 When you're done, run `gradle --version` to ensure the installation is
 complete.
