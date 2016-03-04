@@ -34,7 +34,7 @@ instructions first. Skip below for the Windows instructions
 
 ******************* Mac/Linux Instructions *************
 
-First, head over to https://gradle.org/downloads/, and download the latest
+First, head over to https://gradle.org/gradle-download/, and download the latest
 version of Gradle. Note that we want the complete distribution. Next, we'll
 unzip Gradle and move it to where we want it to live. Our recommendation is in
 `/usr/local/gradle`. Then we need to add some lines to our .bash_profile file
@@ -57,7 +57,7 @@ source ~/.bash_profile
 
 ******************* Windows Instructions *******************
 
-First, head over to https://gradle.org/downloads/, and download the latest
+First, head over to https://gradle.org/gradle-download/, and download the latest
 version of Gradle. Note that we want the complete distribution. Next, we'll
 unzip Gradle and move it to where we want it to live. Our recommendation is in
 `C:\gradle-2.11`.
