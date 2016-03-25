@@ -6,18 +6,14 @@ import android.test.suitebuilder.annotation.MediumTest;
 import android.widget.Button;
 import android.widget.TextView;
 
-/**
- * Created by silver on 6/8/15.
- */
 public class ButtonClickTest extends ActivityInstrumentationTestCase2<ClickActivity> {
-
-    public ButtonClickTest() {
-        super(ClickActivity.class);
-    }
 
     private ClickActivity mClickActvity;
     private Button mButton;
     private TextView mTextView;
+    public ButtonClickTest() {
+        super(ClickActivity.class);
+    }
 
     @Override
     protected void setUp() throws Exception {
@@ -30,16 +26,16 @@ public class ButtonClickTest extends ActivityInstrumentationTestCase2<ClickActiv
     }
 
     @MediumTest
-    public void testInitialValue(){
-        int initialNumber = Integer.parseInt( mTextView.getText().toString());
-         assertEquals(0, initialNumber);
+    public void testInitialValue() {
+        int initialNumber = Integer.parseInt(mTextView.getText().toString());
+        assertEquals(0, initialNumber);
     }
 
     @MediumTest
-    public void testClick(){
-        int priorNumber = Integer.parseInt( mTextView.getText().toString());
+    public void testClick() {
+        int priorNumber = Integer.parseInt(mTextView.getText().toString());
         TouchUtils.clickView(this, mButton);
-        int newNumber = Integer.parseInt( mTextView.getText().toString());
+        int newNumber = Integer.parseInt(mTextView.getText().toString());
         assertEquals(priorNumber + 1, newNumber);
     }
 }

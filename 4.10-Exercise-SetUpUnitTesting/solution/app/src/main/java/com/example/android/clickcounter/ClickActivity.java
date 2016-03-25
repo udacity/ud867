@@ -1,16 +1,13 @@
 package com.example.android.clickcounter;
 
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class ClickActivity extends ActionBarActivity {
+public class ClickActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = ClickActivity.class.getSimpleName();
 
