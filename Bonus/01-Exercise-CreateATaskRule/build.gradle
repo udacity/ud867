@@ -8,7 +8,7 @@ a task rule which will bundle our various source collections.
 Exercises:
 
 1. Define a new task rule that matches a task name pattern of "bundle<Source>".
-2. Task rule should define a new Zip task that:
+2. Task rule should define a new Zip task with the following properties:
     a) Archive name should be "<Source>.zip"
     b) Destination of archive should be "build" directory.
     c) Archive includes all files from "src/<Source>" directory.
