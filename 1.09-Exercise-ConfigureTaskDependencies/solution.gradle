@@ -37,7 +37,7 @@ task blackCoffee {
     dependsOn drink
 
     doLast {
-        println "Mmmm, just how I like it."
+        println "Mmmm, bitter! just how I like it."
     }
 }
 
@@ -45,6 +45,6 @@ task sweetCoffee {
     dependsOn drink, addSweetener
 
     doLast {
-        println "Mmmm, just how I like it."
+        println "Mmmm, sweet! just how I like it."
     }
 }
