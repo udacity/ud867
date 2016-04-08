@@ -30,7 +30,10 @@ installation process for both Windows and Mac.
 To install Gradle manually, we need to do three things. First we need to
 download Gradle. Next we need to put it where we want it on our machine. And
 finally we need to let the system know where to find it. We'll do the Mac
-instructions first. Skip below for the Windows instructions
+instructions first. Skip below for the Windows instructions.
+
+Side note: Gradle relies on Groovy, but brings along its own distribution, so no
+need to install Groovy.
 
 ******************* Mac/Linux Instructions *************
 
