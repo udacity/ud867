@@ -59,12 +59,12 @@ task drink {
 
 task blackCoffee {
     doLast {
-        println "Ummm, just how I like it."
+        println "Mmmm, just how I like it."
     }
 }
 
 task sweetCoffee {
     doLast {
-        println "Ummm, just how I like it."
+        println "Mmmm, just how I like it."
     }
 }
