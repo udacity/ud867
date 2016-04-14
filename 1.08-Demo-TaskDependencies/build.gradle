@@ -33,7 +33,7 @@ task putOnShoes {
 One thing to note is that if you run `gradle tasks`, you won't see
 `putOnSocks`. That's because Gradle assumes that `putOnSocks` exists only to
 help `putOnShoes` do its job. You can still see the `putOnSocks` task by
-running `gradle tasks -all`.
+running `gradle tasks --all`.
 
 Task A is `finalizedBy` task B if every time task A runs, task B should be run
 afterwards. To continue our example, every time you eat breakfast, you must
