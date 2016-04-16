@@ -57,7 +57,7 @@ dependencies {
 
 /*
 
-Gradle also supports project dependencies, where are dependencies to other
+Gradle also supports project dependencies, which are dependencies to other
 Gradle projects within a single multi-project build. We'll talk more about
 multi-project builds and project dependencies in the next lesson.
 
