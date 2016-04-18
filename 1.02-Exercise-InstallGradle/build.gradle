@@ -55,7 +55,7 @@ export GRADLE_HOME=/usr/local/gradle/gradle-2.12
 PATH=$GRADLE_HOME/bin:$PATH
 export PATH
 # Turning on the Gradle daemon by default
-export GRADLE_OPTS="-Dorg.gradle.daemon=true"' >> ~/.bash_profile &&\
+export GRADLE_OPTS="-Dorg.gradle.daemon=true" >> ~/.bash_profile &&\
 source ~/.bash_profile
 
 ******************* Windows Instructions *******************
