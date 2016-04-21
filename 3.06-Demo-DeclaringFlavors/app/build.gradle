@@ -18,13 +18,13 @@ way we can install both flavors on the same device.
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
 
     defaultConfig {
         applicationId "com.example.udacity.declaringflavors"
-        minSdkVersion 10
-        targetSdkVersion 22
+        minSdkVersion 15
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
     }
@@ -81,12 +81,12 @@ requires a new Android SDK. We can enforce that like so:
 
 //productFlavors {
 //    paid {
-//        minSdkVersion 21
+//        minSdkVersion 23
 //    }
 //}
 
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile 'com.android.support:appcompat-v7:23.3.0'
 }
