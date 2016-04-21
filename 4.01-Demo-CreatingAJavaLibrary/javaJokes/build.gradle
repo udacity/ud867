@@ -45,7 +45,7 @@ With contents:
 Now if we want to, we can navigate to the javaJokes directory and run Gradle
 tasks like usual. If we also add
 
-    javaJokes/src/main/java/com/udacity/gradle/jokes/Joker.java
+    javaJokes/src/test/java/com/udacity/gradle/jokes/test/JokerTest.java
 
 With contents:
 
