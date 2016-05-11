@@ -7,8 +7,8 @@
     2. Add the following to the gradle.properties file:
         webOutputDir=build
 
-    3. Run the following Gradle command:
-        ./gradlew -PwebOutputDir=build2 bundleWeb
+    3. Run the following command:
+        $ gradle -b solution.gradle -PwebOutputDir=build2 bundleWeb
 */
 
 ext {

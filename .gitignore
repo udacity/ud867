@@ -36,6 +36,7 @@ local.properties
 ### Gradle template
 .gradle
 build/
+build2/
 
 # Ignore Gradle GUI config
 gradle-app.setting
