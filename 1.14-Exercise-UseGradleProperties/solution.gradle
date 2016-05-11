@@ -12,7 +12,7 @@
 */
 
 ext {
-    bundleBaseName = 'web' // 4. Define extra property
+    bundleBaseName = 'web2' // 4. Define extra property
 }
 
 task bundleWeb(type: Zip) {

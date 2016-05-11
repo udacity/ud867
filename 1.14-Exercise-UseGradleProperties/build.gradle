@@ -1,4 +1,6 @@
-/* In this series of exercises you'll be practicing different ways to pass
+/* 
+
+In this series of exercises you'll be practicing different ways to pass
 properties into your Gradle build. We've again provided a set of sources files
 and an archive task for you to modify.
 
@@ -12,8 +14,11 @@ Exercises:
 3. Run the "bundleWeb" task by passing the value of the "webOutputDir" property
 via the command line so that the zip file is created in a folder "build2".
 
-4. Define an extra project property in your build script whose value determines
-the name of the zip file created by "bundleWeb". */
+4. Define an extra project property in your build script whose value
+determines the name of the zip file created by "bundleWeb" (Continue passing
+in the webOuputDir property via the command line).
+
+*/
 
 task bundleWeb(type: Zip) {
     baseName = 'web'
