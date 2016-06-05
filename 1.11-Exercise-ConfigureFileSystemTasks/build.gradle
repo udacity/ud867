@@ -1,6 +1,6 @@
 /*
     In this series of exercies you'll be configuring tasks to copy and delete
-    files as well as build archives. This example contains some sample files 
+    files as well as build archives. This example contains some sample files
     that you'll be using to complete the exercises below.
 
     Exercises:
@@ -23,3 +23,18 @@
     4. Create a task named "deleteHelp". This task should perform the following:
         a) Delete the "help" folder created by the "copyWeb" task.
 */
+
+task 'copyWeb' (type: Copy) {
+  from ('src/web') {
+    into 'web'
+  }
+  from ('src/docs') {
+    include '*.txt'
+    into 'web/help'
+  }
+  into 'build'
+}
+
+task 'clean' (type: Delete) {
+  delete 'build'
+}
