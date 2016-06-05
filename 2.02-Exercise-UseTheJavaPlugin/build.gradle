@@ -10,3 +10,5 @@ Exercises:
    file.
 
 */
+
+apply plugin: 'java'
