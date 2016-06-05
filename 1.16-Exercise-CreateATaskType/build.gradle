@@ -15,3 +15,16 @@ Exercises:
 4. Run the "hello" task and observe the output.
 
 */
+
+class HelloTask extends DefaultTask {
+    String taskExecutionMessage
+
+    @TaskAction
+    public void doAction() {
+        println taskExecutionMessage
+    }
+}
+
+task hello(type: HelloTask) {
+  taskExecutionMessage = taskExecutionMessageInput
+}
