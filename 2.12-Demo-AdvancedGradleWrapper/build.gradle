@@ -23,7 +23,7 @@ identically to how we would the 'gradle' command.
 If this is the first time using the wrapper, it will go ahead and download the
 appropriate Gradle distribution and cache it locally. We can also explicitly
 configure what version of Gradle to use by setting the `gradleVersion`
-property on the 'wrapper' task. Let's the version to '2.2' and run the
+property on the 'wrapper' task. Let's set the version to '2.2' and run the
 'wrapper' task again.
 
 */
