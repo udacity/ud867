@@ -50,10 +50,10 @@ Let's try adding a second task to our project.
 
 */
 
-//task tellAnotherJoke <<{
-//    println "How long does it take to master build tools?"
-//    println "From the Gradle to the grave."
-//}
+task tellAnotherJoke <<{
+    println "How long does it take to master build tools?"
+    println "From the Gradle to the grave."
+}
 
 /*
 
