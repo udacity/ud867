@@ -47,7 +47,9 @@ script block. We can then assign dependencies to this configuration.
 */
 
 configurations {
-    custom
+    custom {
+      extendsFrom 
+    }
 }
 
 dependencies {
