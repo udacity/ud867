@@ -20,9 +20,16 @@ The solution to this exercise is essentially Demo 4.05
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        defaultConfig {
+            keyAlias 'chiragaggarwal'
+            keyPassword '3%d<s0#)x|,9);V'
+            storeFile file('/Users/chi6rag/workspace/android/learning/udacity_android_nanodegree/ud867/4.06-Exercise-ConfigureSigning/keystore.jks')
+            storePassword ' 6^!9F(|2*\'&#kH'
+        }
+    }
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
-
     defaultConfig {
         applicationId "com.udacity.gradle.automaticsigning"
         minSdkVersion 15
@@ -39,6 +46,6 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:23.3.0'
 }
