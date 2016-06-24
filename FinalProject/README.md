@@ -89,7 +89,7 @@ dependencies you can) from the paid flavor.
 
 ## Optional Tasks
 
-To exceed expectations, do the following:
+For extra practice to make your project stand out, complete the following tasks.
 
 ### Add Interstitial Ad
 
@@ -130,8 +130,8 @@ To tie it all together, create a Gradle task that:
 
 ### Optional Components
 
-To receive "exceeds specifications", your app must fully implement all of the following items.
+Once you have a functioning project, consider adding more features to test your Gradle and Android skills. Here are a few suggestions:
 
-* The free app variant displays interstitial ads between the main activity and the joke-displaying activity.
-* The app displays a loading indicator while the joke is being fetched from the server.
-* The root build.gradle file contains a task that will start up the GCE development server, run all Android tests, then shutdown the development server.
+* Make the free app variant display interstitial ads between the main activity and the joke-displaying activity.
+* Have the app display a loading indicator while the joke is being fetched from the server.
+* Write a Gradle task that starts the GCE dev server, runs all the Android tests, and shuts down the dev server.
