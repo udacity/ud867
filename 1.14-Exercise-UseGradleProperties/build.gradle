@@ -1,4 +1,4 @@
-/* 
+/*
 
 In this series of exercises you'll be practicing different ways to pass
 properties into your Gradle build. We've again provided a set of sources files
@@ -25,4 +25,10 @@ task bundleWeb(type: Zip) {
     destinationDir = file(webOutputDir)
 
     from 'src/web'
+}
+
+task clean(type: Delete) {
+    delete 'build'
+    delete 'build2'
+    delete 'build3'
 }

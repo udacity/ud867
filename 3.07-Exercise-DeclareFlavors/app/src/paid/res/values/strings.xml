@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="product_flavor_name">Paid</string>
+    <string name="joke">Yayy! I have a joke for you</string>
 </resources>

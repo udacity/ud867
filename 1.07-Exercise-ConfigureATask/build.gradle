@@ -18,3 +18,11 @@ Hint: Don't forget about the solution file!
 https://docs.gradle.org/current/dsl/org.gradle.api.Task.html#org.gradle.api.Task:description
 
 */
+
+task "hello" {
+  description "hello"
+  group "Udacity"
+  doLast {
+    println "Hello World!"
+  }
+}

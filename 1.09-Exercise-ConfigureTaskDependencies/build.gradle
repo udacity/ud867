@@ -34,6 +34,7 @@
 */
 
 task brew {
+    finalizedBy "pour"
     doLast {
         println "Brewing. Drip, drip, drip."
     }
@@ -45,25 +46,33 @@ task pour {
     }
 }
 
+task prepareCoffee {
+    dependsOn = ["brew", "pour"]
+}
+
 task addSweetener {
+    mustRunAfter "prepareCoffee"
     doLast {
         println "Adding sweetener. Stir, stir, stir."
     }
 }
 
 task drink {
+    shouldRunAfter "prepareCoffee"
     doLast {
         println "Drinking. Gulp, gulp, gulp."
     }
 }
 
 task blackCoffee {
+    dependsOn = ["prepareCoffee", "drink"]
     doLast {
         println "Mmmm, bitter! just how I like it."
     }
 }
 
 task sweetCoffee {
+    dependsOn = ["prepareCoffee", "addSweetener", "drink"]
     doLast {
         println "Mmmm, sweet! just how I like it."
     }
