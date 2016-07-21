@@ -28,7 +28,7 @@ println "Hello Groovy!"
 
 /*
 
-Most valid Java is also valid Groovy, and we can interoperates with Java, as
+Most valid Java is also valid Groovy, and we can interoperate with Java, as
 well as access the standard library. Let's make a Java class.
 
 */
