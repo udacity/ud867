@@ -45,17 +45,14 @@ unzip Gradle and move it to where we want it to live. Our recommendation is in
 new installation of Gradle. You can do all these steps manually, but the
 easiest way is to paste the whole big block of instructions below into your
 terminal. Note that you may need to change the version number on the first and
-third lines. This command also adds an environment variable that turns on the
-Gradle daemon by default. Note that you may need to run the following command
+third lines. Note that you may need to run the following command
 with `sudo` out in front.
 
-unzip ~/Downloads/gradle-2.13-all.zip -d /usr/local/gradle/ &&\
+unzip ~/Downloads/gradle-3.0-all.zip -d /usr/local/gradle/ &&\
 echo '# Adding Gradle to system path
-export GRADLE_HOME=/usr/local/gradle/gradle-2.13
+export GRADLE_HOME=/usr/local/gradle/gradle-3.0
 PATH=$GRADLE_HOME/bin:$PATH
-export PATH
-# Turning on the Gradle daemon by default
-export GRADLE_OPTS="-Dorg.gradle.daemon=true"' >> ~/.bash_profile &&\
+export PATH' >> ~/.bash_profile &&\
 source ~/.bash_profile
 
 ******************* Windows Instructions *******************
@@ -63,14 +60,14 @@ source ~/.bash_profile
 First, head over to https://gradle.org/gradle-download/, and download the latest
 version of Gradle. Note that we want the complete distribution. Next, we'll
 unzip Gradle and move it to where we want it to live. Our recommendation is in
-`C:\gradle-2.13`.
+`C:\gradle-3.0`.
 
 To tell Windows where to find Gradle, we need to add an environment variable.
 Navigate to the Control Panel > System > Advanced system settings > Advanced >
 Environment Variables... > System variables > New...
 
 Set the variable name to: GRADLE_HOME Set the variable value to the location
-you unzipped Gradle if you followed our suggestion it should be: C:\gradle-2.13
+you unzipped Gradle if you followed our suggestion it should be: C:\gradle-3.0
 
 Then edit the PATH user variable by appending: ;%GRADLE_HOME%\bin\
 
@@ -80,10 +77,6 @@ Your path will then look something like:
 
 When you're done, run `gradle --version` to ensure the installation is
 complete.
-
-Finally, let's add a properties file to tell Gradle to use the daemon by
-default. All we need to do is put a file named `gradle.properties` in
-C:\Users\<your username>\.gradle, and add the line `org.gradle.daemon=true`.
 
 ******************* When you're done *******************
 
