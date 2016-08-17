@@ -11,6 +11,7 @@ public class ButtonClickTest extends ActivityInstrumentationTestCase2<ClickActiv
     private ClickActivity mClickActvity;
     private Button mButton;
     private TextView mTextView;
+
     public ButtonClickTest() {
         super(ClickActivity.class);
     }

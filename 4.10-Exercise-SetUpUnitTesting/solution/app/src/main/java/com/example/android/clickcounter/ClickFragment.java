@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.Locale;
+
 public class ClickFragment extends Fragment {
 
     private static String CLICK_COUNT_TAG = "derp";
@@ -47,7 +49,7 @@ public class ClickFragment extends Fragment {
     }
 
     void displayClickCount() {
-        mTextView.setText(Integer.toString(mClickCounter.getCount()));
+        mTextView.setText(String.format(Locale.getDefault(), "%d", mClickCounter.getCount()));
     }
 
     @Override
