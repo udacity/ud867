@@ -1,9 +1,10 @@
 package com.udacity.gradle.testing.paid;
 
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 import java.util.Collection;
+
+import static org.junit.Assert.*;
 
 public class PaidEchoTest {
     @Test
