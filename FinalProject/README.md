@@ -16,7 +16,8 @@ flavors allow for much bigger projects with minimal added complexity.
 
 ##What Will I Learn?
 
-You will learn the role of Gradle in building Android Apps and how to use Gradle to manage apps of increasing complexity. You'll learn to:
+You will learn the role of Gradle in building Android Apps and how to use
+Gradle to manage apps of increasing complexity. You'll learn to:
 
 * Add free and paid flavors to an app, and set up your build to share code between them
 * Factor reusable functionality into a Java library
@@ -29,8 +30,9 @@ You will learn the role of Gradle in building Android Apps and how to use Gradle
 
 ### Step 0: Starting Point
 
-This is the starting point for the final project, which is provided to you in the [course repository](https://github.com/udacity/ud867/tree/master/FinalProject).
-It contains an activity with a banner ad and a button that purports to tell a
+This is the starting point for the final project, which is provided to you in
+the [course repository](https://github.com/udacity/ud867/tree/master/FinalProject). It
+contains an activity with a banner ad and a button that purports to tell a
 joke, but actually just complains. The banner ad was set up following the
 instructions here:
 
@@ -94,7 +96,7 @@ For extra practice to make your project stand out, complete the following tasks.
 ### Add Interstitial Ad
 
 Follow these instructions to add an interstitial ad to the free version.
-Display the add after the user hits the button, but before the joke is shown.
+Display the ad after the user hits the button, but before the joke is shown.
 
 https://developers.google.com/mobile-ads-sdk/docs/admob/android/interstitial
 
