@@ -11,9 +11,9 @@ installation of Gradle. First make sure you have an installation of by running
 
 The output should be something like:
 
-    java version "1.8.0_77"
-    Java(TM) SE Runtime Environment (build 1.8.0_77-b03)
-    Java HotSpot(TM) 64-Bit Server VM (build 25.77-b03, mixed mode)
+    java version "1.8.0_102"
+    Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+    Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
 
 If not, skip below to find Java installation instructions.
 
@@ -48,9 +48,9 @@ terminal. Note that you may need to change the version number on the first and
 third lines. Note that you may need to run the following command
 with `sudo` out in front.
 
-unzip ~/Downloads/gradle-3.0-all.zip -d /usr/local/gradle/ &&\
+unzip ~/Downloads/gradle-3.1-all.zip -d /usr/local/gradle/ &&\
 echo '# Adding Gradle to system path
-export GRADLE_HOME=/usr/local/gradle/gradle-3.0
+export GRADLE_HOME=/usr/local/gradle/gradle-3.1
 PATH=$GRADLE_HOME/bin:$PATH
 export PATH' >> ~/.bash_profile &&\
 source ~/.bash_profile
@@ -60,14 +60,14 @@ source ~/.bash_profile
 First, head over to https://gradle.org/gradle-download/, and download the latest
 version of Gradle. Note that we want the complete distribution. Next, we'll
 unzip Gradle and move it to where we want it to live. Our recommendation is in
-`C:\gradle-3.0`.
+`C:\gradle-3.1`.
 
 To tell Windows where to find Gradle, we need to add an environment variable.
 Navigate to the Control Panel > System > Advanced system settings > Advanced >
 Environment Variables... > System variables > New...
 
 Set the variable name to: GRADLE_HOME Set the variable value to the location
-you unzipped Gradle if you followed our suggestion it should be: C:\gradle-3.0
+you unzipped Gradle if you followed our suggestion it should be: C:\gradle-3.1
 
 Then edit the PATH user variable by appending: ;%GRADLE_HOME%\bin\
 
@@ -116,9 +116,9 @@ Before following these instructions, check to make sure you haven't already
 installed Java by running `java -version`. If the output is something like the
 following:
 
-    java version "1.8.0_77"
-    Java(TM) SE Runtime Environment (build 1.8.0_77-b03)
-    Java HotSpot(TM) 64-Bit Server VM (build 25.77-b03, mixed mode)
+    java version "1.8.0_102"
+    Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+    Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
 
 then you're already good to go!
 
@@ -157,7 +157,7 @@ license agreement, and download the Windows x64 package. At the time this was
 written, the most recent package was: jdk-8u51-windows-x64.exe
 
 Run the installer, installing to the default location. At the time of this
-writing that was: C:\Program Files\Java\jdk1.8.0_77\
+writing that was: C:\Program Files\Java\jdk1.8.0_102\
 
 To tell Windows where to find Java, we need to add an environment variable.
 Navigate to the Control Panel > System > Advanced system settings > Advanced >
@@ -166,7 +166,7 @@ Environment Variables... > System variables > New...
 The variable name should be : JAVA_HOME
 
 The variable value should be your install location. At the time of this
-writing it should be: C:\Program Files\Java\jdk1.8.0_77
+writing it should be: C:\Program Files\Java\jdk1.8.0_102
 
 You can now test your Java installation by running
 
