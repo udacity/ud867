@@ -99,8 +99,10 @@ much faster the second run is.
 
 */
 
-task helloWorld << {
-    println "Hello, World!"
+task helloWorld {
+    doLast{
+        println "Hello, World!"        
+    }
 }
 
 /*
