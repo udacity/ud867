@@ -22,7 +22,7 @@ selecting View > Syntax > Open all with current extension as... > Groovy
 
 */
 
-task groovy << {}
+task groovy {}
 
 println "Hello Groovy!"
 

@@ -1,50 +1,63 @@
 /*
 
-In these exercises we'll explore the Groovy features most relevant to Gradle
-build scripts. Each topic will be contained in the action of a Gradle task, so
-to test run your code you'll need to run that particular task. If you get
-stuck, check out the solution.gradle file in this directory.
+Welcome to the solutions to the Groovy Playground exercise! You can run these
+tasks by telling Gradle to use this build script, instead of the default
+build.gradle. To run the task below, use:
+
+    $ gradle -b solution.gradle stringsAndTypes
+
+or, more compactly
+
+    $ gradle -b solution.gradle sAT
 
 */
 
-task stringsAndTypes << {
-    // TODO: Run `$ gradle sAT`
-    println "Nice work abbreviating the task name"
+task stringsAndTypes {
+    doLast {
+        // TODO: Run `$ gradle sAT`
+        println "Nice work abbreviating the task name"
+
+        // TODO: Create a variable named foo and assign it the value 4.2
+
+        // TODO: Print the value and class of foo
+
+        // TODO: Use string interpolation to print the square root of 127
+        // HINT: http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html
+
+        // TODO: Assign the current date to foo and print it, along with its type
+        // HINT:
+        // http://docs.oracle.com/javase/7/docs/api/java/util/package-summary.html
 
 
-    // TODO: Create a variable named foo and assign it the value 4.2
+        // TODO: Use the `substring` method to extract my name from this string
+        def hello = "Hello, Jeremy."
 
-    // TODO: Print the value and class of foo
+        // TODO: Use `toUpperCase` to capitalize and print my name
 
-    // TODO: Use string interpolation to print the square root of 127
-    // HINT: http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html
-
-    // TODO: Assign the current date to foo and print it, along with its type
-    // HINT:
-    // http://docs.oracle.com/javase/7/docs/api/java/util/package-summary.html
-
-    // TODO: Use the `substring` method to extract my name from this string
-    def hello = "Hello, Jeremy.";
-
-    // TODO: Use `toUpperCase` to capitalize and print my name
-
+    }
 }
 
-task closures << {
-    // TODO: Declare a closure that takes two arguments and adds them together
-    // HINT: http://www.groovy-lang.org/closures.html
 
-    // TODO: Call your closure with arguments 17 and 25, and print the result
-    // Beware that something like `println addTwo 17, 25` is ambiguous
+task closures {
+    doLast {
+        // TODO: Declare a closure that takes two arguments and adds them together
+        // HINT: http://www.groovy-lang.org/closures.html
+
+        // TODO: Call your closure with arguments 17 and 25, and print the result
+        // Beware that something like `println addTwo 17, 25` is ambiguous
+
+    }
 }
 
-task lists << {
-    // TODO: Declare a list containing 5 of your favorite candies
-    // HINT: Try searching for "groovy list literal"
+task lists {
+    doLast {
+        // TODO: Declare a list containing 5 of your favorite candies
+        // HINT: Try searching for "groovy list literal"
 
-    // TODO: Create a new list of your candies in all caps
-    // HINT: http://mrhaki.blogspot.ca/2010/05/groovy-goodness-use-collect-with.html
+        // TODO: Create a new list of your candies in all caps
+        // HINT: http://mrhaki.blogspot.ca/2010/05/groovy-goodness-use-collect-with.html
 
-    // TODO: Print each capital candy
+        // TODO: Print each capital candy
 
+    }
 }

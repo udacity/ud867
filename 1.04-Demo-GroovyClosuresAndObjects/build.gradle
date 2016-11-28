@@ -7,7 +7,7 @@ from the scope in which they're declared.
 
 */
 
-task groovy << {}
+task groovy {}
 
 def foo = "One million dollars"
 def myClosure = {

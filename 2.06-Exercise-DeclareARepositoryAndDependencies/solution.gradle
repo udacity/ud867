@@ -13,6 +13,8 @@ dependencies {
     compile fileTree(dir: 'libs', include: '*.jar') // 3. Add 'lib' directory
 }
 
-task printDependencies << {
-    configurations.compile.each { println it.name }
+task printDependencies {
+    doLast {
+        configurations.compile.each { println it.name }
+    }
 }

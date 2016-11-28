@@ -14,8 +14,10 @@ Let's create a task that prints a greeting.
 
 */
 
-task printGreeting << {
-    println greeting
+task printGreeting {
+    doLast {
+       println greeting
+    }
 }
 
 /* If we just run that as is, we get the following error:

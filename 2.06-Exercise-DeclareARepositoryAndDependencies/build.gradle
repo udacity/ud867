@@ -27,6 +27,8 @@ http://search.maven.org/
 
 apply plugin: 'java'
 
-task printDependencies << {
-    configurations.compile.each { println it.name }
+task printDependencies {
+    doLast {
+        configurations.compile.each { println it.name }
+    }
 }

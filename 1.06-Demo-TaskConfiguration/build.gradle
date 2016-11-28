@@ -76,26 +76,6 @@ myTask4.doFirst {println "Do this first"}
 
 /*
 
-We can also add actions using the `leftShift` operator.
-
-*/
-
-myTask4.leftShift {println "Do this even more last"}
-myTask4 << {println "Do this last of all"}
-
-/*
-
-We can also declare a task and give it an action in a single stroke. This is a
-very common pattern.
-
-*/
-
-task myTask5 << {
-    println "Here's how to declare a task and give it an action in one stroke"
-}
-
-/*
-
 Instead of declaring a task and then setting its properties afterwards, we can
 also give the task a configuration closure when it's declared.
 
@@ -140,8 +120,10 @@ using the following syntax:
 
 */
 
-task myTask8(description: "Another description") << {
-    println "Doing something"
+task myTask8(description: "Another description") {
+    doLast {
+        println "Doing something"
+    }
 }
 
 /*
