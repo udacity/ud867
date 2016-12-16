@@ -18,7 +18,8 @@
         a) Expand the zip file created by the "bundleWeb" task.
         b) Copy the contents to a folder "build/exploded".
 
-    HINT: There isn't an UnZip task, so what task type do you need?
+    HINT: There isn't an UnZip task, so what task type do you need? You're kinda copying files so...
+    HINT: https://docs.gradle.org/current/dsl/org.gradle.api.Project.html#org.gradle.api.Project:zipTree(java.lang.Object)
 
     4. Create a task named "deleteHelp". This task should perform the following:
         a) Delete the "help" folder created by the "copyWeb" task.
