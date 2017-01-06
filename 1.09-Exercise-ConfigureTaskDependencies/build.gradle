@@ -21,8 +21,7 @@
     task also includes the adding of sweetener to my coffee.
 
     4. Make sure your dependencies are correctly configured by running
-    "blackCoffee" and "sweetCoffee" tasks individually using the Gradle
-    wrapper.
+    "blackCoffee" and "sweetCoffee" tasks individually.
 
     Hint: When considering an "optional" build step, such as sweetening
     my coffee, a "dependsOn" relationship isn't quite appropriate. I
