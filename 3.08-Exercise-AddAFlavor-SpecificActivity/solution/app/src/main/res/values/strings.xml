@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">Flavor Specific Activity</string>
-    <string name="greeting"> Go ahead and add free and paid versions!</string>
-    <string name="action_settings">Settings</string>
-    <string name="button_text">Tell a joke!</string>
-</resources>

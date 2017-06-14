@@ -1,17 +1,10 @@
 /*
 
-In this series of exercises we'll be experimenting with Gradle's built-in
-automated testing support. For these exercises a simple Java project has been
-provided, along with some unit tests. The project currently fails to build for
-a number of reasons. You will need to fix the project dependencies as well as
-the failing test.
-
 Exercises:
 
 1. Add a test dependency to the latest version of 'junit'.
 2. Run the provided unit tests.
-3. Use the test reports to identify the failing test. Modify the production
-   code such that the failing test will pass.
+3. Use the test reports to identify the failing test. Modify the production code such that the failing test will pass.
 
  */
 

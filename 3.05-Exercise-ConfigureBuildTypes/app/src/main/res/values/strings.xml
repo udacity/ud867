@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">BuildTypes</string>
-    <string name="action_settings">Settings</string>
-    <string name="welcome_message">Lesson 3 Exercise: Build Types</string>
-    <string name="application_id">Application Id:</string>
-</resources>

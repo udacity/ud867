@@ -1,5 +1,0 @@
-<resources>
-    <string name="app_name">Android Library Demo</string>
-    <string name="action_settings">Settings</string>
-    <string name="button_text">Launch activity from Library</string>
-</resources>

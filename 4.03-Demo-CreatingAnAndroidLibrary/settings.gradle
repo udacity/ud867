@@ -1,7 +1,0 @@
-/*
-
-Yep, looking good here. Let's check out the build.gradle in our app module.
-
-*/
-
-include ':app', ':imageactivity'

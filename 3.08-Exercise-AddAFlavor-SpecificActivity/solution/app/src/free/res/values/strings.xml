@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="greeting">Welcome to the free version!</string>
-    <string name="app_name">Flavor Specific Activity - Free</string>
-    <string name="toast_text">Upgrade to the paid version to get a joke!</string>
-</resources>
