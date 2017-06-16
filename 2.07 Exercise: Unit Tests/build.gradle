@@ -3,7 +3,7 @@
 Exercises:
 
 1. Add a test dependency to the latest version of 'junit'.
-2. Run the provided unit tests.
+2. Run and fix the provided unit tests.
 
 */
 
@@ -13,7 +13,4 @@ repositories {
     mavenCentral()
 }
 
-// Download dependencies with: gradle dependencies
-dependencies {
-    testCompile 'junit:junit:4.12'
-}
+// TODO: Add junit dependency
