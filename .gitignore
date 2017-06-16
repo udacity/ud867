@@ -45,7 +45,7 @@ gradle-app.setting
 !gradle-wrapper.jar
 
 # Other
-.setting
+.settings
 .classpath
 .vscode
 .project
