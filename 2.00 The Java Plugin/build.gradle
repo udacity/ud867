@@ -1,0 +1,17 @@
+/* 
+* -----------------------------------------------------------------
+* The Java Plugin
+* -----------------------------------------------------------------
+*/
+
+// Apply the java plugin:
+apply plugin: 'java'
+
+/*
+* Run: gradle tasks --all
+* 
+* assemble: creates the output we're interested in (usually JAR)
+* check: runs tests
+* build: depends on assemble and check
+* clean: deletes all build output
+*/

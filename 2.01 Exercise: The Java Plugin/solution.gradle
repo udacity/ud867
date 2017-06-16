@@ -1,0 +1,11 @@
+/*
+    Solution:
+ */
+
+apply plugin: 'java' // 1. Apply the Java plugin to the project
+
+jar {
+    manifest {
+        attributes 'Implementation-Version': '1.0' // 2. Add manifest attribute
+    }
+}

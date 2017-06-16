@@ -1,5 +1,0 @@
-<resources>
-    <string name="app_name">ClickCounter</string>
-    <string name="action_settings">Settings</string>
-    <string name="click_button_message">Click me portrait!</string>
-</resources>

@@ -1,0 +1,25 @@
+/*
+    Solution:
+*/
+
+task brew {
+    doLast {
+        println "Brewing. Drip, drip, drip."
+    }
+}
+
+task pour {
+    dependsOn brew
+    
+    doLast {
+        println "Pouring. Glug, glug, glug."
+    }
+}
+
+task drink {
+    dependsOn pour
+
+    doLast {
+        println "Drinking. Gulp, gulp, gulp."
+    }
+}

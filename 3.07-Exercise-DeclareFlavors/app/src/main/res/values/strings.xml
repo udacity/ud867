@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">ProductFlavors</string>
-    <string name="action_settings">Settings</string>
-    <string name="welcome_message">Lesson 3 Exercise: Product Flavors</string>
-    <string name="product_flavor_heading">Product Flavor:</string>
-    <string name="product_flavor_name" />
-    <string name="joke">Sorry, I don\'t have a joke for you.</string>
-</resources>

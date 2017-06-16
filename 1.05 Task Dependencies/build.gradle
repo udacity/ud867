@@ -1,0 +1,22 @@
+/* 
+* -----------------------------------------------------------------
+* Task Dependencies
+* -----------------------------------------------------------------
+*/
+
+// - in java build, build steps depend on each other: we cannot build jar without first having compiled
+// - task dependencies do this:
+task putOnSocks {
+    doLast {
+        println "Putting on Socks."
+    }
+}
+
+task putOnShoes {
+    dependsOn "putOnSocks"
+    doLast {
+        println "Putting on Shoes."
+    }
+}
+
+// more task relationships exist: mustRunAfter, shouldRunAfter, and finalizedB (not here)

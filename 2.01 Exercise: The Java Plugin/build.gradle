@@ -1,0 +1,17 @@
+/*
+
+Exercises:
+
+1. Apply the Java plugin to your project.
+
+2. Modify the 'jar' task to add a manifest attribute named 'Implementation-Version' with a value of '1.0'.
+
+3. Use the gradle command-line to build your JAR file.
+*/
+
+// TODO: Add Java plugin
+
+jar {
+    // TODO: Add manifest attribute
+}
+

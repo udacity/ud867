@@ -1,0 +1,21 @@
+/* 
+* -----------------------------------------------------------------
+* The Gradle Wrapper
+* -----------------------------------------------------------------
+*/
+
+
+/*
+1. To generate the Gradle wrapper, run: gradle wrapper
+2. To use the wrapper to run the `tasks` task, run:
+
+    $ ./gradlew tasks [Mac]
+    $ gradlew tasks [Windows]
+
+3. You can configure the `wrapper` task to use a different version of Gradle using the following:
+*/
+
+// optional, for version pinning
+wrapper {
+    gradleVersion = '2.14.1'
+}

@@ -1,0 +1,68 @@
+
+/* 
+* -----------------------------------------------------------------
+* Groovy Basics
+* -----------------------------------------------------------------
+*/
+
+// - run task below with: gradle groovy
+task groovy {}
+
+println "Hello Groovy!"
+
+
+// most valid java is also valid groovy
+class JavaGreeter {
+    public void sayHello() {
+        System.out.println("Hello Java!");
+    }
+}
+
+JavaGreeter greeter = new JavaGreeter()
+greeter.sayHello()
+
+
+// groovy is dynamically typed
+def foo = 6.5
+
+
+// we do not even need to specify types
+bar = "hello world"
+
+
+// build strings with string interpolation
+println "foo has value: $foo"
+
+
+// we can also surround any Groovy code with a dollar sign and curly braces
+println "Let's do some math. 5 + 6 = ${5 + 6}"
+
+
+// - semicolons are optional
+// - do not need a return statement
+def doubleIt(n) {
+    n + n
+}
+
+
+// - no need to use parentheses when function is called with at least one argument (assuming unambiguity)
+def noArgs() {
+    println "Called the no args function"
+}
+
+def oneArg(x) {
+    println "Called the 1 arg function with $x"
+    x
+}
+
+def twoArgs(x, y) {
+    println "Called the 2 arg function with $x and $y"
+    x + y
+}
+
+oneArg 500 // Look, no parentheses!
+twoArgs 200, 300
+noArgs()
+//noArgs // Doesn't work
+//twoArgs oneArg 500, 200 // Also doesn't work as it's ambiguous
+twoArgs oneArg(500), 200 // Fixed the ambiguity

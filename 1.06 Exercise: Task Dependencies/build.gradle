@@ -1,0 +1,27 @@
+/*
+    Exercises:
+    
+    Configure dependencies for the "brew", "pour" and "drink" tasks
+    such that to drink my coffee I must first pour it, and pouring my
+    coffee requires me to first brew it.
+*/
+
+task brew {
+    doLast {
+        println "Brewing. Drip, drip, drip."
+    }
+}
+
+task pour {
+    doLast {
+        println "Pouring. Glug, glug, glug."
+    }
+}
+
+task drink {
+    doLast {
+        println "Drinking. Gulp, gulp, gulp."
+    }
+}
+
+// TODO: think about having them code tasks

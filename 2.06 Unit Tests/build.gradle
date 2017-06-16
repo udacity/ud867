@@ -1,0 +1,20 @@
+/* 
+* -----------------------------------------------------------------
+* Unit Tests
+* -----------------------------------------------------------------
+*/
+
+// Gradle automatically runs tests (build is dependent on assemble and test)
+// Detailed testing reports are generated as well:
+// 
+// open build/reports/tests/test/index.html
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}

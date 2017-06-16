@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Android Library Exercise</string>
-    <string name="instructions">Hit the button to get a joke from a Java library and pass it to an Android Library for display!</string>
-    <string name="button_text">Tell a joke</string>
-    <string name="debug_joke">Debug Joke. This is so funny.</string>
-    <string name="action_settings">Settings</string>
-</resources>

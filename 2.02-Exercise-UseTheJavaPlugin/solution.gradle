@@ -1,9 +1,0 @@
-/*
-
-Solution:
-
-*/
-
-apply plugin: 'java' // 1. Apply the Java plugin to the project
-
-//2. Simply run `gradle jar`

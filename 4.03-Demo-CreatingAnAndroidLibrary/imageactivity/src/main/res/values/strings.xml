@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">ImageActivity</string>
-    <string name="action_settings">Settings</string>
-    <string name="library_welcome_text">Welcome to an activity that you launched from an Android Library project. The image below is packaged with the library, as is this string!</string>
-    <string name="gradle_logo">Gradle Logo</string>
-</resources>

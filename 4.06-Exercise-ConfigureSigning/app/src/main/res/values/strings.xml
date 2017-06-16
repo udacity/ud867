@@ -1,5 +1,0 @@
-<resources>
-    <string name="app_name">Automatic Signing</string>
-    <string name="hello_world">Nope! This is the debug version. Try again! Run installRelease, or use the Build Variants pane in Android Studio.</string>
-    <string name="action_settings">Settings</string>
-</resources>
