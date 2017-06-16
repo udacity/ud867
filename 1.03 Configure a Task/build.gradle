@@ -1,0 +1,65 @@
+/* 
+* -----------------------------------------------------------------
+* Configuring a task
+* -----------------------------------------------------------------
+*/
+
+// entire build script delegates to 'project' object (everything in build script are properties or methods of 'project') 
+// Example: task is a method in 'project' for declaring a task
+project.task("myTask1")
+
+
+// build script delegates to 'project' -> can leave off 'project'
+task("myTask2")
+
+
+// we can leave of parentheses as well
+task "myTask3"
+
+
+// advanced groovy features -> can leave of quotes as well
+task myTask4
+
+
+// we can access properties and methods of groovy objects (example tasks)
+myTask4.description = "This is what's shown in the task list"
+myTask4.group = "This is the heading for this task in the task list,"
+
+
+// we can do things like do first or do last
+myTask4.doLast {println "Do this last"}
+myTask4.doFirst {println "Do this first"}
+
+
+// or we can all do it inside the task
+task myTask6 {
+    description "Here's a task with a configuration block"
+    group "Some group"
+    doLast {
+        println "Here's the action"
+    }
+}
+
+
+/*
+
+Two things:
+1. 'group' delegates to task -> 'group' is same as 'task.group' 
+2. properties of task objects setters with same name
+
+*/
+task myTask7 {
+    description("Description") // Function call works
+    group = "Some group" // Assignment also works
+    doLast { 
+        println "Here's the action" // We can also omit the parentheses, because Groovy syntax
+    }
+}
+
+
+// some properties can be set the following way:
+task myTask8(description: "Another description") {
+    doLast {
+        println "Doing something"
+    }
+}

@@ -1,4 +1,8 @@
-/*
+/* 
+* -----------------------------------------------------------------
+* Install gradle
+* -----------------------------------------------------------------
+
 
 Whenever we're working with an existing Gradle project, we'll be using the
 wrapper, because that way we can ensure that everyone working on the project
