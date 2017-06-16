@@ -1,0 +1,20 @@
+/* 
+* -----------------------------------------------------------------
+* Dependency Configurations
+* -----------------------------------------------------------------
+*/
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+
+// Different configurations -> different dependencies used per task (via classpath):
+// - compile dependencies only used in assemble task
+// - testCompile dependencies used in test & assemble tasks
+dependencies {
+    compile 'commons-logging:commons-logging:1.1.3'
+    testCompile 'junit:junit:4.12'
+}

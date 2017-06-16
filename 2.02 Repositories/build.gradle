@@ -1,0 +1,50 @@
+/* 
+* -----------------------------------------------------------------
+* Repositories
+* -----------------------------------------------------------------
+*/
+
+
+// A folder full of jars
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+
+// Commonly used repositories
+// - by far the most common way to use repositories
+repositories {
+    mavenCentral()
+    mavenLocal()
+    jcenter()
+}
+
+
+// A managed (private/'unofficial') repository
+repositories {
+    maven {
+        url 'https://repo.foo.org/m2'
+    }
+}
+
+
+// A managed (private/'unofficial') repository with credentials
+repositories {
+    ivy {
+        url 'https://repo.foo.org/ivy'
+        credentials {
+            username 'user'
+            password 'secret'
+        }
+    }
+}
+
+
+// Use HTTP/HTTPS/SFTP and more
+repositories {
+    ivy {
+        url 'file:///home/user/repo'
+    }
+}

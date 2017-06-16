@@ -1,0 +1,19 @@
+/*
+
+Exercises:
+
+1. Add a test dependency to the latest version of 'junit'.
+2. Run the provided unit tests.
+
+*/
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+// Download dependencies with: gradle dependencies
+dependencies {
+    testCompile 'junit:junit:4.12'
+}

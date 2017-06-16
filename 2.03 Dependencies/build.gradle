@@ -1,0 +1,30 @@
+/* 
+* -----------------------------------------------------------------
+* Dependencies
+* -----------------------------------------------------------------
+*/
+
+
+// Basic dependency entry:
+// - dependency is assigned to a configuration (more later)
+dependencies {
+    compile 'com.google.guava:guava:18.0'
+}
+
+
+// This works too
+dependencies {
+    compile group: 'com.google.guava', name: 'guava', version: '18.0'
+}
+
+
+// Adding file dependencies (two JARs)
+dependencies {
+    compile files('libs/foo.jar', 'libs/bar.jar')
+}
+
+
+// Add all files in the libs folder that end in .jar
+dependencies {
+    compile fileTree(dir: 'libs', include: '*.jar')
+}
