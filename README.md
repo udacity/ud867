@@ -1,4 +1,4 @@
-# Gradle for Java
+# Core Gradle Exercises
 
 Welcome to the demos and exercises for the Hack & Söhne Tooling Deep Dive!
 
