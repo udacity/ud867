@@ -1,0 +1,41 @@
+group 'my.group.id'
+version '1.0'
+
+// Allows us to build ZIPs as well as JARs, and implicitly applies the 'java' plugin as well
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+mainClassName = 'my.main.class'
+
+repositories {
+    // jcenter is a super set of maven central
+    jcenter()
+}
+
+// List all dependencies of the project
+dependencies {
+    // Dependencies can be listed like this:
+    testCompile 'org.mockito:mockito-core:1.+'
+    
+    // Or like this:
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+// Configure the java jar plugin to build jars
+jar {
+    manifest {
+        attributes 'Main-Class': "$mainClassName"
+    }
+}
+
+// Create a single Jar with all dependencies
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': "$mainClassName"
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
