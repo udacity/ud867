@@ -1,6 +1,6 @@
 # Core Gradle Exercises
 
-Welcome to the demos and exercises for the Hack & Söhne Tooling Deep Dive!
+Welcome to the demos and exercises for the [Hack & Söhne](https://hackundsoehne.de) Tooling Deep Dive!
 
 The exercises were taken from Udacity's ud867 course and modified to fit this format. 
 
