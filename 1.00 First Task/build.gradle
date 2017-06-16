@@ -1,0 +1,22 @@
+/* 
+* -----------------------------------------------------------------
+* First task
+* -----------------------------------------------------------------
+*/
+
+/*
+*
+* Run the task below with gradle wrapper:
+*
+* Unix: ./gradlew hello
+* Windows: execute gradlew.bat hello 
+*
+* Challenges: Modify the action of this task so it instead prints your name.
+*/
+task hello {
+    description "Hey student! Run this one :D"
+    group "Our demo"
+    doLast {
+        println "Hello World!"
+    }
+}
