@@ -14,7 +14,7 @@ behavior of the Gradle build tool, allowing automation of repetitive tasks.
 Particularly, factoring functionality into libraries and creating product
 flavors allow for much bigger projects with minimal added complexity.
 
-##What Will I Learn?
+## What Will I Learn?
 
 You will learn the role of Gradle in building Android Apps and how to use
 Gradle to manage apps of increasing complexity. You'll learn to:
@@ -26,7 +26,7 @@ Gradle to manage apps of increasing complexity. You'll learn to:
 * Use the Gradle App Engine plugin to deploy a backend
 * Configure an integration test suite that runs against the local App Engine development server
 
-##How Do I Complete this Project?
+## How Do I Complete this Project?
 
 ### Step 0: Starting Point
 
@@ -40,6 +40,9 @@ https://developers.google.com/mobile-ads-sdk/docs/admob/android/quick-start
 
 You may need to download the Google Repository from the Extras section of the
 Android SDK Manager.
+
+You will also notice a folder called backend in the starter code. 
+It will be used at step 3 below, and you do not need to worry about it for now.
 
 When you can build an deploy this starter code to an emulator, you're ready to
 move on.
@@ -69,8 +72,11 @@ http://developer.android.com/guide/components/intents-filters.html
 
 This next task will be pretty tricky. Instead of pulling jokes directly from
 our Java library, we'll set up a Google Cloud Endpoints development server,
-and pull our jokes from there. Follow the instructions in the following
-tutorial to add a Google Could Endpoints module to your project:
+and pull our jokes from there. 
+
+The following tutorial explains how to add and use a Google Cloud Endpoints module to 
+your project. The starter code already includes the module in the folder called backend.
+Therefore, you can skip the creation steps in the tutorial:
 
 https://github.com/GoogleCloudPlatform/gradle-appengine-templates/tree/master/HelloEndpoints
 
