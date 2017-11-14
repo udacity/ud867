@@ -42,7 +42,7 @@ You may need to download the Google Repository from the Extras section of the
 Android SDK Manager.
 
 You will also notice a folder called backend in the starter code. 
-It will be used at step 3 below, and you do not need to worry about it for now.
+It will be used in step 3 below, and you do not need to worry about it for now.
 
 When you can build an deploy this starter code to an emulator, you're ready to
 move on.
@@ -74,9 +74,10 @@ This next task will be pretty tricky. Instead of pulling jokes directly from
 our Java library, we'll set up a Google Cloud Endpoints development server,
 and pull our jokes from there. 
 
-The following tutorial explains how to add and use a Google Cloud Endpoints module to 
+The following tutorial explains how to add and use a Google Cloud Endpoints module in 
 your project. The starter code already includes the module in the folder called backend.
-Therefore, you can skip the creation steps in the tutorial:
+Therefore, you can skip the creation steps in the tutorial and start at section
+1.1 *Debugging the backend locally*:
 
 https://github.com/GoogleCloudPlatform/gradle-appengine-templates/tree/master/HelloEndpoints
 
