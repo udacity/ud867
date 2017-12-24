@@ -23,7 +23,7 @@ Gradle also provides detailed reports on our test execution. These reports are
 placed in the 'build/reports' directory. Let's take a look at one of these
 reports. On Mac you can use:
 
-    $ open build/reports/tests/index.html
+    $ open build/reports/tests/test/index.html
 
 In this case we can see that we have 1 test and that it was successful. Of
 course in a real project we would likely have a number of tests.
