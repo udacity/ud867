@@ -6,38 +6,28 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.google.appengine:gradle-appengine-plugin:1.9.42'
+        classpath 'com.google.cloud.tools:endpoints-framework-gradle-plugin:1.0.2'
+        classpath 'com.google.cloud.tools:appengine-gradle-plugin:1.3.3'
     }
 }
 
 repositories {
-    jcenter();
+    jcenter()
 }
 
 apply plugin: 'java'
 apply plugin: 'war'
-apply plugin: 'appengine'
+apply plugin: 'com.google.cloud.tools.appengine'
+apply plugin: 'com.google.cloud.tools.endpoints-framework-server'
 
 sourceCompatibility = JavaVersion.VERSION_1_7
 targetCompatibility = JavaVersion.VERSION_1_7
 
 dependencies {
-    appengineSdk 'com.google.appengine:appengine-java-sdk:1.9.42'
-    compile 'com.google.appengine:appengine-endpoints:1.9.42'
-    compile 'com.google.appengine:appengine-endpoints-deps:1.9.42'
-    compile 'javax.servlet:servlet-api:2.5'
-    compile 'com.google.api-client:google-api-client:1.23.0'
-    compile 'com.google.http-client:google-http-client-android:1.23.0'
-}
+    implementation 'com.google.endpoints:endpoints-framework:2.0.9'
+    implementation 'javax.inject:javax.inject:1'
 
-appengine {
-    downloadSdk = true
-    appcfg {
-        oauth2 = true
-    }
-    endpoints {
-        getClientLibsOnBuild = true
-        getDiscoveryDocsOnBuild = true
-        googleClientVersion = '1.23.0'
-    }
+    implementation 'javax.servlet:servlet-api:2.5'
+    implementation 'com.google.api-client:google-api-client:1.23.0'
+    implementation 'com.google.http-client:google-http-client-android:1.23.0'
 }
