@@ -68,23 +68,45 @@ refresher on intent extras, check out;
 
 http://developer.android.com/guide/components/intents-filters.html
 
-### Step 3: Create GCE Module
+### Step 3: Setup GCE
 
 This next task will be pretty tricky. Instead of pulling jokes directly from
 our Java library, we'll set up a Google Cloud Endpoints development server,
-and pull our jokes from there. 
+and pull our jokes from there. The starter code already includes the GCE module 
+in the folder called backend.
 
-The following tutorial explains how to add and use a Google Cloud Endpoints module in 
-your project. The starter code already includes the module in the folder called backend.
-Therefore, you can skip the creation steps in the tutorial and start at section
-1.1 *Debugging the backend locally*:
+Before going ahead you will need to be able to run a local instance of the GCE 
+server. In order to do that you will have to install the Cloud SDK:
 
-https://github.com/GoogleCloudPlatform/gradle-appengine-templates/tree/master/HelloEndpoints
+https://cloud.google.com/sdk/docs/
 
-Introduce a project dependency between your Java library and your GCE module,
-and modify the GCE starter code to pull jokes from your Java library. Create
-an Async task to retrieve jokes. Make the button kick off a task to retrieve a
-joke, then launch the activity from your Android Library to display it.
+Once installed, you will need to follow the instructions in the Setup Cloud SDK
+section at:
+
+https://cloud.google.com/endpoints/docs/frameworks/java/migrating-android
+
+Note: You do not need to follow the rest of steps in the migration guide, only
+the Setup Cloud SDK.
+
+Start or stop your local server by using the gradle tasks as shown in the following
+screenshot:
+
+<img src="/FinalProject/GCE-server-gradle-tasks.png" height="500">
+
+Once your local GCE server is started you should see the following at 
+[localhost:8080](http://localhost:8080)
+
+<img src="https://raw.githubusercontent.com/GoogleCloudPlatform/gradle-appengine-templates/77e9910911d5412e5efede5fa681ec105a0f02ad/doc/img/devappserver-endpoints.png">
+
+Now you are ready to continue! 
+
+Introduce a project dependency between your Java library 
+and your GCE module, and modify the GCE starter code to pull jokes from your Java library. 
+Create an AsyncTask to retrieve jokes using the template included int these 
+[instructions](https://github.com/GoogleCloudPlatform/gradle-appengine-templates/tree/77e9910911d5412e5efede5fa681ec105a0f02ad/HelloEndpoints#2-connecting-your-android-app-to-the-backend). 
+Make the button kick off a task to retrieve a joke, 
+then launch the activity from your Android Library to display it.
+
 
 ### Step 4: Add Functional Tests
 
