@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.yasmeen.libjava.JokeRerieve;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,8 +40,15 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void tellJoke(View view) {
-        Toast.makeText(this, "derp", Toast.LENGTH_SHORT).show();
+    public void tellJoke(View view)
+    {
+        JokeRerieve jokeRerieve= new JokeRerieve();
+        String retunString = jokeRerieve.retrieveJoke();
+        Toast.makeText(this, retunString, Toast.LENGTH_SHORT).show();
+        new EndpointsAsyncTask().execute(this);
+        //Intent intent = new Intent(this,ShowingJoke.class);
+        //intent.putExtra("Joke",retunString);
+        //startActivity(intent);
     }
 
 
