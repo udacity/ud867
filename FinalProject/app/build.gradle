@@ -36,10 +36,10 @@ android {
 
     productFlavors {
         free {
-            applicationId 'com.udacity.gradle.builditbigger.free'
+            applicationId "com.udacity.gradle.builditbigger.free"
         }
         paid {
-            applicationId 'com.udacity.gradle.builditbigger.paid'
+            applicationId "com.udacity.gradle.builditbigger.paid"
         }
     }
 }
