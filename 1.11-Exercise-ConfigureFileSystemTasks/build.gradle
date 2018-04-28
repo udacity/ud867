@@ -9,6 +9,7 @@
         a) Copy files from "src/web" to a folder "build/web".
         b) Copy all .txt files from "src/docs" to folder "build/web/help".
 
+
     2. Create a task named "bundleWeb". This task should perform the following:
         a) Create a zip file located in the "build" folder named "web.zip".
         b) Include all the files copied by the "copyWeb" task except the
@@ -24,3 +25,29 @@
     4. Create a task named "deleteHelp". This task should perform the following:
         a) Delete the "help" folder created by the "copyWeb" task.
 */
+task copyWeb (type: Copy)
+{
+	from 'src/web'
+	include '*.txt'
+	into 'build/web'
+	
+}
+
+task bundleWeb (type: zip dependsOn: copyWeb)
+{
+	baseName ='web'
+	destinationDir =file('build')
+	from 'build/web'
+	exclude 'images/**'
+
+}
+task unpackBundle(type: Copy dependsOn bundleWeb)
+{
+	from zipTree('build/web.zip')
+    into 'build/exploded'
+}
+
+task deleteHelp(type: Delete, dependsOn: copyWeb)
+{
+	delete 'build/web/help'
+}

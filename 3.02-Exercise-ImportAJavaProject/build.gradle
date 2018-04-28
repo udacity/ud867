@@ -18,5 +18,9 @@ or uncomment the following line to essentially paste the contents of the
 solution file into this one.
 
 */
+apply plugin:'java'
+apply plugin: 'application'
+
+mainClassName = "com.udacity.gradle.JokeTeller"
 
 //apply from: "solution.gradle"

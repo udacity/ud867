@@ -15,3 +15,13 @@ Exercises:
 4. Run the "hello" task and observe the output.
 
 */
+class HelloTask extends DefaultTask {
+
+	@TaskAction
+	void doAction()
+	{
+		println "Executing my custom task"
+	}
+}
+
+task hello(type: HelloTask)

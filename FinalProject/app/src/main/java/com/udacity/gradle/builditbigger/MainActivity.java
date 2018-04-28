@@ -1,16 +1,18 @@
 package com.udacity.gradle.builditbigger;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
-import com.example.yasmeen.libjava.JokeRerieve;
+import com.example.yasmeen.libandroid.ShowingJoke;
+
+import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends AppCompatActivity {
-
+ private static String joke ="Joke";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,13 +44,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void tellJoke(View view)
     {
-        JokeRerieve jokeRerieve= new JokeRerieve();
-        String retunString = jokeRerieve.retrieveJoke();
-        Toast.makeText(this, retunString, Toast.LENGTH_SHORT).show();
-        new EndpointsAsyncTask().execute(this);
-        //Intent intent = new Intent(this,ShowingJoke.class);
-        //intent.putExtra("Joke",retunString);
-        //startActivity(intent);
+        try {
+            String retunString=new EndpointsAsyncTask().execute(this.getApplicationContext()).get();
+            Intent intent = new Intent(this, ShowingJoke.class);
+            intent.putExtra(joke, retunString);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
     }
 
 

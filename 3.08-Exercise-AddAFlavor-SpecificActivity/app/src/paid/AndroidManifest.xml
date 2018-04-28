@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.udacity.gradle.buildflavors.paid"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+
+        <activity
+            android:name="com.udacity.gradle.buildflavors.paid.detail"
+            android:label="@string/title_activity_detail"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+</manifest>

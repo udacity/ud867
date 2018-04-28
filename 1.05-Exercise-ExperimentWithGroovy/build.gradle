@@ -18,21 +18,28 @@ task stringsAndTypes {
         println "Nice work abbreviating the task name"
 
         // TODO: Create a variable named foo and assign it the value 4.2
+        def foo =4.2
 
         // TODO: Print the value and class of foo
+        println "the foo value is  $foo  and foo type is ${foo.class}"
 
         // TODO: Use string interpolation to print the square root of 127
+        println "the square root of 127 is ${Math.sqrt(127)}"
         // HINT: http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html
 
         // TODO: Assign the current date to foo and print it, along with its type
         // HINT:
+        foo = new java.util.Date()
+        println "foo is value is $foo and it's type is ${foo.class}"
         // http://docs.oracle.com/javase/7/docs/api/java/util/package-summary.html
 
 
         // TODO: Use the `substring` method to extract my name from this string
         def hello = "Hello, Jeremy."
+        def name  = hello.substring(7, 13)
 
         // TODO: Use `toUpperCase` to capitalize and print my name
+        println name.toUpperCase()
 
     }
 }
