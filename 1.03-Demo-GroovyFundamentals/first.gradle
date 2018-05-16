@@ -1,0 +1,59 @@
+/*
+gradle -b first.gradle groovy
+*/ 
+task groovy  {
+	
+	doLast {
+		println "Hello Groovy"
+	}
+}
+
+noArgs()
+oneArgs 200
+twoArgs 200, 122
+twoArgs oneArgs(12), 8
+
+def noArgs(){
+	println "Called the no args funtion"
+}
+
+def oneArgs(x){
+	println "Called the 1 arg funtion $x"
+	x
+}
+
+def twoArgs(x, y){
+	println "Called the 2 arg funtion with $x and $y"
+	x + y
+}
+
+def doubleIt(n){
+	n + n
+}
+
+def koo = 5;
+println "doubleIt($koo) = ${doubleIt(koo)}"
+
+koo = "foobar "
+println "doubleIt($koo) = ${doubleIt(koo)}"
+
+class JavaGreeter{
+	public void sayHello(){
+		println "Hello, Java"
+	}
+}
+
+JavaGreeter javaGreeter = new JavaGreeter();
+javaGreeter.sayHello()
+
+def foo = 3.4
+
+println "foo has value : $foo"
+
+println "Let's do some math. 5 + 6 = ${5 + 6}"
+
+println "foo is of type ${foo.class} and has value $foo"
+
+foo = "A string"
+
+println "foo is now type of ${foo.class} and now has value of $foo"
