@@ -10,3 +10,16 @@ task brushYourTeeth {
 		println "I am done brushing my teeth"
 	}
 }
+
+task putOnSocks {
+	doLast {
+		println "Putting on Socks"
+	}
+}
+
+task putOnShoes {
+	dependsOn "putOnSocks"
+	doLast{
+		println "Putting on Shoes"
+	}
+}
