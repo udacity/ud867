@@ -1,5 +1,17 @@
 task firstTest {}
 
+def doubleIt = { x -> x + x }
+
+def applyTwice(func, arg){
+	func(func(arg))
+}
+
+def koo = 5
+
+def kooDoubledTwice = applyTwice(doubleIt, koo)
+
+println "Applying doubleIt twice to $koo equals $kooDoubledTwice"
+
 def foo = "One million dollars"
 
 def myClosure = {
