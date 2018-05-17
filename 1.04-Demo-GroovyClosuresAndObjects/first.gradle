@@ -1,0 +1,14 @@
+task firstTest {}
+
+def foo = "One million dollars"
+
+def myClosure = {
+	println "Hello from a closure"
+	println "The value of foo is $foo"
+}
+
+myClosure()
+
+def bar = myClosure
+def baz = bar
+baz()
