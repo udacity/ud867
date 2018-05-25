@@ -1,4 +1,7 @@
 /*
+gradle -b first.gradle groovy
+
+use above command to call a *.gradle file which doesn't starts with build.gradle
 
 Welcome to the first exercise in ud867! Have fun, and remember that you can
 always check out the solution.gradle file for help!
@@ -27,4 +30,12 @@ task hello {
     doLast {
         println "Hello World!"
     }
+}
+
+task glassOfWater {
+	description "this is sleep method"
+	group "time"
+	doLast {
+		println "Hello take"
+	}
 }

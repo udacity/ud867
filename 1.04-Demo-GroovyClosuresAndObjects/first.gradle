@@ -1,0 +1,55 @@
+task firstTest {}
+
+class GroovyGreeter {
+	String greeting = "Default Greeting"
+	def printGreeting() {
+		println "Greeting: $greeting"
+	}
+}
+
+def myGroovyGreeter = new GroovyGreeter()
+
+myGroovyGreeter.printGreeting()
+myGroovyGreeter.greeting = "Custom Greeting"
+myGroovyGreeter.printGreeting()
+
+def greetingClosure ={
+	greeting = "Setting the greeting from a closure"
+	printGreeting()
+}
+
+greetingClosure.delegate = myGroovyGreeter
+greetingClosure()
+
+def myList = ["Gradle", "Groovy", "Java", "Kotlin"]
+
+def printItem = {item -> println "List item: $item"}
+myList.each(printItem)
+
+myList.each{println "Compactly printing each list item: $it"}
+
+
+def doubleIt = { x -> x + x }
+
+def applyTwice(func, arg){
+	func(func(arg))
+}
+
+def koo = 5
+
+def kooDoubledTwice = applyTwice(doubleIt, koo)
+
+println "Applying doubleIt twice to $koo equals $kooDoubledTwice"
+
+def foo = "One million dollars"
+
+def myClosure = {
+	println "Hello from a closure"
+	println "The value of foo is $foo"
+}
+
+myClosure()
+
+def bar = myClosure
+def baz = bar
+baz()

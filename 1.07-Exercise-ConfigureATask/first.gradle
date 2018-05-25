@@ -1,0 +1,10 @@
+task hello {
+
+	description = "This is a description for the task hello"
+	
+	group = "Udacity"
+	
+	doLast{
+		println "This is a last action from the hello task in gralde build script"
+	}
+}

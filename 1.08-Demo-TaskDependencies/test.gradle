@@ -1,0 +1,12 @@
+task putOnSocks {
+	doLast {
+		println "Putting on Socks"
+	}
+}
+
+task putOnShoes {
+	dependsOn "putOnSocks"
+	doLast{
+		println "Putting on Shoes"
+	}
+}

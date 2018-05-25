@@ -1,0 +1,25 @@
+task eatBreakfast {
+	finalizedBy "brushYourTeeth"
+	doLast {
+		println "I am eating my breakfast"
+	}
+}
+
+task brushYourTeeth {
+	doLast{
+		println "I am done brushing my teeth"
+	}
+}
+
+task putOnSocks {
+	doLast {
+		println "Putting on Socks"
+	}
+}
+
+task putOnShoes {
+	dependsOn "putOnSocks"
+	doLast{
+		println "Putting on Shoes"
+	}
+}
