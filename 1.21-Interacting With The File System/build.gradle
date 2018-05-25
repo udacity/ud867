@@ -1,0 +1,101 @@
+/**
+Keep an 'images' directory with images of diffrent types and test the code
+*/
+
+task copyImages(type: Copy){
+	
+	from 'images'
+	into 'build'
+}
+
+task copyJpegs(type: Copy){
+	
+	from 'images'
+	include '*.jpg'
+	into 'build'
+}
+
+task copyPnges(type: Copy){
+	
+	from 'images'
+	include '*.png'
+	into 'build'
+}
+
+task copyImageFolders(type: Copy){
+	
+	from('images'){
+		include '*.jpg'
+		into 'jpeg'
+	}
+	
+	from('images'){
+		include '*.png'
+		into 'png'
+	}
+	
+	into 'build'
+
+}
+
+
+task zipImages(type: Zip){
+
+	baseName = 'images'
+	destinationDir = file('build')
+	from 'images'
+	
+}
+
+
+
+task zipImagesFolders(type: Zip){
+
+	baseName = 'images'
+	destinationDir = file('build')
+	
+	from('images') {
+		include '*.jpg'
+		into 'jpeg'
+	}
+	
+	from('images'){
+		include '*.png'
+		into 'png'
+	}
+	
+}
+
+task deleteBuild(type: Delete){
+	
+	delete 'build'
+
+}
+
+
+task unzip(type: Copy){
+	
+	dependsOn 'deleteBuild'
+	
+	def zipInput = file('images.zip')
+	from zipTree(zipInput)
+	into 'build'
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
