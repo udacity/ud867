@@ -29,7 +29,7 @@ Note that the wizard adds JokeWizard to your settings.gradle
 8. Implement a tellAWizardJoke() method on JokeWizard that uses the tellAHandCraftedJoke() method
 on JokeSmith.
 
-9. Add a project dependence between your app and JokeWizard
+9. Add a project dependency between your app and JokeWizard
 
 9. Add another text view to MainActivityFragment and populate it with a joke
 from JokeWizard.
