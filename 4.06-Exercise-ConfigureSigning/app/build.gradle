@@ -1,10 +1,12 @@
 /*
 
-In this exercise you'll configure signing and deploy a release build.
+In this exercise you'll configure signing and deploying a release build.
 
 1. Use the Build > Generate Signed APK dialog to create a new keystore (or you can use a previously generated keystore).
 
-2. Create a signing configuration using your keystore. You can either use the Module Settings dialog (which you can access by right clicking on the app folder), or by manually configuring the signingConfigs block. Make sure the keystore is included in your project directory and is referenced via a
+2. Create a signing configuration using your keystore. You can either use the Module Settings dialog (which you can access by right clicking on the app folder), 
+or by manually configuring the signingConfigs block. Make sure the keystore is included in your project directory and is referenced via a config block
+in your app's build.gradle.
 
 http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Signing-Configurations
 
