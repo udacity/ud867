@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.exmample.joke_provider.JokeProvider;
+import com.example.jokedisplayer.*;
 
 public class MainActivity extends AppCompatActivity {
 
