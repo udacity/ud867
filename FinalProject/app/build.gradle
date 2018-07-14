@@ -67,4 +67,8 @@ dependencies {
 
     implementation project(':joke_provider')
     implementation project(':jokedisplayer')
+
+    endpointsServer project(path: ':backend', configuration: 'endpoints')
+    implementation 'com.google.api-client:google-api-client:+'
+    implementation 'com.google.http-client:google-http-client-android:1.23.0'
 }
