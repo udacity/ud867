@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Joke Displayer</string>
+    <string name="title_activity_joke_displayer">JokeDisplayerActivity</string>
+    <string name="key_intent_joke" translatable="false">joke</string>
 </resources>
