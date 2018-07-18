@@ -42,10 +42,12 @@ dependencies {
 // V2: Define deployment configuration using the new App Engine plugin
 // with the appengine closure
 appengine {  // App Engine tasks configuration
+
     deploy {   // deploy configuration
 
         // The following is used for acceptance tests and
         // is not required for a migration.
+        // address = findProperty("appengine.deploy.address")
         project = findProperty("appengine.deploy.project")
         version = findProperty("appengine.deploy.version")
         def promoteProp = findProperty("appengine.deploy.promote")

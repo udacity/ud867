@@ -26,7 +26,8 @@ public class GoogleCloudEndpointTask extends AsyncTaskLoader<String> {
         if (myApi == null) {
             MyApi.Builder apiBuilder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(),
                     new AndroidJsonFactory(), null).
-                    setRootUrl("http://localhost:8080/_ah/api/").
+                    setRootUrl("http://localhost:8080/_ah/api").
+                    setApplicationName("backend").
                     setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
                         @Override
                         public void initialize(AbstractGoogleClientRequest<?> request) throws IOException {
