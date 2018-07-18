@@ -10,13 +10,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.exmample.joke_provider.JokeProvider;
 import com.example.jokedisplayer.*;
 
 public class MainActivity extends AppCompatActivity implements
-        LoaderManager.LoaderCallbacks<String> {
+        LoaderManager.LoaderCallbacks<String>,
+        View.OnClickListener {
 
     private static final int GET_JOKE_TASK = 100;
 
@@ -24,8 +26,9 @@ public class MainActivity extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button button = findViewById(R.id.btn_joke_button);
+        button.setOnClickListener(this);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -49,8 +52,8 @@ public class MainActivity extends AppCompatActivity implements
         return super.onOptionsItemSelected(item);
     }
 
-    public void tellJoke(View view) {
-        Toast.makeText(this, "derp", Toast.LENGTH_SHORT).show();
+    public void tellJoke(View view, String joke) {
+        Toast.makeText(this, joke, Toast.LENGTH_SHORT).show();
     }
 
 
@@ -74,9 +77,23 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     public void onLoadFinished(@NonNull Loader<String> loader, String data) {
-
+        if (data != null && !data.isEmpty()) {
+            tellJoke(null, data);
+        }
     }
 
     @Override
     public void onLoaderReset(@NonNull Loader<String> loader) { }
+
+    @Override
+    public void onClick(View v) {
+        if (getSupportLoaderManager() != null) {
+            if (getSupportLoaderManager().getLoader(GET_JOKE_TASK) == null) {
+                getSupportLoaderManager().initLoader(GET_JOKE_TASK, null, this).forceLoad();
+            }
+            else {
+                getSupportLoaderManager().restartLoader(GET_JOKE_TASK, null, this).forceLoad();
+            }
+        }
+    }
 }
