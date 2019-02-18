@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="udacity.android.com.androidlibrary">
+
+    <application
+        android:allowBackup="false"
+        android:label="@string/app_name">
+        <activity
+            android:name=".AndroidLibraryMainActivity"
+            android:label="@string/app_name">
+        </activity>
+    </application>
+
+</manifest>
