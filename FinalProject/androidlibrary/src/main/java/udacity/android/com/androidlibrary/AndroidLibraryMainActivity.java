@@ -3,7 +3,6 @@ package udacity.android.com.androidlibrary;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class AndroidLibraryMainActivity extends AppCompatActivity {
 
@@ -22,8 +21,8 @@ public class AndroidLibraryMainActivity extends AppCompatActivity {
     }
 
     public void init(){
-//        mAndroidLibraryBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        setContentView(R.layout.activity_main);
+//        mAndroidLibraryBinding = DataBindingUtil.setContentView(this, R.layout.activity_main_android_library);
+        setContentView(R.layout.activity_main_android_library);
         mTextViewJoke = findViewById(R.id.tv_joker);
     }
 }
