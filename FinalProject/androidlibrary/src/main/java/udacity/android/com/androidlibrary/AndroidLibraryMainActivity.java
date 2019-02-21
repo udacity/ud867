@@ -3,6 +3,7 @@ package udacity.android.com.androidlibrary;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class AndroidLibraryMainActivity extends AppCompatActivity {
 
@@ -17,6 +18,7 @@ public class AndroidLibraryMainActivity extends AppCompatActivity {
         String strJoke =  getIntent().getStringExtra(JOKER_TEXT);
 //        mAndroidLibraryBinding.setJokeText(strJoke);
         mTextViewJoke.setText(strJoke);
+//        Toast.makeText(this, strJoke, Toast.LENGTH_SHORT).show();
     }
 
     public void init(){
