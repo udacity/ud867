@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
-    <application>myApplicationId</application>
+    <application>jokerendpoint</application>
     <version>1</version>
     <threadsafe>true</threadsafe>
 
     <system-properties>
         <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
     </system-properties>
+    <!-- [START env_variables] -->
+    <env-variables>
+        <env-var name="ENDPOINTS_SERVICE_NAME" value="jokerendpoint.appspot.com" />
+    </env-variables>
+    <!-- [END env_variables] -->
 </appengine-web-app>
