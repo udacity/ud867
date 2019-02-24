@@ -6,16 +6,24 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import com.udacity.gradle.builditbigger.model.JokerEndPointAsyncTask;
+import com.udacity.gradle.builditbigger.presenter.JokerPresenterImpl;
+
 import udacity.android.com.libjoker.Joker;
 import udacity.android.com.androidlibrary.AndroidLibraryMainActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements JokerEndPointResult{
+
+    private JokerPresenterImpl mJokerPresenterImpl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mJokerPresenterImpl = new JokerPresenterImpl(this, this);
     }
 
 
@@ -42,15 +50,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        Joker joker = new Joker();
-        Toast.makeText(this, joker.getJoke(), Toast.LENGTH_SHORT).show();
-        launchJokeView(joker);
+        mJokerPresenterImpl.fetchJokeFromApi();
     }
 
-    public void launchJokeView(Joker joker){
+    @Override
+    public void retrieveJoker(String joke) {
         Intent intent = new Intent(this, AndroidLibraryMainActivity.class);
-        intent.putExtra(AndroidLibraryMainActivity.JOKER_TEXT, joker.getJoke());
+        intent.putExtra(AndroidLibraryMainActivity.JOKER_TEXT, joke);
         startActivity(intent);
+    }
+
+    @Override
+    public void showProgress(boolean show) {
+        MainActivityFragment mainActivityFragment = (MainActivityFragment) getSupportFragmentManager().getFragments().get(0);
+        mainActivityFragment.showProgress(show);
+    }
+
+    @Override
+    public void showNoInternetConnection() {
+        this.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                MainActivityFragment mainActivityFragment = (MainActivityFragment) getSupportFragmentManager().getFragments().get(0);
+                mainActivityFragment.showNoInternetConnection();
+            }
+        });
     }
 
 }

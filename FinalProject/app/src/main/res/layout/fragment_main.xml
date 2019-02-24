@@ -16,11 +16,32 @@
         android:text="@string/instructions" />
 
     <Button
+        android:id="@+id/bt_tell_joke"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/instructions_text_view"
         android:onClick="tellJoke"
         android:text="@string/button_text" />
+
+    <include
+        android:id="@+id/in_loading"
+        layout="@layout/view_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_tell_joke"
+        android:layout_margin="@dimen/margin_height_include"
+        android:visibility="gone"
+        />
+
+    <include
+        android:id="@+id/in_no_internet"
+        layout="@layout/view_no_internet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_tell_joke"
+        android:layout_margin="@dimen/margin_height_include"
+        android:visibility="gone"
+        />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
