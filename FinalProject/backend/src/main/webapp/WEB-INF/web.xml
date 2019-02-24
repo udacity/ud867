@@ -16,21 +16,4 @@
         <url-pattern>/_ah/api/*</url-pattern>
         <!-- V2: End of v2 section -->
     </servlet-mapping>
-
-    <!--<servlet>-->
-        <!--<servlet-name>SystemServiceServlet</servlet-name>-->
-        <!--<servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>-->
-        <!--<init-param>-->
-            <!--<param-name>services</param-name>-->
-            <!--<param-value>com.udacity.gradle.builditbigger.backend.MyEndpoint</param-value>-->
-        <!--</init-param>-->
-        <!--<init-param>-->
-            <!--<param-name>restricted</param-name>-->
-            <!--<param-value>false</param-value>-->
-        <!--</init-param>-->
-    <!--</servlet>-->
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>SystemServiceServlet</servlet-name>-->
-        <!--<url-pattern>/_ah/spi/*</url-pattern>-->
-    <!--</servlet-mapping>-->
 </web-app>

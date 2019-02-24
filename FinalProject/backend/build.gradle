@@ -1,6 +1,10 @@
 // If you would like more information on the gradle-appengine-plugin please refer to the github page
 // https://github.com/GoogleCloudPlatform/gradle-appengine-plugin
 
+/**
+ *  Reference: https://github.com/GoogleCloudPlatform/java-docs-samples/blob/master/appengine/endpoints-frameworks-v2/backend/build.gradle
+ */
+
 buildscript {
     repositories {
         mavenCentral()
