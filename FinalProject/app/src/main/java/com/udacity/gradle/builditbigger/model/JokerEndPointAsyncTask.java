@@ -1,6 +1,5 @@
 package com.udacity.gradle.builditbigger.model;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
 
