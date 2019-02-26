@@ -82,6 +82,9 @@ public class MainActivity extends AppCompatActivity implements JokerEndPointResu
         this.runOnUiThread(new Runnable() {
             @Override
             public void run() {
+                if (mIdlingResource != null) {
+                    mIdlingResource.setIdleState(true);
+                }
                 MainActivityFragment mainActivityFragment = (MainActivityFragment) getSupportFragmentManager().getFragments().get(0);
                 mainActivityFragment.showNoInternetConnection();
             }
