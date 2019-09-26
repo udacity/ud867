@@ -61,4 +61,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'junit:junit:4.12'
     androidTestImplementation 'org.testng:testng:6.9.6'
+    implementation project(path: ':androidjokelibrary')
 }
