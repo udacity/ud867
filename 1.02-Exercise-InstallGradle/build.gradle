@@ -11,6 +11,8 @@ installation of Gradle. First make sure you have an installation of by running
 
 The output should be something like:
 
+(java version may be different)
+
     java version "1.8.0_112"
     Java(TM) SE Runtime Environment (build 1.8.0_112-b16)
     Java HotSpot(TM) 64-Bit Server VM (build 25.112-b16, mixed mode)
@@ -48,9 +50,9 @@ terminal. Note that you may need to change the version number on the first and
 third lines. Note that you may need to run the following command
 with `sudo` out in front.
 
-unzip ~/Downloads/gradle-3.3-all.zip -d /usr/local/gradle/ &&\
+unzip ~/Downloads/gradle-4.7-all.zip -d /usr/local/gradle/ &&\
 echo '# Adding Gradle to system path
-export GRADLE_HOME=/usr/local/gradle/gradle-3.3
+export GRADLE_HOME=/usr/local/gradle/gradle-4.7
 PATH=$GRADLE_HOME/bin:$PATH
 export PATH' >> ~/.bash_profile &&\
 source ~/.bash_profile
@@ -60,14 +62,14 @@ source ~/.bash_profile
 First, head over to https://gradle.org/gradle-download/, and download the latest
 version of Gradle. Note that we want the complete distribution. Next, we'll
 unzip Gradle and move it to where we want it to live. Our recommendation is in
-`C:\gradle-3.3`.
+`C:\gradle-4.7`.
 
 To tell Windows where to find Gradle, we need to add an environment variable.
 Navigate to the Control Panel > System > Advanced system settings > Advanced >
 Environment Variables... > System variables > New...
 
 Set the variable name to: GRADLE_HOME Set the variable value to the location
-you unzipped Gradle if you followed our suggestion it should be: C:\gradle-3.3
+you unzipped Gradle if you followed our suggestion it should be: C:\gradle-4.7
 
 Then edit the PATH user variable by appending: ;%GRADLE_HOME%\bin\
 
@@ -117,6 +119,8 @@ finally we need to tell the system where to find your new installation.
 Before following these instructions, check to make sure you haven't already
 installed Java by running `java -version`. If the output is something like the
 following:
+
+(java version may be different)
 
     java version "1.8.0_112"
     Java(TM) SE Runtime Environment (build 1.8.0_112-b16)
