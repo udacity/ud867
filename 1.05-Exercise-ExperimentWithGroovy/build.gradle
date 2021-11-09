@@ -1,14 +1,6 @@
 /*
 
-Welcome to the solutions to the Groovy Playground exercise! You can run these
-tasks by telling Gradle to use this build script, instead of the default
-build.gradle. To run the task below, use:
-
-    $ gradle -b solution.gradle stringsAndTypes
-
-or, more compactly
-
-    $ gradle -b solution.gradle sAT
+Welcome to the to the Groovy Playground exercise! Complete the TODOs below.
 
 */
 
