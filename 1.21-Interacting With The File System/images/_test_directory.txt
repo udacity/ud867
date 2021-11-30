@@ -1,0 +1,1 @@
+Put images with *.png, *.jpeg or *.gif in this directory and run the diffrent tasks to check the code output.
